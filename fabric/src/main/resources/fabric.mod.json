@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pridemod",
+  "version": "${version}",
+  "name": "Pride Mod",
+  "description": "This is an example description! Tell everyone what your mod is about!",
+  "authors": [
+    "Idk add yourselves here"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/Pridecraft-Studios/PrideMod"
+  },
+  "license": "Insert License Here",
+  "icon": "assets/pridemod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.pridestudios.pridemod.fabric.PrideModFabric"
+    ]
+  },
+  "mixins": [
+    "pridemod.mixins.json",
+    "pridemod-common.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.19.3"
+  }
+}
