@@ -1,5 +1,6 @@
 package gay.pridecraft.pridemod;
 
+import gay.pridecraft.pridemod.block.ModBlocks;
 import gay.pridecraft.pridemod.item.ModItemGroups;
 import net.fabricmc.api.ModInitializer;
 
@@ -17,7 +18,7 @@ public class PrideMod implements ModInitializer {
 		LOGGER.info("Thanks for using PrideMod! Gaying your minecraft...");
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
-
+		ModBlocks.registerModBlocks();
 
 	}
 }

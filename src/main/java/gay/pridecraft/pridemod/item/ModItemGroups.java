@@ -1,6 +1,7 @@
 package gay.pridecraft.pridemod.item;
 
 import gay.pridecraft.pridemod.PrideMod;
+import gay.pridecraft.pridemod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -35,6 +36,15 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(Items.BEE_SPAWN_EGG)).entries((displayContext, entries) -> {
 
                         entries.add(Items.DIRT);
+
+                    }).build());
+
+    public static final ItemGroup BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(PrideMod.MOD_ID, "prideblocks"),
+            FabricItemGroup.builder().displayName(Text.translatable("prideblocks.pridemod"))
+                    .icon(() -> new ItemStack(Items.WHITE_WOOL)).entries((displayContext, entries) -> {
+
+                        entries.add(ModBlocks.ULTIMATER_ULTIMATE_GAY);
 
                     }).build());
 
