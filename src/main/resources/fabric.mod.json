@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "pridemod",
+	"version": "${version}",
+	"name": "PrideMod",
+	"description": "This is an LGBT pride-themed Fabric mod made by Pridecraft Studios.",
+	"authors": [
+		"Blurryface",
+		"UnlikePaladin"
+	],
+	"contact": {
+		"homepage": "https://pridecraft.gay/",
+		"sources": "https://git.pridecraft.gay/PrideMod"
+	},
+	"license": "I HAVE NO IDEA",
+	"icon": "assets/pridemod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"gay.pridecraft.PrideMod"
+		],
+		"client": [
+			"gay.pridecraft.PrideModClient"
+		],
+		"fabric-datagen": [
+			"gay.pridecraft.PrideModDataGenerator"
+		]
+	},
+	"mixins": [
+		"pridemod.mixins.json",
+		{
+			"config": "pridemod.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
