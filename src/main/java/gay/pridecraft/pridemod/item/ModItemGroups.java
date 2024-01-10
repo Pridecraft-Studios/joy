@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
     public static final ItemGroup BEDS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(PrideMod.MOD_ID, "test"),
+            new Identifier(PrideMod.MOD_ID, "pridebeds"),
             FabricItemGroup.builder().displayName(Text.translatable("pridebeds.pridemod"))
                     .icon(() -> new ItemStack(Items.WHITE_BED)).entries((displayContext, entries) -> {
 
@@ -21,7 +21,7 @@ public class ModItemGroups {
                     }).build());
 
     public static final ItemGroup FLAGS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(PrideMod.MOD_ID, "test2"),
+            new Identifier(PrideMod.MOD_ID, "prideflags"),
             FabricItemGroup.builder().displayName(Text.translatable("prideflags.pridemod"))
                     .icon(() -> new ItemStack(Items.WHITE_BANNER)).entries((displayContext, entries) -> {
 
@@ -30,7 +30,7 @@ public class ModItemGroups {
                     }).build());
 
     public static final ItemGroup ENTITIES_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(PrideMod.MOD_ID, "test3"),
+            new Identifier(PrideMod.MOD_ID, "pridemobs"),
             FabricItemGroup.builder().displayName(Text.translatable("pridemobs.pridemod"))
                     .icon(() -> new ItemStack(Items.BEE_SPAWN_EGG)).entries((displayContext, entries) -> {
 
