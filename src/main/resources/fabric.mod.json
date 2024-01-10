@@ -17,13 +17,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"gay.pridecraft.PrideMod"
+          "gay.pridecraft.pridemod.PrideMod"
 		],
 		"client": [
 			"gay.pridecraft.PrideModClient"
 		],
 		"fabric-datagen": [
-			"gay.pridecraft.PrideModDataGenerator"
+          "gay.pridecraft.pridemod.PrideModDataGenerator"
 		]
 	},
 	"mixins": [

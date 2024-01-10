@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "gay.pridecraft.mixin.client",
+	"package": "gay.pridecraft.pridemod.mixin.client",
 	"compatibilityLevel": "JAVA_17",
 	"client": [
 		"ProudClientMixin"

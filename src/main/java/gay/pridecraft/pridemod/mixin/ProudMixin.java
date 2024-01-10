@@ -1,4 +1,4 @@
-package gay.pridecraft.mixin;
+package gay.pridecraft.pridemod.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;
