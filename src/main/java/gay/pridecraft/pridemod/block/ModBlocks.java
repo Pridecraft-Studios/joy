@@ -18,9 +18,6 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.NETHERITE_BLOCK).sounds(BlockSoundGroup.WOOL)));
 
 
-
-
-
     private static Block registerBlock(String name, Block block) {
 
         registerBlockItem(name, block);

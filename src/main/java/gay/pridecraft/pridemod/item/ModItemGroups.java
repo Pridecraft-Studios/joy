@@ -48,6 +48,24 @@ public class ModItemGroups {
 
                     }).build());
 
+    public static final ItemGroup PAINTINGS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(PrideMod.MOD_ID, "pridepaintings"),
+            FabricItemGroup.builder().displayName(Text.translatable("pridepaintings.pridemod"))
+                    .icon(() -> new ItemStack(Items.PAINTING)).entries((displayContext, entries) -> {
+
+                        entries.add(Items.DIRT);
+
+                    }).build());
+
+    public static final ItemGroup MISC_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(PrideMod.MOD_ID, "miscpride"),
+            FabricItemGroup.builder().displayName(Text.translatable("miscitemgroup.pridemod"))
+                    .icon(() -> new ItemStack(Items.PAINTING)).entries((displayContext, entries) -> {
+
+                        entries.add(Items.DIRT);
+
+                    }).build());
+    
     public static void registerItemGroups() {
         PrideMod.LOGGER.info("Making the gay items in" + PrideMod.MOD_ID, "have a group...");
     }
