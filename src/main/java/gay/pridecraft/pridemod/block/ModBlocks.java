@@ -20,7 +20,7 @@ public class ModBlocks {
             new BedBlock(DyeColor.RED, FabricBlockSettings.copyOf(Blocks.RED_BED)));
 
     public static final Block ENBY_BED = registerBlock("enby_bed",
-            new BedBlock(DyeColor.RED, FabricBlockSettings.copyOf(Blocks.BLACK_BED)));
+            new BedBlock(DyeColor.BLACK, FabricBlockSettings.copyOf(Blocks.BLACK_BED)));
 
     public static final Block INTERSEX_BED = registerBlock("intersex_bed",
             new BedBlock(DyeColor.GREEN, FabricBlockSettings.copyOf(Blocks.GREEN_BED)));
