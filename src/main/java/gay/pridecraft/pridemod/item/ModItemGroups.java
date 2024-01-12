@@ -15,9 +15,24 @@ public class ModItemGroups {
     public static final ItemGroup BEDS_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(PrideMod.MOD_ID, "pridebeds"),
             FabricItemGroup.builder().displayName(Text.translatable("pridebeds.pridemod"))
-                    .icon(() -> new ItemStack(Items.WHITE_BED)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModBlocks.GAY_BED)).entries((displayContext, entries) -> {
 
-                        entries.add(Items.DIRT);
+                        entries.add(ModBlocks.GAY_BED);
+                        entries.add(ModBlocks.ENBY_BED);
+                        entries.add(ModBlocks.INTERSEX_BED);
+                        entries.add(ModBlocks.AGENDER_BED);
+                        entries.add(ModBlocks.BIGENDER_BED);
+                        entries.add(ModBlocks.BISEXUAL_BED);
+                        entries.add(ModBlocks.MLM_BED);
+                        entries.add(ModBlocks.ACE_BED);
+                        entries.add(ModBlocks.ARO_BED);
+                        entries.add(ModBlocks.APLATONIC_BED);
+                        entries.add(ModBlocks.GENDER_FLUID_BED);
+                        entries.add(ModBlocks.PAN_BED);
+                        entries.add(ModBlocks.TRANS_BED);
+                        entries.add(ModBlocks.AROACE_BED);
+                        entries.add(ModBlocks.LESBIAN_BED);
+                        entries.add(ModBlocks.PROGRESS_BED);
 
                     }).build());
 
@@ -44,7 +59,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("prideblocks.pridemod"))
                     .icon(() -> new ItemStack(Items.WHITE_WOOL)).entries((displayContext, entries) -> {
 
-                        entries.add(ModBlocks.ULTIMATER_ULTIMATE_GAY);
+                        entries.add(Items.DIRT);
 
                     }).build());
 
@@ -60,19 +75,13 @@ public class ModItemGroups {
     public static final ItemGroup MISC_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(PrideMod.MOD_ID, "miscpride"),
             FabricItemGroup.builder().displayName(Text.translatable("miscitemgroup.pridemod"))
-                    .icon(() -> new ItemStack(Items.PAINTING)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(Items.DEBUG_STICK)).entries((displayContext, entries) -> {
 
                         entries.add(Items.DIRT);
 
                     }).build());
-    
+
     public static void registerItemGroups() {
         PrideMod.LOGGER.info("Making the gay items in" + PrideMod.MOD_ID, "have a group...");
     }
-
-
-
-
-
-
 }
