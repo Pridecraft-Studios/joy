@@ -82,6 +82,6 @@ public class ModItemGroups {
                     }).build());
 
     public static void registerItemGroups() {
-        PrideMod.LOGGER.info("Making the gay items in" + PrideMod.MOD_ID, "have a group...");
+        // PrideMod.LOGGER.info("Making the gay items in" + PrideMod.MOD_ID, "have a group...");
     }
 }

@@ -79,7 +79,7 @@ public class ModBlocks {
 
 
     public static void registerModBlocks() {
-        PrideMod.LOGGER.info("Adding gay blocks from" + PrideMod.MOD_ID);
+        // PrideMod.LOGGER.info("Adding gay blocks from" + PrideMod.MOD_ID);
     }
 
 

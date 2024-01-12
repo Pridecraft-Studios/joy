@@ -15,7 +15,7 @@ public class PrideMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Thanks for using PrideMod! Gaying your minecraft...");
+		// LOGGER.info("Thanks for using PrideMod! Gaying your minecraft...");
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();

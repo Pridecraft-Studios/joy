@@ -24,7 +24,7 @@ public class ModItems {
 
     public static void registerModItems() {
 
-        PrideMod.LOGGER.info("Making the gay items from" + PrideMod.MOD_ID);
+      // PrideMod.LOGGER.info("Making the gay items from" + PrideMod.MOD_ID);
 
     }
 }
