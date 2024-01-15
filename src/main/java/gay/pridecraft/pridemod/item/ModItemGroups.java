@@ -3,9 +3,12 @@ package gay.pridecraft.pridemod.item;
 import gay.pridecraft.pridemod.PrideMod;
 import gay.pridecraft.pridemod.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.potion.PotionUtil;
+import net.minecraft.potion.Potions;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -71,6 +74,17 @@ public class ModItemGroups {
                         entries.add(Items.DIRT);
 
                     }).build());
+
+
+/* > */    public static final ItemGroup POTIONS_GROUP = Registry.register(Registries.ITEM_GROUP,
+/* > */            new Identifier(PrideMod.MOD_ID, "pridepotions"),
+/* > */            FabricItemGroup.builder().displayName(Text.translatable("pridepotions.pridemod"))
+/* > */                    .icon(() -> new ItemStack(Items.POTION)).entries((displayContext, entries) -> {
+/* > */
+/* > */                        entries.add(PotionUtil.setPotion(new ItemStack(Items.POTION), ModPotions.GENDER_FLUID));
+/* > */                        entries.add((ItemConvertible) Potions.LUCK);
+/* > */
+/* > */                    }).build());
 
     public static final ItemGroup MISC_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(PrideMod.MOD_ID, "miscpride"),

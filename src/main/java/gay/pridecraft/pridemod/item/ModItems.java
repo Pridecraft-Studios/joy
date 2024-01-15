@@ -8,13 +8,15 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.PotionItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item ULTIMATE_GAY = registerItem("ultimate_gay", new Item(new FabricItemSettings()));
+    public static final Item GENDER_FLUID = registerItem("gender_fluid",
+            new PotionItem(new FabricItemSettings()));
 
 
     private static Item registerItem(String name, Item item) {
