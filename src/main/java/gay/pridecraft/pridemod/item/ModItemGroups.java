@@ -82,7 +82,6 @@ public class ModItemGroups {
 /* > */                    .icon(() -> new ItemStack(Items.POTION)).entries((displayContext, entries) -> {
 /* > */
 /* > */                        entries.add(PotionUtil.setPotion(new ItemStack(Items.POTION), ModPotions.GENDER_FLUID));
-/* > */                        entries.add((ItemConvertible) Potions.LUCK);
 /* > */
 /* > */                    }).build());
 

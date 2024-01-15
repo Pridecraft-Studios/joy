@@ -2,6 +2,7 @@ package gay.pridecraft.pridemod;
 
 import gay.pridecraft.pridemod.block.ModBlocks;
 import gay.pridecraft.pridemod.item.ModItemGroups;
+import gay.pridecraft.pridemod.item.ModPotions;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -19,6 +20,7 @@ public class PrideMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModPotions.registerPotions();
 
 	}
 }
