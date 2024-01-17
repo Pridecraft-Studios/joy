@@ -90,7 +90,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("miscitemgroup.pridemod"))
                     .icon(() -> new ItemStack(Items.DEBUG_STICK)).entries((displayContext, entries) -> {
 
-                        entries.add(Items.DIRT);
+                        entries.add(ModItems.BLAHAJ);
 
                     }).build());
 

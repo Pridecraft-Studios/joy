@@ -18,11 +18,14 @@ public class ModItems {
     public static final Item GENDER_FLUID = registerItem("gender_fluid",
             new PotionItem(new FabricItemSettings()));
 
+    public static final Item BLAHAJ = registerItem("blahaj",
+            new Item(new FabricItemSettings()));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(PrideMod.MOD_ID, name), item);
-    }
 
+    }
 
     public static void registerModItems() {
 
