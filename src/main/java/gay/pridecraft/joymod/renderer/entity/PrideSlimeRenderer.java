@@ -2,6 +2,7 @@ package gay.pridecraft.joymod.renderer.entity;
 
 import gay.pridecraft.joymod.JoyMod;
 import gay.pridecraft.joymod.entity.custom.living.CustomSlimeEntity;
+import gay.pridecraft.joymod.renderer.feature.PrideSlimeOverlayFeatureRenderer;
 import gay.pridecraft.joymod.renderer.model.PrideSlimeEntityModel;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -19,7 +20,7 @@ public class PrideSlimeRenderer extends MobEntityRenderer<CustomSlimeEntity.Prid
 
     public PrideSlimeRenderer(EntityRendererFactory.Context context) {
         super(context, new PrideSlimeEntityModel<>(context.getPart(EntityModelLayers.SLIME)), 0.25F);
-        //this.addFeature(new SlimeOverlayFeatureRenderer(this, context.getModelLoader()));
+        this.addFeature(new PrideSlimeOverlayFeatureRenderer<>(this, context.getModelLoader()));
     }
 
     @Override

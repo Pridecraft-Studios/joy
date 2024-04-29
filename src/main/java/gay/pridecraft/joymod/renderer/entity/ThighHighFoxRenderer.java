@@ -2,6 +2,7 @@ package gay.pridecraft.joymod.renderer.entity;
 
 import gay.pridecraft.joymod.JoyMod;
 import gay.pridecraft.joymod.entity.custom.living.CustomFoxEntity;
+import gay.pridecraft.joymod.renderer.feature.ThighHighFoxHeldItemFeatureRenderer;
 import gay.pridecraft.joymod.renderer.model.ThighHighFoxEntityModel;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -23,7 +24,7 @@ public class ThighHighFoxRenderer extends MobEntityRenderer<CustomFoxEntity.Thig
 
     public ThighHighFoxRenderer(EntityRendererFactory.Context context) {
         super(context, new ThighHighFoxEntityModel<>(context.getPart(EntityModelLayers.FOX)), 0.4F);
-        //this.addFeature(new FoxHeldItemFeatureRenderer(this, context.getHeldItemRenderer()));
+        this.addFeature(new ThighHighFoxHeldItemFeatureRenderer(this, context.getHeldItemRenderer()));
     }
 
     protected void setupTransforms(CustomFoxEntity.ThighHighFoxEntity thighHighFoxEntity, MatrixStack matrixStack, float f, float g, float h) {

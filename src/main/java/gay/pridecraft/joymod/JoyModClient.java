@@ -17,22 +17,17 @@ public class JoyModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockEntityRendererFactories.register(ModEntities.CUSTOM_BED_BLOCK_ENTITY, CustomBedBlockEntityRenderer::new);
+
         registerBedBlockRenderLayers();
+        registerEntityRenderers();
 
         LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
             Identifier elytra = new Identifier("minecraft:textures/entity/elytra.png");
             registrationHelper.register(new CustomElytraFeatureRenderer<>(entityRenderer, context.getModelLoader(), elytra));
         });
-
-        EntityRendererRegistry.register(ModEntities.THIGH_HIGH_FOX, ThighHighFoxRenderer::new);
-        EntityRendererRegistry.register(ModEntities.PRIDE_BII, PrideBiiRenderer::new);
-        EntityRendererRegistry.register(ModEntities.PRIDE_AXOLOTL, PrideAxolotlRenderer::new);
-        EntityRendererRegistry.register(ModEntities.PRIDE_FROG, PrideFrogRenderer::new);
-        EntityRendererRegistry.register(ModEntities.PRIDE_SLIME, PrideSlimeRenderer::new);
-        EntityRendererRegistry.register(ModEntities.PRIDE_SNIFFER, PrideSnifferRenderer::new);
     }
 
-    private static void registerBedBlockRenderLayers () {
+    private static void registerBedBlockRenderLayers() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ACE_BED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TRANS_BED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AGENDER_BED, RenderLayer.getCutout());
@@ -49,5 +44,14 @@ public class JoyModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MLM_BED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PAN_BED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PROGRESS_BED, RenderLayer.getCutout());
+    }
+
+    private static void registerEntityRenderers() {
+        EntityRendererRegistry.register(ModEntities.THIGH_HIGH_FOX, ThighHighFoxRenderer::new);
+        EntityRendererRegistry.register(ModEntities.PRIDE_BII, PrideBiiRenderer::new);
+        EntityRendererRegistry.register(ModEntities.PRIDE_AXOLOTL, PrideAxolotlRenderer::new);
+        EntityRendererRegistry.register(ModEntities.PRIDE_FROG, PrideFrogRenderer::new);
+        EntityRendererRegistry.register(ModEntities.PRIDE_SLIME, PrideSlimeRenderer::new);
+        EntityRendererRegistry.register(ModEntities.PRIDE_SNIFFER, PrideSnifferRenderer::new);
     }
 }

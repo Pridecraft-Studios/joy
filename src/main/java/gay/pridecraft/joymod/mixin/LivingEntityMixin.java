@@ -33,10 +33,10 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
     public void useCustomTotem(DamageSource damageSource, CallbackInfoReturnable<Boolean> callback) {
-        Entity entity = this;
+        LivingEntityMixin entity = this;
 
-        ItemStack offhandStack = ((LivingEntityMixin) entity).getStackInHand(Hand.OFF_HAND);
-        ItemStack mainhandStack = ((LivingEntityMixin) entity).getStackInHand(Hand.MAIN_HAND);
+        ItemStack offhandStack = entity.getStackInHand(Hand.OFF_HAND);
+        ItemStack mainhandStack = entity.getStackInHand(Hand.MAIN_HAND);
 
         if (offhandStack.isOf(ModItems.TOTEM_OF_PRIDE) || mainhandStack.isOf(ModItems.TOTEM_OF_PRIDE)) {
                 if (offhandStack.isOf(ModItems.TOTEM_OF_PRIDE)) {

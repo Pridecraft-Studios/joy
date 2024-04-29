@@ -16,7 +16,7 @@ import java.util.Map;
 
 @Environment(EnvType.CLIENT)
 public class PrideAxolotlRenderer extends MobEntityRenderer<CustomAxolotlEntity.PrideAxolotlEntity, PrideAxolotlEntityModel<CustomAxolotlEntity.PrideAxolotlEntity>> {
-    private static final Map<AxolotlEntity.Variant , Identifier> TEXTURES = new HashMap<>();
+    private static final Map<AxolotlEntity.Variant, Identifier> TEXTURES = new HashMap<>();
 
     static {
         TEXTURES.put(AxolotlEntity.Variant.BLUE, new Identifier(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_blue.png"));

@@ -167,6 +167,7 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, new Identifier(JoyMod.MOD_ID, name), block);
 
     }
+
     private static Item registerBlockItem(String name, Block block) {
 
         return Registry.register(Registries.ITEM, new Identifier(JoyMod.MOD_ID, name),

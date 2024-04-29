@@ -17,22 +17,37 @@ public class JoyMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        // LOGGER.info("Thanks for using JoyMod! Gaying your minecraft...");
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModEntities.registerBlockEntities();
+        registerEntityAttributes();
+    }
 
-        FabricDefaultAttributeRegistry.register(ModEntities.THIGH_HIGH_FOX, MobEntity.createMobAttributes());
-        FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_BII, MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0).add(EntityAttributes.GENERIC_FLYING_SPEED, 0.23F));
-        FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_AXOLOTL, MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0));
-        FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_FROG, MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0));
+    private void registerEntityAttributes() {
+        FabricDefaultAttributeRegistry.register(ModEntities.THIGH_HIGH_FOX, MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 32.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3));
+
+        FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_BII, MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
+                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
+
+        FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_AXOLOTL, MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0));
+
+        FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_FROG, MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0));
+
         FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_SLIME, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2D)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1.0D));
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3));
 
         FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_SNIFFER, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0));
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.1));
     }
 }

@@ -34,46 +34,55 @@ public class ModEntities {
                     ModBlocks.GAY_BED,
                     ModBlocks.INTERSEX_BED,
                     ModBlocks.AROACE_BED
-
-
             ).build()
     );
 
     public static final EntityType<CustomFoxEntity.ThighHighFoxEntity> THIGH_HIGH_FOX = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(JoyMod.MOD_ID, "thigh_high_fox"),
-            FabricEntityTypeBuilder.create(EntityType.FOX.getSpawnGroup(), CustomFoxEntity.ThighHighFoxEntity::new).dimensions(EntityDimensions.fixed(0.6f, 0.7f)).build()
+            FabricEntityTypeBuilder.create(EntityType.FOX.getSpawnGroup(), CustomFoxEntity.ThighHighFoxEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.6f, 0.7f))
+                    .trackRangeBlocks(8).build()
     );
 
     public static final EntityType<CustomBeeEntity.PrideBiiEntity> PRIDE_BII = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(JoyMod.MOD_ID, "pride_bii"),
-            FabricEntityTypeBuilder.create(EntityType.BEE.getSpawnGroup(), CustomBeeEntity.PrideBiiEntity::new).dimensions(EntityDimensions.fixed(0.6f, 0.7f)).build()
+            FabricEntityTypeBuilder.create(EntityType.BEE.getSpawnGroup(), CustomBeeEntity.PrideBiiEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.7f, 0.6f))
+                    .trackRangeBlocks(8).build()
     );
 
     public static final EntityType<CustomAxolotlEntity.PrideAxolotlEntity> PRIDE_AXOLOTL = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(JoyMod.MOD_ID, "pride_axolotl"),
-            FabricEntityTypeBuilder.create(EntityType.AXOLOTL.getSpawnGroup(), CustomAxolotlEntity.PrideAxolotlEntity::new).dimensions(EntityDimensions.fixed(0.6f, 0.7f)).build()
+            FabricEntityTypeBuilder.create(EntityType.AXOLOTL.getSpawnGroup(), CustomAxolotlEntity.PrideAxolotlEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.75F, 0.42F))
+                    .trackRangeBlocks(10).build()
     );
 
     public static final EntityType<CustomFrogEntity.PrideFrogEntity> PRIDE_FROG = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(JoyMod.MOD_ID, "pride_frog"),
-            FabricEntityTypeBuilder.create(EntityType.FROG.getSpawnGroup(), CustomFrogEntity.PrideFrogEntity::new).dimensions(EntityDimensions.fixed(0.6f, 0.7f)).build()
+            FabricEntityTypeBuilder.create(EntityType.FROG.getSpawnGroup(), CustomFrogEntity.PrideFrogEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.5F, 0.5f))
+                    .trackRangeBlocks(10).build()
     );
 
     public static final EntityType<CustomSlimeEntity.PrideSlimeEntity> PRIDE_SLIME = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(JoyMod.MOD_ID, "pride_slime"),
             FabricEntityTypeBuilder.create(EntityType.SLIME.getSpawnGroup(), CustomSlimeEntity.PrideSlimeEntity::new)
-                    .dimensions(EntityDimensions.fixed(2.04F, 2.04F)).trackRangeBlocks(10).build()
+                    .dimensions(EntityDimensions.changing(2.04F, 2.04F))
+                    .trackRangeBlocks(10).build()
     );
 
     public static final EntityType<CustomSnifferEntity.PrideSnifferEntity> PRIDE_SNIFFER = Registry.register(
             Registries.ENTITY_TYPE,
             new Identifier(JoyMod.MOD_ID, "pride_sniffer"),
-            FabricEntityTypeBuilder.create(EntityType.SNIFFER.getSpawnGroup(), CustomSnifferEntity.PrideSnifferEntity::new).dimensions(EntityDimensions.fixed(0.6f, 0.7f)).build()
+            FabricEntityTypeBuilder.create(EntityType.SNIFFER.getSpawnGroup(), CustomSnifferEntity.PrideSnifferEntity::new)
+                    .dimensions(EntityDimensions.fixed(1.9F, 1.75F))
+                    .trackRangeBlocks(10).build()
     );
 
     public static void registerBlockEntities() {
