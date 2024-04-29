@@ -4,6 +4,7 @@ import gay.pridecraft.joymod.entity.ModEntities;
 import gay.pridecraft.joymod.block.ModBlocks;
 import gay.pridecraft.joymod.item.ModItemGroups;
 import gay.pridecraft.joymod.item.ModItems;
+import gay.pridecraft.joymod.painting.ModPaintings;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -21,6 +22,7 @@ public class JoyMod implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModEntities.registerBlockEntities();
+        ModPaintings.registerPaintings();
         registerEntityAttributes();
     }
 
