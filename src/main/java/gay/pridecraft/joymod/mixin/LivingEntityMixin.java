@@ -33,10 +33,10 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
     public void useCustomTotem(DamageSource damageSource, CallbackInfoReturnable<Boolean> callback) {
-        LivingEntityMixin entity = this;
+        Entity entity = this;
 
-        ItemStack offhandStack = entity.getStackInHand(Hand.OFF_HAND);
-        ItemStack mainhandStack = entity.getStackInHand(Hand.MAIN_HAND);
+        ItemStack offhandStack = ((LivingEntityMixin) entity).getStackInHand(Hand.OFF_HAND);
+        ItemStack mainhandStack = ((LivingEntityMixin) entity).getStackInHand(Hand.MAIN_HAND);
 
         if (offhandStack.isOf(ModItems.TOTEM_OF_PRIDE) || mainhandStack.isOf(ModItems.TOTEM_OF_PRIDE)) {
                 if (offhandStack.isOf(ModItems.TOTEM_OF_PRIDE)) {
@@ -47,12 +47,13 @@ public abstract class LivingEntityMixin extends Entity {
 
                 this.setHealth(1.0F);
                 this.clearStatusEffects();
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 125, 2));
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 350, 4));
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 100, 2));
-                this.getWorld().sendEntityStatus(entity, (byte) 35);
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 45 * 20, 1));
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 40 * 20, 0));
+                this.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 5 * 20, 1));
 
-                callback.setReturnValue(true);
+                this.getWorld().sendEntityStatus(entity, (byte) 36);
+
+            callback.setReturnValue(true);
         }
     }
 }

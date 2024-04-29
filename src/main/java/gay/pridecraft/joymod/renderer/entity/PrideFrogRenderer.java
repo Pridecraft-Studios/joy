@@ -12,9 +12,9 @@ import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class PrideFrogRenderer extends MobEntityRenderer<CustomFrogEntity.PrideFrogEntity, PrideFrogEntityModel<CustomFrogEntity.PrideFrogEntity>> {
-    private static final Identifier TEMPERATE_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/frog/temperate_frog.png");
-    private static final Identifier WARM_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/frog/warm_frog.png");
-    private static final Identifier COLD_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/frog/cold_frog.png");
+    private static final Identifier TEMPERATE_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/frog/pride_temperate_frog.png");
+    private static final Identifier WARM_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/frog/pride_warm_frog.png");
+    private static final Identifier COLD_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/frog/pride_cold_frog.png");
 
     public PrideFrogRenderer(EntityRendererFactory.Context context) {
         super(context, new PrideFrogEntityModel<>(context.getPart(EntityModelLayers.FROG)), 0.3F);

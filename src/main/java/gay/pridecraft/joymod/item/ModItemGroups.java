@@ -15,7 +15,7 @@ public class ModItemGroups {
     public static final ItemGroup JOYMOD_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(JoyMod.MOD_ID, "joymod"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.joymod_group"))
-                    .icon(() -> new ItemStack(ModBlocks.GAY_BED)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.PRIDE_BRUSH)).entries((displayContext, entries) -> {
 
                         entries.add(ModBlocks.GAY_BED);
                         entries.add(ModBlocks.ENBY_BED);

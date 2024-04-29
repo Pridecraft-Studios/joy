@@ -1,4 +1,4 @@
-// 1.20.4	2024-04-29T14:58:41.4574672	JoyMod/Model Definitions
+// 1.20.4	2024-04-29T19:51:59.802003	JoyMod/Model Definitions
 4dd6434ec1ac811113197632eb04c55cc19c6833 assets\joymod\models\item\bigender_candle.json
 74845f73cdcbc1f88b2258acc458af8b1da1f19c assets\joymod\models\item\gender_fluid_candle_cake.json
 c90617289caecc5b637d2ced05b24791b6a664ad assets\joymod\models\block\mlm_candle_two_candles.json
@@ -191,9 +191,9 @@ f1de6696858b1b0dac2c7b053363a66cf6e8ba14 assets\joymod\models\block\progress_can
 80b846496b132e036f542da01b9aa3d0560c9cac assets\joymod\models\block\gender_fluid_candle_two_candles_lit.json
 da4d7390d3d5dc11e9bb5dc2a63c8180aa5a9920 assets\joymod\models\block\trans_candle_one_candle.json
 c76e66bad32f48d065d53f6569d8cd4fbf6833a7 assets\joymod\models\block\bisexual_candle_four_candles_lit.json
-7f497a1c76d34fada5a73b6f8f6dee71b305bde1 assets\joymod\models\block\pan_candle_three_candles_lit.json
 daeeb94b70483d72811c6fb5bf148f425749431d assets\joymod\models\block\progress_candle_one_candle_lit.json
 42789bce7e3c35ccc8f6b2104bb12a40f3c734e2 assets\joymod\models\block\aroace_candle_cake_lit.json
+7f497a1c76d34fada5a73b6f8f6dee71b305bde1 assets\joymod\models\block\pan_candle_three_candles_lit.json
 d3d40864c36e76daa49c2cb2bd2befb074595f68 assets\joymod\models\block\pan_candle_four_candles.json
 0ab67a490cde483ee1c2f1a6c9ea462f9da0e751 assets\joymod\models\block\mlm_candle_one_candle_lit.json
 783018a4960f15829ac8c88972f15e755ed0fc49 assets\joymod\models\item\aplatonic_candle_cake.json

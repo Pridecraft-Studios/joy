@@ -2,11 +2,13 @@ package gay.pridecraft.joymod;
 
 import gay.pridecraft.joymod.entity.ModEntities;
 import gay.pridecraft.joymod.block.ModBlocks;
-import gay.pridecraft.joymod.renderer.*;
+import gay.pridecraft.joymod.particle.ModParticles;
+import gay.pridecraft.joymod.particle.TotemOfPrideParticle;
 import gay.pridecraft.joymod.renderer.entity.*;
 import gay.pridecraft.joymod.renderer.feature.CustomElytraFeatureRenderer;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
 import net.minecraft.client.render.RenderLayer;
@@ -16,7 +18,7 @@ import net.minecraft.util.Identifier;
 public class JoyModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        BlockEntityRendererFactories.register(ModEntities.CUSTOM_BED_BLOCK_ENTITY, CustomBedBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(ModEntities.CUSTOM_BED_BLOCK_ENTITY, CustomBedBlockRenderer::new);
 
         registerBedBlockRenderLayers();
         registerEntityRenderers();
@@ -25,6 +27,8 @@ public class JoyModClient implements ClientModInitializer {
             Identifier elytra = new Identifier("minecraft:textures/entity/elytra.png");
             registrationHelper.register(new CustomElytraFeatureRenderer<>(entityRenderer, context.getModelLoader(), elytra));
         });
+
+        ParticleFactoryRegistry.getInstance().register(ModParticles.TOTEM_OF_PRIDE_PARTICLE, TotemOfPrideParticle.Factory::new);
     }
 
     private static void registerBedBlockRenderLayers() {

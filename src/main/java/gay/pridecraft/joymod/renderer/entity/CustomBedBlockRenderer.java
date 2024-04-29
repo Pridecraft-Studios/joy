@@ -1,4 +1,4 @@
-package gay.pridecraft.joymod.renderer;
+package gay.pridecraft.joymod.renderer.entity;
 
 
 import gay.pridecraft.joymod.entity.ModEntities;
@@ -26,11 +26,11 @@ import net.minecraft.util.math.RotationAxis;
 import net.minecraft.world.World;
 
 @Environment(EnvType.CLIENT)
-public class CustomBedBlockEntityRenderer implements BlockEntityRenderer<CustomBedBlockEntity> {
+public class CustomBedBlockRenderer implements BlockEntityRenderer<CustomBedBlockEntity> {
     private final ModelPart bedHead;
     private final ModelPart bedFoot;
 
-    public CustomBedBlockEntityRenderer(BlockEntityRendererFactory.Context ctx) {
+    public CustomBedBlockRenderer(BlockEntityRendererFactory.Context ctx) {
         this.bedHead = ctx.getLayerModelPart(EntityModelLayers.BED_HEAD);
         this.bedFoot = ctx.getLayerModelPart(EntityModelLayers.BED_FOOT);
     }
