@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_candle",
+  "textures": {
+    "all": "joymod:block/agender_candle",
+    "particle": "joymod:block/agender_candle"
+  }
+}

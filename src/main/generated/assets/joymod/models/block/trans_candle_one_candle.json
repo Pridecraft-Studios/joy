@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_candle",
+  "textures": {
+    "all": "joymod:block/trans_candle",
+    "particle": "joymod:block/trans_candle"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "joymod:block/aroace_candle_cake"
+    },
+    "lit=true": {
+      "model": "joymod:block/aroace_candle_cake_lit"
+    }
+  }
+}

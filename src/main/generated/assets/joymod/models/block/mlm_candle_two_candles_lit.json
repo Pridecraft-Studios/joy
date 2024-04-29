@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_two_candles",
+  "textures": {
+    "all": "joymod:block/mlm_candle_lit",
+    "particle": "joymod:block/mlm_candle_lit"
+  }
+}
