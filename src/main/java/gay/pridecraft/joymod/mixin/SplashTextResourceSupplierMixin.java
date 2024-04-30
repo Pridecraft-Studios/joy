@@ -15,7 +15,7 @@ import java.util.List;
 @Mixin(SplashTextResourceSupplier.class)
 public class SplashTextResourceSupplierMixin {
     @Unique
-    private static final List<String> AUTHORS = List.of("Blurryface", "Wolren", "UnlikePaladin");
+    private static final List<String> AUTHORS = List.of("Wolren", "Blurryface", "Sake", "Ampflower", "Pridecraft Studios", "UnlikePaladin"); //Honestly Wolren should be first as they did... literally all the mod apart from textures
 
     @Inject(method = "prepare*", at = @At("RETURN"), cancellable = true)
     private void onPrepare(ResourceManager resourceManager, Profiler profiler, CallbackInfoReturnable<List<String>> cir) {
@@ -29,4 +29,4 @@ public class SplashTextResourceSupplierMixin {
     }
 }
 
-
+//Thanks for helping us so much Wolren, we couldn't have made any of this without you.
