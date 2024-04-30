@@ -9,7 +9,7 @@
     "homepage": "https://pridecraft.gay/",
     "sources": "https://git.pridecraft.gay/PrideMod"
   },
-  "license": "unlicense",
+  "license": "None yet! I guess this means ARR",
   "icon": "assets/joymod/icon.png",
   "environment": "*",
   "entrypoints": {
