@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "joymod:block/gender_fluid_candle_cake"
+    },
+    "lit=true": {
+      "model": "joymod:block/gender_fluid_candle_cake_lit"
+    }
+  }
+}
