@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/template_bed",
+  "textures": {
+    "layer0": "joymod:block/ace_bed",
+    "particle": "minecraft:block/oak_planks"
+  }
+}

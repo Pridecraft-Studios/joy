@@ -1,11 +1,12 @@
 package gay.pridecraft.joymod.mixin;
 
+import gay.pridecraft.joymod.JoyMod;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.resource.SplashTextResourceSupplier;
 import org.spongepowered.asm.mixin.Mixin;
 
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.profiler.Profiler;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -14,19 +15,25 @@ import java.util.List;
 
 @Mixin(SplashTextResourceSupplier.class)
 public class SplashTextResourceSupplierMixin {
-    @Unique
-    private static final List<String> AUTHORS = List.of("Wolren", "Blurryface", "Sake", "Ampflower", "Pridecraft Studios", "UnlikePaladin"); //Honestly Wolren should be first as they did... literally all the mod apart from textures
-
     @Inject(method = "prepare*", at = @At("RETURN"), cancellable = true)
     private void onPrepare(ResourceManager resourceManager, Profiler profiler, CallbackInfoReturnable<List<String>> cir) {
         List<String> splashes = cir.getReturnValue();
 
-        for (String author : AUTHORS) {
-            splashes.add("Made by " + author + "!");
-        }
+        FabricLoader
+                .getInstance()
+                .getModContainer(JoyMod.MOD_ID)
+                .ifPresent(modContainer ->
+                        modContainer
+                                .getMetadata()
+                                .getAuthors()
+                                .forEach(author ->
+                                        splashes.add("Made by " + author.getName() + "!")
+                                )
+                );
 
         cir.setReturnValue(splashes);
     }
 }
 
 //Thanks for helping us so much Wolren, we couldn't have made any of this without you.
+// Answer: Thanks, hope more people will be interested in working on it once we get the first release ;)

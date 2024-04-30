@@ -20,16 +20,15 @@ public class ModItems {
             new Item(new FabricItemSettings().maxCount(1)));
     public static final Item PRIDE_BRUSH = registerItem("pride_brush", new BrushItem(new FabricItemSettings()));
     public static final Item PRIDE_SLIME_BALL = registerItem("pride_slime_ball", new Item(new FabricItemSettings()));
-    public static final Item THIGH_HIGH_FOX_SPAWN_EGG = registerItem("thigh_high_fox_spawn_egg", new RainbowSpawnEggItem(ModEntities.THIGH_HIGH_FOX, 0xFFFFFF, 0xFF69B4, new FabricItemSettings()));
-    public static final Item PRIDE_BII_SPAWN_EGG = registerItem("pride_bii_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_BII, 0xFFFFFF, 0xFF69B4, new FabricItemSettings()));
-    public static final Item PRIDE_AXOLOTL_SPAWN_EGG = registerItem("pride_axolotl_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_AXOLOTL, 0xFFFFFF, 0xFF69B4, new FabricItemSettings()));
-    public static final Item PRIDE_FROG_SPAWN_EGG = registerItem("pride_frog_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_FROG, 0xFFFFFF, 0xFF69B4, new FabricItemSettings()));
-    public static final Item PRIDE_SLIME_SPAWN_EGG = registerItem("pride_slime_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_SLIME, 0xFFFFFF, 0xFF69B4, new FabricItemSettings()));
-    public static final Item PRIDE_SNIFFER_SPAWN_EGG = registerItem("pride_sniffer_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_SNIFFER, 0xFFFFFF, 0xFF69B4, new FabricItemSettings()));
+    public static final Item THIGH_HIGH_FOX_SPAWN_EGG = registerItem("thigh_high_fox_spawn_egg", new RainbowSpawnEggItem(ModEntities.THIGH_HIGH_FOX, 14005919, 0xff80bf, new FabricItemSettings()));
+    public static final Item PRIDE_BII_SPAWN_EGG = registerItem("pride_bii_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_BII, 15582019, 0xFF69B4, new FabricItemSettings()));
+    public static final Item PRIDE_AXOLOTL_SPAWN_EGG = registerItem("pride_axolotl_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_AXOLOTL, 16499171, 0xff80bf, new FabricItemSettings()));
+    public static final Item PRIDE_FROG_SPAWN_EGG = registerItem("pride_frog_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_FROG, 13661252, 0xff80bf, new FabricItemSettings()));
+    public static final Item PRIDE_SLIME_SPAWN_EGG = registerItem("pride_slime_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_SLIME, 5349438, 0xff80bf, new FabricItemSettings()));
+    public static final Item PRIDE_SNIFFER_SPAWN_EGG = registerItem("pride_sniffer_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_SNIFFER, 8855049, 0xff80bf, new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(JoyMod.MOD_ID, name), item);
-
     }
 
     public static void registerModItems() {
