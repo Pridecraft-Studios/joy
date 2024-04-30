@@ -7,6 +7,8 @@ import gay.pridecraft.joymod.particle.TotemOfPrideParticle;
 import gay.pridecraft.joymod.renderer.entity.*;
 import gay.pridecraft.joymod.renderer.feature.CustomElytraFeatureRenderer;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
@@ -15,6 +17,7 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.util.Identifier;
 
+@Environment(EnvType.CLIENT)
 public class JoyModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {

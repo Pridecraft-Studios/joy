@@ -6,9 +6,7 @@ import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.client.particle.AnimatedParticle;
-import net.minecraft.client.particle.ParticleTextureSheet;
 import net.minecraft.client.particle.SpriteProvider;
-import net.minecraft.util.math.random.Random;
 
 import java.util.Arrays;
 import java.util.List;

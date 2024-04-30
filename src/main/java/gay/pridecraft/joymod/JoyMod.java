@@ -1,7 +1,10 @@
 package gay.pridecraft.joymod;
 
+import eu.midnightdust.lib.config.MidnightConfig;
+import gay.pridecraft.joymod.config.Config;
 import gay.pridecraft.joymod.entity.ModEntities;
 import gay.pridecraft.joymod.block.ModBlocks;
+import gay.pridecraft.joymod.entity.spawn.SpawnModifier;
 import gay.pridecraft.joymod.item.ModItemGroups;
 import gay.pridecraft.joymod.item.ModItems;
 import gay.pridecraft.joymod.painting.ModPaintings;
@@ -25,6 +28,12 @@ public class JoyMod implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModEntities.registerBlockEntities();
         ModPaintings.registerPaintings();
+
+        if (Config.mobSpawning) {
+            SpawnModifier.modifySpawning();
+        }
+
+        MidnightConfig.init(JoyMod.MOD_ID, Config.class);
 
         registerEntityAttributes();
     }
