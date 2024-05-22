@@ -1,7 +1,7 @@
 package gay.pridecraft.joymod;
 
-import gay.pridecraft.joymod.entity.ModEntities;
 import gay.pridecraft.joymod.block.ModBlocks;
+import gay.pridecraft.joymod.entity.ModEntities;
 import gay.pridecraft.joymod.particle.ModParticles;
 import gay.pridecraft.joymod.particle.TotemOfPrideParticle;
 import gay.pridecraft.joymod.renderer.entity.*;
@@ -13,7 +13,6 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.util.Identifier;
