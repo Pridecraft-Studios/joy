@@ -1,0 +1,10 @@
+{
+  "music.ambient": {
+    "sounds": [
+      {
+        "name": "joymod:joy",
+        "stream": true
+      }
+    ]
+  }
+}
