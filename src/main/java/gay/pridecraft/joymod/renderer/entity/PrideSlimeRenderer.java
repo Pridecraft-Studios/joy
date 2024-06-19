@@ -16,7 +16,7 @@ import net.minecraft.util.math.MathHelper;
 
 @Environment(EnvType.CLIENT)
 public class PrideSlimeRenderer extends MobEntityRenderer<CustomSlimeEntity.PrideSlimeEntity, PrideSlimeEntityModel<CustomSlimeEntity.PrideSlimeEntity>> {
-    private static final Identifier TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/slime/pride_slime.png");
+    private static final Identifier TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/slime/pride_slime.png");
 
     public PrideSlimeRenderer(EntityRendererFactory.Context context) {
         super(context, new PrideSlimeEntityModel<>(context.getPart(EntityModelLayers.SLIME)), 0.25F);

@@ -41,7 +41,7 @@ public class PrideSlimeOverlayFeatureRenderer<T extends LivingEntity> extends Fe
             this.getContextModel().copyStateTo(this.model);
             this.model.animateModel(livingEntity, f, g, h);
             this.model.setAngles(livingEntity, f, g, j, k, l);
-            this.model.render(matrixStack, vertexConsumer, i, LivingEntityRenderer.getOverlay(livingEntity, 0.0F), 1.0F, 1.0F, 1.0F, 1.0F);
+            this.model.render(matrixStack, vertexConsumer, i, LivingEntityRenderer.getOverlay(livingEntity, 0.0F));
         }
     }
 }

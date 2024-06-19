@@ -17,20 +17,20 @@ import net.minecraft.util.math.RotationAxis;
 
 @Environment(EnvType.CLIENT)
 public class ThighHighFoxRenderer extends MobEntityRenderer<CustomFoxEntity.ThighHighFoxEntity, ThighHighFoxEntityModel<CustomFoxEntity.ThighHighFoxEntity>> {
-    private static final Identifier TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/fox/thigh_high_fox.png");
-    private static final Identifier SLEEPING_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/fox/thigh_high_fox_sleep.png");
-    private static final Identifier SNOW_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/fox/thigh_high_snow_fox.png");
-    private static final Identifier SLEEPING_SNOW_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/fox/thigh_high_snow_fox_sleep.png");
+    private static final Identifier TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/fox/thigh_high_fox.png");
+    private static final Identifier SLEEPING_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/fox/thigh_high_fox_sleep.png");
+    private static final Identifier SNOW_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/fox/thigh_high_snow_fox.png");
+    private static final Identifier SLEEPING_SNOW_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/fox/thigh_high_snow_fox_sleep.png");
 
     public ThighHighFoxRenderer(EntityRendererFactory.Context context) {
         super(context, new ThighHighFoxEntityModel<>(context.getPart(EntityModelLayers.FOX)), 0.4F);
         this.addFeature(new ThighHighFoxHeldItemFeatureRenderer(this, context.getHeldItemRenderer()));
     }
 
-    protected void setupTransforms(CustomFoxEntity.ThighHighFoxEntity thighHighFoxEntity, MatrixStack matrixStack, float f, float g, float h) {
-        super.setupTransforms(thighHighFoxEntity, matrixStack, f, g, h);
+    protected void setupTransforms(CustomFoxEntity.ThighHighFoxEntity thighHighFoxEntity, MatrixStack matrixStack, float animationProgress, float bodyYaw, float tickDelta, float scale) {
+        super.setupTransforms(thighHighFoxEntity, matrixStack, animationProgress, bodyYaw, tickDelta, scale);
         if (thighHighFoxEntity.isChasing() || thighHighFoxEntity.isWalking()) {
-            float i = -MathHelper.lerp(h, thighHighFoxEntity.prevPitch, thighHighFoxEntity.getPitch());
+            float i = -MathHelper.lerp(tickDelta, thighHighFoxEntity.prevPitch, thighHighFoxEntity.getPitch());
             matrixStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(i));
         }
     }

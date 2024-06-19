@@ -27,11 +27,11 @@ public class JoyModClient implements ClientModInitializer {
         registerEntityRenderers();
 
         LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
-            Identifier elytra = new Identifier("minecraft:textures/entity/elytra.png");
+            Identifier elytra = Identifier.ofVanilla("textures/entity/elytra.png");
             registrationHelper.register(new CustomElytraFeatureRenderer<>(entityRenderer, context.getModelLoader(), elytra));
         });
 
-        ParticleFactoryRegistry.getInstance().register(ModParticles.TOTEM_OF_PRIDE_PARTICLE, TotemOfPrideParticle.Factory::new);
+        // ParticleFactoryRegistry.getInstance().register(ModParticles.TOTEM_OF_PRIDE_PARTICLE, TotemOfPrideParticle.Factory::new);
     }
 
     private static void registerBedBlockRenderLayers() {

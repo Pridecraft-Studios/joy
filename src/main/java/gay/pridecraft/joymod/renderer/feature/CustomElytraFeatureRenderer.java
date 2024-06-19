@@ -36,7 +36,7 @@ public class CustomElytraFeatureRenderer<T extends LivingEntity, M extends Entit
         super(context);
         this.defaultElytraTexture = defaultElytraTexture;
         this.elytraTextures = new HashMap<>();
-        this.elytraTextures.put(ModItems.PRIDE_ELYTRA, new Identifier(JoyMod.MOD_ID + ":textures/entity/pride_elytra.png"));
+        this.elytraTextures.put(ModItems.PRIDE_ELYTRA, Identifier.of(JoyMod.MOD_ID + ":textures/entity/pride_elytra.png"));
 
         this.elytra = new ElytraEntityModel<>(loader.getModelPart(EntityModelLayers.ELYTRA));
     }
@@ -53,9 +53,9 @@ public class CustomElytraFeatureRenderer<T extends LivingEntity, M extends Entit
             this.getContextModel().copyStateTo(this.elytra);
             this.elytra.setAngles(livingEntity, f, g, j, k, l);
             VertexConsumer vertexConsumer = ItemRenderer.getArmorGlintConsumer(
-                    vertexConsumerProvider, RenderLayer.getArmorCutoutNoCull(elytraTexture), false, itemStack.hasGlint()
+                    vertexConsumerProvider, RenderLayer.getArmorCutoutNoCull(elytraTexture), false
             );
-            this.elytra.render(matrixStack, vertexConsumer, i, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+            this.elytra.render(matrixStack, vertexConsumer, i, OverlayTexture.DEFAULT_UV);
             matrixStack.pop();
         }
     }

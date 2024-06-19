@@ -40,11 +40,11 @@ public class BedTextureProvider {
         }
     }
 
-    public static final Identifier BEDS_ATLAS_TEXTURE = new Identifier("textures/atlas/beds.png");
+    public static final Identifier BEDS_ATLAS_TEXTURE = Identifier.of("textures/atlas/beds.png");
 
     public static final SpriteIdentifier[] BED_TEXTURES = BEDS.stream()
             .map(bedBlock -> {
-                Identifier bedTextureId = new Identifier(JoyMod.MOD_ID, "entity/bed/" + extractBedName(bedBlock.getTranslationKey()));
+                Identifier bedTextureId = Identifier.of(JoyMod.MOD_ID, "entity/bed/" + extractBedName(bedBlock.getTranslationKey()));
                 return new SpriteIdentifier(BEDS_ATLAS_TEXTURE, bedTextureId);
             })
             .toArray(SpriteIdentifier[]::new);

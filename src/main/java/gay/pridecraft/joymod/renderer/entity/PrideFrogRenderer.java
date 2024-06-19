@@ -12,9 +12,9 @@ import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class PrideFrogRenderer extends MobEntityRenderer<CustomFrogEntity.PrideFrogEntity, PrideFrogEntityModel<CustomFrogEntity.PrideFrogEntity>> {
-    private static final Identifier TEMPERATE_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/frog/pride_temperate_frog.png");
-    private static final Identifier WARM_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/frog/pride_warm_frog.png");
-    private static final Identifier COLD_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/frog/pride_cold_frog.png");
+    private static final Identifier TEMPERATE_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/frog/pride_temperate_frog.png");
+    private static final Identifier WARM_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/frog/pride_warm_frog.png");
+    private static final Identifier COLD_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/frog/pride_cold_frog.png");
 
     public PrideFrogRenderer(EntityRendererFactory.Context context) {
         super(context, new PrideFrogEntityModel<>(context.getPart(EntityModelLayers.FROG)), 0.3F);
@@ -22,13 +22,12 @@ public class PrideFrogRenderer extends MobEntityRenderer<CustomFrogEntity.PrideF
 
     @Override
     public Identifier getTexture(CustomFrogEntity.PrideFrogEntity entity) {
-        String fullTexturePath = entity.getVariant().texture().toString().toLowerCase();
-        String variant = fullTexturePath.substring(fullTexturePath.lastIndexOf("/") + 1);
-        variant = variant.substring(0, variant.lastIndexOf("."));
+        if (entity.getVariant().getKey().isEmpty())
+            return TEMPERATE_TEXTURE;
 
-        return switch (variant) {
-            case "warm_frog" -> WARM_TEXTURE;
-            case "cold_frog" -> COLD_TEXTURE;
+        return switch (entity.getVariant().getKey().get().getValue().getPath()) {
+            case "warm" -> WARM_TEXTURE;
+            case "cold" -> COLD_TEXTURE;
             default -> TEMPERATE_TEXTURE;
         };
     }

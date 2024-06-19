@@ -12,10 +12,10 @@ import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class PrideBiiRenderer extends MobEntityRenderer<CustomBeeEntity.PrideBiiEntity, PrideBiiEntityModel<CustomBeeEntity.PrideBiiEntity>> {
-    private static final Identifier ANGRY_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/bee/pride_bii_angry.png");
-    private static final Identifier ANGRY_NECTAR_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/bee/pride_bii_angry_nectar.png");
-    private static final Identifier PASSIVE_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/bee/pride_bii.png");
-    private static final Identifier NECTAR_TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/bee/pride_bii_nectar.png");
+    private static final Identifier ANGRY_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/bee/pride_bii_angry.png");
+    private static final Identifier ANGRY_NECTAR_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/bee/pride_bii_angry_nectar.png");
+    private static final Identifier PASSIVE_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/bee/pride_bii.png");
+    private static final Identifier NECTAR_TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/bee/pride_bii_nectar.png");
 
     public PrideBiiRenderer(EntityRendererFactory.Context context) {
         super(context, new PrideBiiEntityModel<>(context.getPart(EntityModelLayers.BEE)), 0.4F);

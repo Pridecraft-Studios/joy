@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
 public class PrideSnifferRenderer extends MobEntityRenderer<CustomSnifferEntity.PrideSnifferEntity, PrideSnifferEntityModel<CustomSnifferEntity.PrideSnifferEntity>> {
-    private static final Identifier TEXTURE = new Identifier(JoyMod.MOD_ID, "textures/entity/sniffer/pride_sniffer.png");
+    private static final Identifier TEXTURE = Identifier.of(JoyMod.MOD_ID, "textures/entity/sniffer/pride_sniffer.png");
 
     public PrideSnifferRenderer(EntityRendererFactory.Context context) {
         super(context, new PrideSnifferEntityModel<>(context.getPart(EntityModelLayers.SNIFFER)), 1.1F);

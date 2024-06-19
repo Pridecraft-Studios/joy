@@ -7,7 +7,6 @@ import gay.pridecraft.joymod.entity.ModEntities;
 import gay.pridecraft.joymod.entity.spawn.SpawnModifier;
 import gay.pridecraft.joymod.item.ModItemGroups;
 import gay.pridecraft.joymod.item.ModItems;
-import gay.pridecraft.joymod.painting.ModPaintings;
 import gay.pridecraft.joymod.particle.ModParticles;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
@@ -16,8 +15,7 @@ import net.minecraft.client.sound.PositionedSoundInstance;
 import net.minecraft.client.sound.SoundInstance;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.registry.*;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -28,7 +26,7 @@ import java.util.Random;
 public class JoyMod implements ModInitializer {
     public static final String MOD_ID = "joymod";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    public static final Identifier MUSIC_GAME = new Identifier(MOD_ID, "music.ambient");
+    public static final Identifier MUSIC_GAME = Identifier.of(MOD_ID, "music.ambient");
     public static SoundEvent MUSIC_GAME_EVENT = SoundEvent.of(MUSIC_GAME);
     private int tickCounter = 0;
     private final Random random = new Random();
@@ -40,7 +38,9 @@ public class JoyMod implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModEntities.registerBlockEntities();
-        ModPaintings.registerPaintings();
+
+        // TODO: fix
+        // ModPaintings.registerPaintings();
 
         if (Config.mobSpawning) {
             SpawnModifier.modifySpawning();

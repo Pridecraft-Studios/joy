@@ -4,9 +4,10 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
-import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.client.particle.AnimatedParticle;
 import net.minecraft.client.particle.SpriteProvider;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.SimpleParticleType;
 
 import java.util.Arrays;
 import java.util.List;
@@ -52,7 +53,7 @@ public class TotemOfPrideParticle extends AnimatedParticle {
     }
 
     @Environment(EnvType.CLIENT)
-    public static class Factory implements ParticleFactory<DefaultParticleType> {
+    public static class Factory implements ParticleFactory<SimpleParticleType> {
         private static int colorCounter = 0;
         private final SpriteProvider spriteProvider;
 
@@ -61,7 +62,7 @@ public class TotemOfPrideParticle extends AnimatedParticle {
         }
 
         public Particle createParticle(
-                DefaultParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i
+            SimpleParticleType defaultParticleType, ClientWorld clientWorld, double d, double e, double f, double g, double h, double i
         ) {
             int colorIndex = colorCounter % LGBT_COLORS.size();
             colorCounter++;

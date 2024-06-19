@@ -7,6 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModPaintings {
+    /* TODO: Properly update to 1.21
     public static final PaintingVariant ACE = registerPainting("ace", new PaintingVariant(32, 16));
     public static final PaintingVariant AGENDER = registerPainting("agender", new PaintingVariant(16, 16));
     public static final PaintingVariant ARO = registerPainting("aro", new PaintingVariant(32, 16));
@@ -25,10 +26,11 @@ public class ModPaintings {
     public static final PaintingVariant TRANS = registerPainting("trans", new PaintingVariant(32, 32));
 
     private static PaintingVariant registerPainting(String name, PaintingVariant paintingVariant) {
-        return Registry.register(Registries.PAINTING_VARIANT, new Identifier(JoyMod.MOD_ID, name), paintingVariant);
+        return Registry.register(Registries.PAINTING_VARIANT, Identifier.of(JoyMod.MOD_ID, name), paintingVariant);
     }
 
     public static void registerPaintings() {
         JoyMod.LOGGER.info("Registering Paintings for " + JoyMod.MOD_ID);
     }
+    */
 }

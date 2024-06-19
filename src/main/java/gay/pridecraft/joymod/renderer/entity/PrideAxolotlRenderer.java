@@ -19,11 +19,11 @@ public class PrideAxolotlRenderer extends MobEntityRenderer<CustomAxolotlEntity.
     private static final Map<AxolotlEntity.Variant, Identifier> TEXTURES = new HashMap<>();
 
     static {
-        TEXTURES.put(AxolotlEntity.Variant.BLUE, new Identifier(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_blue.png"));
-        TEXTURES.put(AxolotlEntity.Variant.GOLD, new Identifier(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_gold.png"));
-        TEXTURES.put(AxolotlEntity.Variant.CYAN, new Identifier(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_cyan.png"));
-        TEXTURES.put(AxolotlEntity.Variant.LUCY, new Identifier(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_lucy.png"));
-        TEXTURES.put(AxolotlEntity.Variant.WILD, new Identifier(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_wild.png"));
+        TEXTURES.put(AxolotlEntity.Variant.BLUE, Identifier.of(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_blue.png"));
+        TEXTURES.put(AxolotlEntity.Variant.GOLD, Identifier.of(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_gold.png"));
+        TEXTURES.put(AxolotlEntity.Variant.CYAN, Identifier.of(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_cyan.png"));
+        TEXTURES.put(AxolotlEntity.Variant.LUCY, Identifier.of(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_lucy.png"));
+        TEXTURES.put(AxolotlEntity.Variant.WILD, Identifier.of(JoyMod.MOD_ID, "textures/entity/axolotl/pride_axolotl_wild.png"));
     }
 
     public PrideAxolotlRenderer(EntityRendererFactory.Context context) {
