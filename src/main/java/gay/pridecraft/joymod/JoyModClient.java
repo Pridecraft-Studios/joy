@@ -31,7 +31,7 @@ public class JoyModClient implements ClientModInitializer {
             registrationHelper.register(new CustomElytraFeatureRenderer<>(entityRenderer, context.getModelLoader(), elytra));
         });
 
-        // ParticleFactoryRegistry.getInstance().register(ModParticles.TOTEM_OF_PRIDE_PARTICLE, TotemOfPrideParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ModParticles.TOTEM_OF_PRIDE_PARTICLE, TotemOfPrideParticle.Factory::new);
     }
 
     private static void registerBedBlockRenderLayers() {
