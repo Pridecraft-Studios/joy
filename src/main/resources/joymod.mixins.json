@@ -4,7 +4,8 @@
   "package": "gay.pridecraft.joymod.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "PaintingVariantsMixin"
   ],
   "client": [
     "ClientPlayNetworkHandlerMixin",

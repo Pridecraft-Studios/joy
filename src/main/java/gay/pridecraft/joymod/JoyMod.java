@@ -39,7 +39,7 @@ public class JoyMod implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModEntities.registerBlockEntities();
 
-        // TODO: fix
+        // this is now has to be done in a mixin.
         // ModPaintings.registerPaintings();
 
         if (Config.mobSpawning) {

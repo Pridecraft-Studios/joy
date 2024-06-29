@@ -1,36 +1,31 @@
 package gay.pridecraft.joymod.painting;
 
-import gay.pridecraft.joymod.JoyMod;
 import net.minecraft.entity.decoration.painting.PaintingVariant;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 
+import static gay.pridecraft.joymod.JoyMod.MOD_ID;
+
 public class ModPaintings {
-    /* TODO: Properly update to 1.21
-    public static final PaintingVariant ACE = registerPainting("ace", new PaintingVariant(32, 16));
-    public static final PaintingVariant AGENDER = registerPainting("agender", new PaintingVariant(16, 16));
-    public static final PaintingVariant ARO = registerPainting("aro", new PaintingVariant(32, 16));
-    public static final PaintingVariant AROACE = registerPainting("aroace", new PaintingVariant(64, 48));
-    public static final PaintingVariant BIGENDER = registerPainting("bigender", new PaintingVariant(16, 16));
-    public static final PaintingVariant BISEXUAL = registerPainting("bisexual", new PaintingVariant(32, 32));
-    public static final PaintingVariant ENBY = registerPainting("enby", new PaintingVariant(32, 32));
-    public static final PaintingVariant GAY = registerPainting("gay", new PaintingVariant(32, 32));
-    public static final PaintingVariant INTERSEX = registerPainting("intersex", new PaintingVariant(64, 64));
-    public static final PaintingVariant LESBIAN = registerPainting("lesbian", new PaintingVariant(64, 48));
-    public static final PaintingVariant MLM = registerPainting("mlm", new PaintingVariant(16, 16));
-    public static final PaintingVariant PAN = registerPainting("pan", new PaintingVariant(32, 32));
-    public static final PaintingVariant PROGRESS = registerPainting("progress", new PaintingVariant(64, 64));
-    public static final PaintingVariant QUEER = registerPainting("queer", new PaintingVariant(16, 16));
-    public static final PaintingVariant STRAIGHT_ALLY = registerPainting("straight_ally", new PaintingVariant(32, 32));
-    public static final PaintingVariant TRANS = registerPainting("trans", new PaintingVariant(32, 32));
+    public static final RegistryKey<PaintingVariant> ACE = of("ace");
+    public static final RegistryKey<PaintingVariant> AGENDER = of("agender");
+    public static final RegistryKey<PaintingVariant> ARO = of("aro");
+    public static final RegistryKey<PaintingVariant> AROACE = of("aroace");
+    public static final RegistryKey<PaintingVariant> BIGENDER = of("bigender");
+    public static final RegistryKey<PaintingVariant> BISEXUAL = of("bisexual");
+    public static final RegistryKey<PaintingVariant> ENBY = of("enby");
+    public static final RegistryKey<PaintingVariant> GAY = of("gay");
+    public static final RegistryKey<PaintingVariant> INTERSEX = of("intersex");
+    public static final RegistryKey<PaintingVariant> LESBIAN = of("lesbian");
+    public static final RegistryKey<PaintingVariant> MLM = of("mlm");
+    public static final RegistryKey<PaintingVariant> PAN = of("pan");
+    public static final RegistryKey<PaintingVariant> PROGRESS = of("progress");
+    public static final RegistryKey<PaintingVariant> QUEER = of("queer");
+    public static final RegistryKey<PaintingVariant> STRAIGHT_ALLY = of("straight_ally");
+    public static final RegistryKey<PaintingVariant> TRANS = of("trans");
 
-    private static PaintingVariant registerPainting(String name, PaintingVariant paintingVariant) {
-        return Registry.register(Registries.PAINTING_VARIANT, Identifier.of(JoyMod.MOD_ID, name), paintingVariant);
+    private static RegistryKey<PaintingVariant> of(String id) {
+        return RegistryKey.of(RegistryKeys.PAINTING_VARIANT, Identifier.of(MOD_ID, id));
     }
-
-    public static void registerPaintings() {
-        JoyMod.LOGGER.info("Registering Paintings for " + JoyMod.MOD_ID);
-    }
-    */
 }
