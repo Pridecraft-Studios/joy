@@ -1,8 +1,16 @@
 {
+  "music.menu": {
+    "sounds": [
+      {
+        "name": "music/menu/joy",
+        "stream": true
+      }
+    ]
+  },
   "music.ambient": {
     "sounds": [
       {
-        "name": "joymod:joy",
+        "name": "music/ambient/melancolie",
         "stream": true
       }
     ]
