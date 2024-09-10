@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "joymod",
   "version": "${version}",
-  "name": "JoyMod",
+  "name": "Joy",
   "description": "This is an LGBT pride-themed Fabric mod made by Pridecraft Studios.",
   "authors": [
     "Pridecraft Studios", "Wolren", "Blurryface", "Sake", "Ampflower", "UnlikePaladin"
