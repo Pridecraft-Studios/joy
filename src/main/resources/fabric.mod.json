@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "joymod",
+  "id": "joy",
   "version": "${version}",
   "name": "Joy",
   "description": "This is an LGBT pride-themed Fabric mod made by Pridecraft Studios.",
@@ -12,21 +12,21 @@
     "sources": "https://git.pridecraft.gay/PrideMod"
   },
   "license": "None yet! I guess this means ARR",
-  "icon": "assets/joymod/icon.png",
+  "icon": "assets/joy/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "gay.pridecraft.joymod.JoyModClient"
+      "gay.pridecraft.joy.JoyClient"
     ],
     "fabric-datagen": [
-      "gay.pridecraft.joymod.JoyModDataGenerator"
+      "gay.pridecraft.joy.JoyDataGenerator"
     ],
     "main": [
-      "gay.pridecraft.joymod.JoyMod"
+      "gay.pridecraft.joy.Joy"
     ]
   },
   "mixins": [
-    "joymod.mixins.json"
+    "joy.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.15.3",

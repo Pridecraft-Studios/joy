@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "joy:block/aplatonic_candle_cake"
+    },
+    "lit=true": {
+      "model": "joy:block/aplatonic_candle_cake_lit"
+    }
+  }
+}
