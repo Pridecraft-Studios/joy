@@ -15,6 +15,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerCandle(ModBlocks.QUEER_CANDLE, ModBlocks.QUEER_CANDLE_CAKE);
         blockStateModelGenerator.registerCandle(ModBlocks.GAY_CANDLE, ModBlocks.GAY_CANDLE_CAKE);
         blockStateModelGenerator.registerCandle(ModBlocks.ENBY_CANDLE, ModBlocks.ENBY_CANDLE_CAKE);
         blockStateModelGenerator.registerCandle(ModBlocks.INTERSEX_CANDLE, ModBlocks.INTERSEX_CANDLE_CAKE);

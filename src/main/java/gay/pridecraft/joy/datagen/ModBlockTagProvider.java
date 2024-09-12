@@ -16,6 +16,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
         getOrCreateTagBuilder(BlockTags.CANDLES)
+                .add(ModBlocks.QUEER_CANDLE)
                 .add(ModBlocks.GAY_CANDLE)
                 .add(ModBlocks.ENBY_CANDLE)
                 .add(ModBlocks.INTERSEX_CANDLE)
@@ -53,6 +54,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 
         getOrCreateTagBuilder(BlockTags.CANDLE_CAKES)
+                .add(ModBlocks.QUEER_CANDLE_CAKE)
                 .add(ModBlocks.GAY_CANDLE_CAKE)
                 .add(ModBlocks.ENBY_CANDLE_CAKE)
                 .add(ModBlocks.INTERSEX_CANDLE_CAKE)

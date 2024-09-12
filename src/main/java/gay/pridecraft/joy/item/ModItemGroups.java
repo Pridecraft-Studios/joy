@@ -34,6 +34,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.LESBIAN_BED);
                         entries.add(ModBlocks.PROGRESS_BED);
 
+                        entries.add(ModBlocks.QUEER_CANDLE);
                         entries.add(ModBlocks.GAY_CANDLE);
                         entries.add(ModBlocks.ENBY_CANDLE);
                         entries.add(ModBlocks.INTERSEX_CANDLE);

@@ -59,6 +59,9 @@ public class ModBlocks {
     public static final Block PROGRESS_BED = registerBlock("progress_bed",
             new CustomBedBlock(AbstractBlock.Settings.copy(Blocks.WHITE_BED)));
 
+    public static final Block QUEER_CANDLE = registerBlock("queer_candle",
+            new CandleBlock(AbstractBlock.Settings.copy(Blocks.CANDLE)));
+
     public static final Block GAY_CANDLE = registerBlock("gay_candle",
             new CandleBlock(AbstractBlock.Settings.copy(Blocks.CANDLE)));
 
@@ -106,6 +109,9 @@ public class ModBlocks {
 
     public static final Block PROGRESS_CANDLE = registerBlock("progress_candle",
             new CandleBlock(AbstractBlock.Settings.copy(Blocks.CANDLE)));
+
+    public static final Block QUEER_CANDLE_CAKE = registerBlock("queer_candle_cake",
+            new CandleCakeBlock(QUEER_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE)));
 
     public static final Block GAY_CANDLE_CAKE = registerBlock("gay_candle_cake",
             new CandleCakeBlock(GAY_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE)));
