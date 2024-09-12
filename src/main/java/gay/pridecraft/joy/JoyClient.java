@@ -55,7 +55,8 @@ public class JoyClient implements ClientModInitializer {
 
     private static void registerEntityRenderers() {
         EntityRendererRegistry.register(ModEntities.THIGH_HIGH_FOX, ThighHighFoxRenderer::new);
-        EntityRendererRegistry.register(ModEntities.PRIDE_BII, PrideBiiRenderer::new);
+        EntityRendererRegistry.register(ModEntities.BII, BiiRenderer::new);
+        EntityRendererRegistry.register(ModEntities.ENBEE, EnbeeRenderer::new);
         EntityRendererRegistry.register(ModEntities.PRIDE_AXOLOTL, PrideAxolotlRenderer::new);
         EntityRendererRegistry.register(ModEntities.PRIDE_FROG, PrideFrogRenderer::new);
         EntityRendererRegistry.register(ModEntities.PRIDE_SLIME, PrideSlimeRenderer::new);

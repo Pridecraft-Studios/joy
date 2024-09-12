@@ -9,7 +9,7 @@ import net.minecraft.entity.passive.BeeEntity;
 import net.minecraft.util.math.MathHelper;
 
 @Environment(EnvType.CLIENT)
-public class PrideBiiEntityModel<T extends BeeEntity> extends AnimalModel<T> {
+public class BiiEntityModel<T extends BeeEntity> extends AnimalModel<T> {
     private static final float BONE_BASE_Y_PIVOT = 19.0F;
     private static final String BONE = "bone";
     private static final String STINGER = "stinger";
@@ -29,7 +29,7 @@ public class PrideBiiEntityModel<T extends BeeEntity> extends AnimalModel<T> {
     private final ModelPart rightAntenna;
     private float bodyPitch;
 
-    public PrideBiiEntityModel(ModelPart root) {
+    public BiiEntityModel(ModelPart root) {
         super(false, 24.0F, 0.0F);
         this.bone = root.getChild("bone");
         ModelPart modelPart = this.bone.getChild("body");

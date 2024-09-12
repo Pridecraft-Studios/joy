@@ -43,13 +43,22 @@ public class ModEntities {
             .build()
     );
 
-    public static final EntityType<CustomBeeEntity.PrideBiiEntity> PRIDE_BII = Registry.register(
+    public static final EntityType<CustomBeeEntity.BiiEntity> BII = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier.of(Joy.MOD_ID, "pride_bii"),
-        EntityType.Builder.create(CustomBeeEntity.PrideBiiEntity::new, EntityType.BEE.getSpawnGroup())
+        Identifier.of(Joy.MOD_ID, "bii"),
+        EntityType.Builder.create(CustomBeeEntity.BiiEntity::new, EntityType.BEE.getSpawnGroup())
             .dimensions(0.7f, 0.6f)
             .maxTrackingRange(8)
             .build()
+    );
+
+    public static final EntityType<CustomBeeEntity.EnbeeEntity> ENBEE = Registry.register(
+            Registries.ENTITY_TYPE,
+            Identifier.of(Joy.MOD_ID, "enbee"),
+            EntityType.Builder.create(CustomBeeEntity.EnbeeEntity::new, EntityType.BEE.getSpawnGroup())
+                    .dimensions(0.7f, 0.6f)
+                    .maxTrackingRange(8)
+                    .build()
     );
 
     public static final EntityType<CustomAxolotlEntity.PrideAxolotlEntity> PRIDE_AXOLOTL = Registry.register(

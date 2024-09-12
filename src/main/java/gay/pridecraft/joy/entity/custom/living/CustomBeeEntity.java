@@ -10,9 +10,16 @@ public class CustomBeeEntity extends BeeEntity {
         super(entityType, world);
     }
 
-    public static class PrideBiiEntity extends CustomBeeEntity {
-        public PrideBiiEntity(EntityType<? extends PrideBiiEntity> entityType, World world) {
+    public static class BiiEntity extends CustomBeeEntity {
+        public BiiEntity(EntityType<? extends BiiEntity> entityType, World world) {
             super(entityType, world);
         }
     }
+
+    public static class EnbeeEntity extends CustomBeeEntity {
+        public EnbeeEntity(EntityType<? extends EnbeeEntity> entityType, World world) {
+            super(entityType, world);
+        }
+    }
+
 }

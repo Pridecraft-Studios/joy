@@ -81,7 +81,12 @@ public class Joy implements ModInitializer {
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 32.0)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3));
 
-        FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_BII, MobEntity.createMobAttributes()
+        FabricDefaultAttributeRegistry.register(ModEntities.BII, MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
+                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
+
+        FabricDefaultAttributeRegistry.register(ModEntities.ENBEE, MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
                 .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));

@@ -39,9 +39,13 @@
   "item.joy.pride_brush": "Pride Brush",
   "item.joy.pride_slime_ball": "Pride Slime Ball",
   "item.joy.thigh_high_fox_spawn_egg": "Thigh-High Fox Spawn Egg",
-  "item.joy.pride_bii_spawn_egg": "Pride Bii Spawn Egg",
+  "item.joy.bii_spawn_egg": "Bii Spawn Egg",
+  "item.joy.enbee_spawn_egg": "Enbee Spawn Egg",
   "item.joy.pride_axolotl_spawn_egg": "Pride Axolotl Spawn Egg",
   "item.joy.pride_frog_spawn_egg": "Pride Frog Spawn Egg",
   "item.joy.pride_slime_spawn_egg": "Pride Slime Spawn Egg",
-  "item.joy.pride_sniffer_spawn_egg": "Pride Sniffer Spawn Egg"
+  "item.joy.pride_sniffer_spawn_egg": "Pride Sniffer Spawn Egg",
+
+  "entity.joy.bii": "Bii",
+  "entity.joy.enbee": "Enbee"
 }

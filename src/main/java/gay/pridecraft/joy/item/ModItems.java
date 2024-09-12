@@ -20,7 +20,8 @@ public class ModItems {
     public static final Item PRIDE_BRUSH = registerItem("pride_brush", new BrushItem(new Item.Settings()));
     public static final Item PRIDE_SLIME_BALL = registerItem("pride_slime_ball", new Item(new Item.Settings()));
     public static final Item THIGH_HIGH_FOX_SPAWN_EGG = registerItem("thigh_high_fox_spawn_egg", new RainbowSpawnEggItem(ModEntities.THIGH_HIGH_FOX, 14005919, 0xff80bf, new Item.Settings()));
-    public static final Item PRIDE_BII_SPAWN_EGG = registerItem("pride_bii_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_BII, 15582019, 0xFF69B4, new Item.Settings()));
+    public static final Item BII_SPAWN_EGG = registerItem("bii_spawn_egg", new RainbowSpawnEggItem(ModEntities.BII, 15582019, 0xFF69B4, new Item.Settings()));
+    public static final Item ENBEE_SPAWN_EGG = registerItem("bii_spawn_egg", new RainbowSpawnEggItem(ModEntities.BII, 16577588, 0x9C59D1, new Item.Settings()));
     public static final Item PRIDE_AXOLOTL_SPAWN_EGG = registerItem("pride_axolotl_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_AXOLOTL, 16499171, 0xff80bf, new Item.Settings()));
     public static final Item PRIDE_FROG_SPAWN_EGG = registerItem("pride_frog_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_FROG, 13661252, 0xff80bf, new Item.Settings()));
     public static final Item PRIDE_SLIME_SPAWN_EGG = registerItem("pride_slime_spawn_egg", new RainbowSpawnEggItem(ModEntities.PRIDE_SLIME, 5349438, 0xff80bf, new Item.Settings()));
