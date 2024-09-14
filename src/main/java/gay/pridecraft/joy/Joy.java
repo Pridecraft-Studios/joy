@@ -91,6 +91,11 @@ public class Joy implements ModInitializer {
                 .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
 
+        FabricDefaultAttributeRegistry.register(ModEntities.TREE, MobEntity.createMobAttributes() //Tree == Trans Bee :moyai:
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
+                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
+
         FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_AXOLOTL, MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0));

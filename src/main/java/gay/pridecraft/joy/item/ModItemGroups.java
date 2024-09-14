@@ -59,6 +59,7 @@ public class ModItemGroups {
                         entries.add(ModItems.THIGH_HIGH_FOX_SPAWN_EGG);
                         entries.add(ModItems.BII_SPAWN_EGG);
                         entries.add(ModItems.ENBEE_SPAWN_EGG);
+                        entries.add(ModItems.TREE_SPAWN_EGG);
                         entries.add(ModItems.PRIDE_AXOLOTL_SPAWN_EGG);
                         entries.add(ModItems.PRIDE_FROG_SPAWN_EGG);
                         entries.add(ModItems.PRIDE_SLIME_SPAWN_EGG);
