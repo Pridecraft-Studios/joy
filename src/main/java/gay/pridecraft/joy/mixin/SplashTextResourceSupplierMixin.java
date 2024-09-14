@@ -11,6 +11,10 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Mixin(SplashTextResourceSupplier.class)
@@ -18,6 +22,7 @@ public class SplashTextResourceSupplierMixin {
     @Inject(method = "prepare*", at = @At("RETURN"), cancellable = true)
     private void onPrepare(ResourceManager resourceManager, Profiler profiler, CallbackInfoReturnable<List<String>> cir) {
         List<String> splashes = cir.getReturnValue();
+        List<String> bdSplash = new ArrayList<>();
 
         FabricLoader
                 .getInstance()
@@ -31,7 +36,21 @@ public class SplashTextResourceSupplierMixin {
                                 )
                 );
 
-        cir.setReturnValue(splashes);
+        LocalDateTime now = LocalDateTime.now();
+
+        if (now.getMonth() == Month.MARCH && now.getDayOfMonth() == 18) {
+            bdSplash.add("Happy Birthday, TheClashFruit!");
+        }
+
+        if (now.getMonth() == Month.SEPTEMBER && now.getDayOfMonth() == 14) {
+            bdSplash.add("Happy Birthday, Blurry!");
+        }
+
+        if (!bdSplash.isEmpty()) {
+            cir.setReturnValue(bdSplash);
+        } else {
+            cir.setReturnValue(splashes);
+        }
     }
 }
 
