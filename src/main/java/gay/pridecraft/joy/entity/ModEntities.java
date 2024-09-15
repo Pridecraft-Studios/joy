@@ -79,7 +79,7 @@ public class ModEntities {
             .build()
     );
 
-    public static final EntityType<CustomFrogEntity.PrideFrogEntity> PRIDE_FROG = Registry.register(
+    public static final EntityType<CustomFrogEntity.PrideFrogEntity> FROG = Registry.register(
         Registries.ENTITY_TYPE,
         Identifier.of(Joy.MOD_ID, "pride_frog"),
         EntityType.Builder.create(CustomFrogEntity.PrideFrogEntity::new, EntityType.FROG.getSpawnGroup())

@@ -14,7 +14,7 @@ import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.entity.passive.FrogEntity;
 
 @Environment(EnvType.CLIENT)
-public class PrideFrogEntityModel<T extends FrogEntity> extends SinglePartEntityModel<T> {
+public class FrogEntityModel<T extends FrogEntity> extends SinglePartEntityModel<T> {
     private static final float WALKING_LIMB_ANGLE_SCALE = 1.5F;
     private static final float SWIMMING_LIMB_ANGLE_SCALE = 1.0F;
     private static final float LIMB_DISTANCE_SCALE = 2.5F;
@@ -29,7 +29,7 @@ public class PrideFrogEntityModel<T extends FrogEntity> extends SinglePartEntity
     private final ModelPart rightLeg;
     private final ModelPart croakingBody;
 
-    public PrideFrogEntityModel(ModelPart root) {
+    public FrogEntityModel(ModelPart root) {
         this.root = root.getChild("root");
         this.body = this.root.getChild("body");
         this.head = this.body.getChild("head");
