@@ -1,7 +1,7 @@
 package gay.pridecraft.joy.renderer.feature;
 
 import gay.pridecraft.joy.entity.custom.living.CustomFoxEntity;
-import gay.pridecraft.joy.renderer.model.ThighHighFoxEntityModel;
+import gay.pridecraft.joy.renderer.model.SockFoxEntityModel;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -15,10 +15,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.RotationAxis;
 
 @Environment(EnvType.CLIENT)
-public class ThighHighFoxHeldItemFeatureRenderer extends FeatureRenderer<CustomFoxEntity.ThighHighFoxEntity, ThighHighFoxEntityModel<CustomFoxEntity.ThighHighFoxEntity>> {
+public class SockFoxHeldItemFeatureRenderer extends FeatureRenderer<CustomFoxEntity.SockFoxEntity, SockFoxEntityModel<CustomFoxEntity.SockFoxEntity>> {
     private final HeldItemRenderer heldItemRenderer;
 
-    public ThighHighFoxHeldItemFeatureRenderer(FeatureRendererContext<CustomFoxEntity.ThighHighFoxEntity, ThighHighFoxEntityModel<CustomFoxEntity.ThighHighFoxEntity>> context, HeldItemRenderer heldItemRenderer) {
+    public SockFoxHeldItemFeatureRenderer(FeatureRendererContext<CustomFoxEntity.SockFoxEntity, SockFoxEntityModel<CustomFoxEntity.SockFoxEntity>> context, HeldItemRenderer heldItemRenderer) {
         super(context);
         this.heldItemRenderer = heldItemRenderer;
     }
@@ -27,7 +27,7 @@ public class ThighHighFoxHeldItemFeatureRenderer extends FeatureRenderer<CustomF
             MatrixStack matrixStack,
             VertexConsumerProvider vertexConsumerProvider,
             int i,
-            CustomFoxEntity.ThighHighFoxEntity foxEntity,
+            CustomFoxEntity.SockFoxEntity foxEntity,
             float f,
             float g,
             float h,

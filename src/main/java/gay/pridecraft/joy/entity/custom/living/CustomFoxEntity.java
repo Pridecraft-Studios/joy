@@ -9,8 +9,8 @@ public class CustomFoxEntity extends FoxEntity {
         super(entityType, world);
     }
 
-    public static class ThighHighFoxEntity extends CustomFoxEntity {
-        public ThighHighFoxEntity(EntityType<? extends ThighHighFoxEntity> entityType, World world) {
+    public static class SockFoxEntity extends CustomFoxEntity {
+        public SockFoxEntity(EntityType<? extends SockFoxEntity> entityType, World world) {
             super(entityType, world);
         }
     }

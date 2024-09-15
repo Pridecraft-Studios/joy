@@ -9,7 +9,7 @@ import net.minecraft.client.render.entity.model.AnimalModel;
 import net.minecraft.util.math.MathHelper;
 
 @Environment(EnvType.CLIENT)
-public class ThighHighFoxEntityModel<T extends CustomFoxEntity> extends AnimalModel<T> {
+public class SockFoxEntityModel<T extends CustomFoxEntity> extends AnimalModel<T> {
     public final ModelPart head;
     private final ModelPart body;
     private final ModelPart rightHindLeg;
@@ -22,7 +22,7 @@ public class ThighHighFoxEntityModel<T extends CustomFoxEntity> extends AnimalMo
     private static final float LEG_Y_PIVOT = 17.5F;
     private float legPitchModifier;
 
-    public ThighHighFoxEntityModel(ModelPart root) {
+    public SockFoxEntityModel(ModelPart root) {
         super(true, 8.0F, 3.35F);
         this.head = root.getChild("head");
         this.body = root.getChild("body");

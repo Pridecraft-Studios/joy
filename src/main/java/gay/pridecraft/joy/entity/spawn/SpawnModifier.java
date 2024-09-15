@@ -16,8 +16,8 @@ public class SpawnModifier {
                             BiomeKeys.SNOWY_TAIGA,
                             BiomeKeys.OLD_GROWTH_PINE_TAIGA,
                             BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA),
-                    ModEntities.THIGH_HIGH_FOX.getSpawnGroup(),
-                    ModEntities.THIGH_HIGH_FOX,
+                    ModEntities.SOCK_FOX.getSpawnGroup(),
+                    ModEntities.SOCK_FOX,
                     Config.foxWeight,
                     Config.foxMinGroupSize,
                     Config.foxMaxGroupSize

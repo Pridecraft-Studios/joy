@@ -34,10 +34,10 @@ public class ModEntities {
             ).build()
     );
 
-    public static final EntityType<CustomFoxEntity.ThighHighFoxEntity> THIGH_HIGH_FOX = Registry.register(
+    public static final EntityType<CustomFoxEntity.SockFoxEntity> SOCK_FOX = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier.of(Joy.MOD_ID, "thigh_high_fox"),
-        EntityType.Builder.create(CustomFoxEntity.ThighHighFoxEntity::new, EntityType.FOX.getSpawnGroup())
+        Identifier.of(Joy.MOD_ID, "sock_fox"),
+        EntityType.Builder.create(CustomFoxEntity.SockFoxEntity::new, EntityType.FOX.getSpawnGroup())
             .dimensions(0.6f, 0.7f)
             .maxTrackingRange(8)
             .build()

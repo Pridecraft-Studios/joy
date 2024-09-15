@@ -56,7 +56,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PRIDE_BRUSH);
                         entries.add(ModItems.PRIDE_SLIME_BALL);
                         entries.add(ModItems.PRIDE_ELYTRA);
-                        entries.add(ModItems.THIGH_HIGH_FOX_SPAWN_EGG);
+                        entries.add(ModItems.SOCK_FOX_SPAWN_EGG);
                         entries.add(ModItems.BII_SPAWN_EGG);
                         entries.add(ModItems.ENBEE_SPAWN_EGG);
                         entries.add(ModItems.TREE_SPAWN_EGG);

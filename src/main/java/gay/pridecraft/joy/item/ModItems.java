@@ -19,7 +19,7 @@ public class ModItems {
             new Item(new Item.Settings().maxCount(1)));
     public static final Item PRIDE_BRUSH = registerItem("pride_brush", new BrushItem(new Item.Settings()));
     public static final Item PRIDE_SLIME_BALL = registerItem("pride_slime_ball", new Item(new Item.Settings()));
-    public static final Item THIGH_HIGH_FOX_SPAWN_EGG = registerItem("thigh_high_fox_spawn_egg", new RainbowSpawnEggItem(ModEntities.THIGH_HIGH_FOX, 14005919, 0xff80bf, new Item.Settings()));
+    public static final Item SOCK_FOX_SPAWN_EGG = registerItem("thigh_high_fox_spawn_egg", new RainbowSpawnEggItem(ModEntities.SOCK_FOX, 14005919, 0xff80bf, new Item.Settings()));
     public static final Item BII_SPAWN_EGG = registerItem("bii_spawn_egg", new RainbowSpawnEggItem(ModEntities.BII, 15582019, 0xFF69B4, new Item.Settings()));
     public static final Item ENBEE_SPAWN_EGG = registerItem("bii_spawn_egg", new RainbowSpawnEggItem(ModEntities.ENBEE, 16577588, 0x9C59D1, new Item.Settings()));
     public static final Item TREE_SPAWN_EGG = registerItem("tree_spawn_egg", new RainbowSpawnEggItem(ModEntities.TREE, 16577588, 0x9C59D1, new Item.Settings()));
