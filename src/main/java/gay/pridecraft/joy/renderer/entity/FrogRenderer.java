@@ -11,7 +11,7 @@ import net.minecraft.client.render.entity.model.EntityModelLayers;
 import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
-public class FrogRenderer extends MobEntityRenderer<CustomFrogEntity.PrideFrogEntity, FrogEntityModel<CustomFrogEntity.PrideFrogEntity>> {
+public class FrogRenderer extends MobEntityRenderer<CustomFrogEntity.FrogEntity, FrogEntityModel<CustomFrogEntity.FrogEntity>> {
     private static final Identifier TEMPERATE_TEXTURE = Identifier.of(Joy.MOD_ID, "textures/entity/frog/temperate_frog.png");
     private static final Identifier WARM_TEXTURE = Identifier.of(Joy.MOD_ID, "textures/entity/frog/warm_frog.png");
     private static final Identifier COLD_TEXTURE = Identifier.of(Joy.MOD_ID, "textures/entity/frog/cold_frog.png");
@@ -21,7 +21,7 @@ public class FrogRenderer extends MobEntityRenderer<CustomFrogEntity.PrideFrogEn
     }
 
     @Override
-    public Identifier getTexture(CustomFrogEntity.PrideFrogEntity entity) {
+    public Identifier getTexture(CustomFrogEntity.FrogEntity entity) {
         if (entity.getVariant().getKey().isEmpty())
             return TEMPERATE_TEXTURE;
 

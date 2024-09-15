@@ -97,7 +97,7 @@ public class Joy implements ModInitializer {
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10.0)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0));
 
-        FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_SNIFFER, MobEntity.createMobAttributes()
+        FabricDefaultAttributeRegistry.register(ModEntities.SNIFFER, MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.1));
     }
 }

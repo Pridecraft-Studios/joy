@@ -79,28 +79,20 @@ public class ModEntities {
             .build()
     );
 
-    public static final EntityType<CustomFrogEntity.PrideFrogEntity> FROG = Registry.register(
+    public static final EntityType<CustomFrogEntity.FrogEntity> FROG = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier.of(Joy.MOD_ID, "pride_frog"),
-        EntityType.Builder.create(CustomFrogEntity.PrideFrogEntity::new, EntityType.FROG.getSpawnGroup())
+        Identifier.of(Joy.MOD_ID, "frog"),
+        EntityType.Builder.create(CustomFrogEntity.FrogEntity::new, EntityType.FROG.getSpawnGroup())
             .dimensions(0.5F, 0.5f)
             .maxTrackingRange(10)
             .build()
     );
 
-    public static final EntityType<CustomSlimeEntity.PrideSlimeEntity> PRIDE_SLIME = Registry.register(
-        Registries.ENTITY_TYPE,
-        Identifier.of(Joy.MOD_ID, "pride_slime"),
-        EntityType.Builder.create(CustomSlimeEntity.PrideSlimeEntity::new, EntityType.SLIME.getSpawnGroup())
-            .dimensions(0.5f, 0.5f)
-            .maxTrackingRange(10)
-            .build()
-    );
 
-    public static final EntityType<CustomSnifferEntity.PrideSnifferEntity> PRIDE_SNIFFER = Registry.register(
+    public static final EntityType<CustomSnifferEntity.SnifferEntity> SNIFFER = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier.of(Joy.MOD_ID, "pride_sniffer"),
-        EntityType.Builder.create(CustomSnifferEntity.PrideSnifferEntity::new, EntityType.SNIFFER.getSpawnGroup())
+        Identifier.of(Joy.MOD_ID, "sniffer"),
+        EntityType.Builder.create(CustomSnifferEntity.SnifferEntity::new, EntityType.SNIFFER.getSpawnGroup())
             .dimensions(1.9F, 1.75F)
             .maxTrackingRange(10)
             .build()

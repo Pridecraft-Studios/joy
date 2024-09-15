@@ -11,8 +11,8 @@ public class CustomSnifferEntity extends SnifferEntity {
         super(entityType, world);
     }
 
-    public static class PrideSnifferEntity extends CustomSnifferEntity {
-        public PrideSnifferEntity(EntityType<? extends PrideSnifferEntity> entityType, World world) {
+    public static class SnifferEntity extends CustomSnifferEntity {
+        public SnifferEntity(EntityType<? extends SnifferEntity> entityType, World world) {
             super(entityType, world);
         }
     }

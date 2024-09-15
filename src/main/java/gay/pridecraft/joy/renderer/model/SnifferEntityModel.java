@@ -15,13 +15,13 @@ import net.minecraft.client.render.entity.animation.SnifferAnimations;
 import net.minecraft.entity.passive.SnifferEntity;
 
 @Environment(EnvType.CLIENT)
-public class PrideSnifferEntityModel<T extends SnifferEntity> extends SinglePartEntityModelWithChildTransform<T> {
+public class SnifferEntityModel<T extends SnifferEntity> extends SinglePartEntityModelWithChildTransform<T> {
     private static final float LIMB_ANGLE_SCALE = 9.0F;
     private static final float LIMB_DISTANCE_SCALE = 100.0F;
     private final ModelPart root;
     private final ModelPart head;
 
-    public PrideSnifferEntityModel(ModelPart root) {
+    public SnifferEntityModel(ModelPart root) {
         super(0.5F, 24.0F);
         this.root = root.getChild("root");
         this.head = this.root.getChild("bone").getChild("body").getChild("head");

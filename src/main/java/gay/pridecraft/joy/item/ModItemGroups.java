@@ -12,9 +12,9 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
-    public static final ItemGroup JOYMOD_GROUP = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup JOY_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joy.MOD_ID, "joy"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.joymod_group"))
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.joy_group"))
                     .icon(() -> new ItemStack(ModItems.PRIDE_BRUSH)).entries((displayContext, entries) -> {
 
                         entries.add(ModBlocks.GAY_BED);
@@ -62,7 +62,6 @@ public class ModItemGroups {
                         entries.add(ModItems.TREE_SPAWN_EGG);
                         entries.add(ModItems.PRIDE_AXOLOTL_SPAWN_EGG);
                         entries.add(ModItems.PRIDE_FROG_SPAWN_EGG);
-                        entries.add(ModItems.PRIDE_SLIME_SPAWN_EGG);
                         entries.add(ModItems.PRIDE_SNIFFER_SPAWN_EGG);
                     }).build());
 

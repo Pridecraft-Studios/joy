@@ -10,8 +10,8 @@ public class CustomFrogEntity extends FrogEntity {
         super(entityType, world);
     }
 
-    public static class PrideFrogEntity extends CustomFrogEntity {
-        public PrideFrogEntity(EntityType<? extends PrideFrogEntity> entityType, World world) {
+    public static class FrogEntity extends CustomFrogEntity {
+        public FrogEntity(EntityType<? extends FrogEntity> entityType, World world) {
             super(entityType, world);
         }
     }
