@@ -60,7 +60,6 @@ public class JoyClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.TREE, TreeRenderer::new);
         EntityRendererRegistry.register(ModEntities.AXOLOTL, AxolotlRenderer::new);
         EntityRendererRegistry.register(ModEntities.FROG, FrogRenderer::new);
-        EntityRendererRegistry.register(ModEntities.PRIDE_SLIME, PrideSlimeRenderer::new);
         EntityRendererRegistry.register(ModEntities.PRIDE_SNIFFER, PrideSnifferRenderer::new);
     }
 }
