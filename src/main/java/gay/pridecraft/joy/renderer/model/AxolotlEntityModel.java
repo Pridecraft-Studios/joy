@@ -13,7 +13,7 @@ import org.joml.Vector3f;
 import java.util.Map;
 
 @Environment(EnvType.CLIENT)
-public class PrideAxolotlEntityModel<T extends AxolotlEntity & AngledModelEntity> extends AnimalModel<T> {
+public class AxolotlEntityModel<T extends AxolotlEntity & AngledModelEntity> extends AnimalModel<T> {
     public static final float MOVING_IN_WATER_LEG_PITCH = 1.8849558F;
     private final ModelPart tail;
     private final ModelPart leftHindLeg;
@@ -26,7 +26,7 @@ public class PrideAxolotlEntityModel<T extends AxolotlEntity & AngledModelEntity
     private final ModelPart leftGills;
     private final ModelPart rightGills;
 
-    public PrideAxolotlEntityModel(ModelPart root) {
+    public AxolotlEntityModel(ModelPart root) {
         super(true, 8.0F, 3.35F);
         this.body = root.getChild("body");
         this.head = this.body.getChild("head");

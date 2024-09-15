@@ -1,6 +1,5 @@
 package gay.pridecraft.joy;
 
-import eu.midnightdust.lib.config.MidnightConfig;
 import gay.pridecraft.joy.block.ModBlocks;
 import gay.pridecraft.joy.config.Config;
 import gay.pridecraft.joy.entity.ModEntities;
@@ -9,15 +8,9 @@ import gay.pridecraft.joy.item.ModItemGroups;
 import gay.pridecraft.joy.item.ModItems;
 import gay.pridecraft.joy.particle.ModParticles;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.client.sound.PositionedSoundInstance;
-import net.minecraft.client.sound.SoundInstance;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.registry.*;
-import net.minecraft.sound.SoundEvent;
-import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -96,7 +89,7 @@ public class Joy implements ModInitializer {
                 .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
 
-        FabricDefaultAttributeRegistry.register(ModEntities.PRIDE_AXOLOTL, MobEntity.createMobAttributes()
+        FabricDefaultAttributeRegistry.register(ModEntities.AXOLOTL, MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0));
 

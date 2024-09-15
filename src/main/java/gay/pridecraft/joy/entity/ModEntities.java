@@ -70,10 +70,10 @@ public class ModEntities {
                     .build()
     );
 
-    public static final EntityType<CustomAxolotlEntity.PrideAxolotlEntity> PRIDE_AXOLOTL = Registry.register(
+    public static final EntityType<CustomAxolotlEntity.AxolotlEntity> AXOLOTL = Registry.register(
         Registries.ENTITY_TYPE,
-        Identifier.of(Joy.MOD_ID, "pride_axolotl"),
-        EntityType.Builder.create(CustomAxolotlEntity.PrideAxolotlEntity::new, EntityType.AXOLOTL.getSpawnGroup())
+        Identifier.of(Joy.MOD_ID, "axolotl"),
+        EntityType.Builder.create(CustomAxolotlEntity.AxolotlEntity::new, EntityType.AXOLOTL.getSpawnGroup())
             .dimensions(0.75F, 0.42F)
             .maxTrackingRange(10)
             .build()

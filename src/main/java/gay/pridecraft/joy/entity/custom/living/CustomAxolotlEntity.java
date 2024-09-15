@@ -5,12 +5,12 @@ import net.minecraft.entity.passive.AxolotlEntity;
 import net.minecraft.world.World;
 
 public class CustomAxolotlEntity extends AxolotlEntity {
-    public CustomAxolotlEntity(EntityType<? extends AxolotlEntity> entityType, World world) {
+    public CustomAxolotlEntity(EntityType<? extends net.minecraft.entity.passive.AxolotlEntity> entityType, World world) {
         super(entityType, world);
     }
 
-    public static class PrideAxolotlEntity extends CustomAxolotlEntity {
-        public PrideAxolotlEntity(EntityType<? extends PrideAxolotlEntity> entityType, World world) {
+    public static class AxolotlEntity extends CustomAxolotlEntity {
+        public AxolotlEntity(EntityType<? extends AxolotlEntity> entityType, World world) {
             super(entityType, world);
         }
     }
