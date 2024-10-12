@@ -22,7 +22,7 @@ public class ModItems {
     public static final Item SOCK_FOX_SPAWN_EGG = registerItem("thigh_high_fox_spawn_egg", new RainbowSpawnEggItem(ModEntities.SOCK_FOX, 14005919, 0xff80bf, new Item.Settings()));
     public static final Item BII_SPAWN_EGG = registerItem("bii_spawn_egg", new RainbowSpawnEggItem(ModEntities.BII, 15582019, 0xFF69B4, new Item.Settings()));
     public static final Item ENBEE_SPAWN_EGG = registerItem("bii_spawn_egg", new RainbowSpawnEggItem(ModEntities.ENBEE, 16577588, 0x9C59D1, new Item.Settings()));
-    public static final Item TREE_SPAWN_EGG = registerItem("tree_spawn_egg", new RainbowSpawnEggItem(ModEntities.TREE, 16577588, 0x9C59D1, new Item.Settings()));
+    public static final Item TREE_SPAWN_EGG = registerItem("tree_spawn_egg", new RainbowSpawnEggItem(ModEntities.TRANS_BEE, 16577588, 0x9C59D1, new Item.Settings()));
     public static final Item PRIDE_AXOLOTL_SPAWN_EGG = registerItem("pride_axolotl_spawn_egg", new RainbowSpawnEggItem(ModEntities.AXOLOTL, 16499171, 0xff80bf, new Item.Settings()));
     public static final Item PRIDE_FROG_SPAWN_EGG = registerItem("pride_frog_spawn_egg", new RainbowSpawnEggItem(ModEntities.FROG, 13661252, 0xff80bf, new Item.Settings()));
     public static final Item PRIDE_SNIFFER_SPAWN_EGG = registerItem("pride_sniffer_spawn_egg", new RainbowSpawnEggItem(ModEntities.SNIFFER, 8855049, 0xff80bf, new Item.Settings()));

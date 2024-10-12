@@ -61,10 +61,10 @@ public class ModEntities {
                     .build()
     );
 
-    public static final EntityType<CustomBeeEntity.TreeEntity> TREE = Registry.register(
+    public static final EntityType<CustomBeeEntity.TransBeeEntity> TRANS_BEE = Registry.register(
             Registries.ENTITY_TYPE,
-            Identifier.of(Joy.MOD_ID, "tree"),
-            EntityType.Builder.create(CustomBeeEntity.TreeEntity::new, EntityType.BEE.getSpawnGroup())
+            Identifier.of(Joy.MOD_ID, "trans_bee"),
+            EntityType.Builder.create(CustomBeeEntity.TransBeeEntity::new, EntityType.BEE.getSpawnGroup())
                     .dimensions(0.7f, 0.6f)
                     .maxTrackingRange(8)
                     .build()

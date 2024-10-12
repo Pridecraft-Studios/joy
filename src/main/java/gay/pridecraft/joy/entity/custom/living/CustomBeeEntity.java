@@ -22,8 +22,8 @@ public class CustomBeeEntity extends BeeEntity {
         }
     }
 
-    public static class TreeEntity extends CustomBeeEntity {
-        public TreeEntity(EntityType<? extends TreeEntity> entityType, World world) {
+    public static class TransBeeEntity extends CustomBeeEntity {
+        public TransBeeEntity(EntityType<? extends TransBeeEntity> entityType, World world) {
             super(entityType, world);
         }
     }

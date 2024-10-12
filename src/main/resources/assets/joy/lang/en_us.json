@@ -47,5 +47,7 @@
   "item.joy.pride_sniffer_spawn_egg": "Pride Sniffer Spawn Egg",
 
   "entity.joy.bii": "Bii",
-  "entity.joy.enbee": "Enbee"
+  "entity.joy.enbee": "Enbee",
+  "entity.joy.trans_bee": "Trans Bee",
+  "entity.joy.tree": "Tree"
 }
