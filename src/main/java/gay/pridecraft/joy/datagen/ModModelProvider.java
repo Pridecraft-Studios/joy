@@ -39,6 +39,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.TOTEM_OF_PRIDE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PRIDE_ELYTRA, Models.GENERATED);
         itemModelGenerator.register(ModItems.PRIDE_BRUSH, Models.GENERATED);
-        itemModelGenerator.register(ModItems.PRIDE_SLIME_BALL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SOCK_FOX_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BII_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENBEE_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TRANS_BEE_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AXOLOTL_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FROG_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SNIFFER_SPAWN_EGG, Models.GENERATED);
     }
 }

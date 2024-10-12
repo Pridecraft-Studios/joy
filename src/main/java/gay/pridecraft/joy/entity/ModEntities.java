@@ -70,6 +70,15 @@ public class ModEntities {
                     .build()
     );
 
+    public static final EntityType<CustomBeeEntity.TreeEntity> TREE = Registry.register(
+            Registries.ENTITY_TYPE,
+            Identifier.of(Joy.MOD_ID, "tree"),
+            EntityType.Builder.create(CustomBeeEntity.TreeEntity::new, EntityType.BEE.getSpawnGroup())
+                    .dimensions(0.7f, 0.6f)
+                    .maxTrackingRange(8)
+                    .build()
+    );
+
     public static final EntityType<CustomAxolotlEntity.AxolotlEntity> AXOLOTL = Registry.register(
         Registries.ENTITY_TYPE,
         Identifier.of(Joy.MOD_ID, "axolotl"),

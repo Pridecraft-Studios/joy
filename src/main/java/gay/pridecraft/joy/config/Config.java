@@ -44,3 +44,5 @@ public class Config extends MidnightConfig {
     @Entry(category = "spawn", name = "Pride Frog Group Size", min = 0)
     public static int frogMaxGroupSize = 5;
 }
+
+// what is this config
