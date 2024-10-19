@@ -3,13 +3,13 @@
   "id": "joy",
   "version": "${version}",
   "name": "Joy",
-  "description": "This is an LGBT pride-themed Fabric mod made by Pridecraft Studios.",
+  "description": "This is an LGBT pride mod made by Pridecraft Studios.",
   "authors": [
-    "Pridecraft Studios", "Wolren", "Blurryface", "Sake", "Ampflower", "UnlikePaladin"
+    "Pridecraft Studios", "Wolren", "Blurryface", "Sake", "Ampflower", "UnlikePaladin", "TheClashFruit", "WorldWidePixel"
   ],
   "contact": {
     "homepage": "https://pridecraft.gay/",
-    "sources": "https://git.pridecraft.gay/PrideMod"
+    "sources": "https://git.pridecraft.gay/joy"
   },
   "license": "None yet! I guess this means ARR",
   "icon": "assets/joy/icon.png",
@@ -34,17 +34,5 @@
     "java": ">=17",
     "fabric-api": "*",
     "midnightlib": ">=1.5.3-fabric"
-  },
-  "custom": {
-    "mcb": [
-      {
-        "name": "Test Badge",
-        "fillColor": -2003942227,
-        "outlineColor": -2003084874
-      },
-      {
-
-      }
-    ]
   }
 }
