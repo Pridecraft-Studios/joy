@@ -42,3 +42,4 @@ replay_*.log
 # custom
 
 src/main/generated/.cache
+.local/
