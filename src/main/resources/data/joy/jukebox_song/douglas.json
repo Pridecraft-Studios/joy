@@ -1,0 +1,10 @@
+{
+  "comparator_output": 14,
+  "description": {
+    "translate": "music_disc.joy.douglas"
+  },
+  "length_in_seconds": 176.0,
+  "sound_event": {
+    "sound_id": "joy:music_disc.douglas"
+  }
+}

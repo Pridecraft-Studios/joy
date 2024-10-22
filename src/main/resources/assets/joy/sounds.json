@@ -1,34 +1,10 @@
 {
-  "music.menu": {
+  "music_disc.douglas": {
     "sounds": [
       {
-        "name": "music/menu/joy",
-        "stream": true
-      },
-      {
-        "name": "music/menu/reminiscence",
+        "name": "joy:music/game/creative/douglas",
         "stream": true
       }
     ]
-  },
-  "music.game": {
-    "sounds": [
-      {
-        "name": "music/game/melancolie",
-        "stream": true
-      },
-      {
-        "name": "music/game/regina",
-        "stream": true
-      }
-    ]
-  },
-  "music.creative": {
-      "sounds": [
-        {
-          "name": "music/game/creative/douglas",
-          "stream": true
-        }
-      ]
-    }
+  }
 }
