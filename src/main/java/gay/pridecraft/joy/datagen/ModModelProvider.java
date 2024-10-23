@@ -46,5 +46,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.AXOLOTL_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.FROG_SPAWN_EGG, Models.GENERATED);
         itemModelGenerator.register(ModItems.SNIFFER_SPAWN_EGG, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TEST_DISC, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TEST_DISK, Models.GENERATED);
     }
 }

@@ -9,7 +9,7 @@ import net.minecraft.util.Identifier;
 
 public class ModSoundEvents {
     public static final RegistryEntry.Reference<SoundEvent> DOUGLAS = registerReference("music_disc.douglas");
-
+    public static final RegistryEntry.Reference<SoundEvent> MELANCOLIE = registerReference("music_disc.melancolie");
 
     private static SoundEvent registerSound(String id) {
         Identifier identifier = Identifier.of(Joy.MOD_ID, id);

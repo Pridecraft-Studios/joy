@@ -6,5 +6,13 @@
         "stream": true
       }
     ]
+  },
+  "music_disc.melancolie": {
+    "sounds": [
+      {
+        "name": "joy:music/game/melancolie",
+        "stream": true
+      }
+    ]
   }
 }
