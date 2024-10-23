@@ -33,7 +33,7 @@ public class ModItems {
     public static final Item SNIFFER_SPAWN_EGG = registerItem("sniffer_spawn_egg", new CustomSpawnEggItem(ModEntities.SNIFFER, 8855049, 0xff80bf, new Item.Settings()));
     // Test disc item that can be used as template in case someone wants to create one. Note: it's not added to any item group, only obtainable via commands.
     public static final Item TEST_DISC = registerItem("test_disc", new Item(new Item.Settings().maxCount(1).rarity(Rarity.RARE).jukeboxPlayable(RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(MOD_ID, "douglas")))));
-
+    public static final Item TEST_DISK = registerItem("test_disk", new Item(new Item.Settings().maxCount(1).rarity(Rarity.RARE).jukeboxPlayable(RegistryKey.of(RegistryKeys.JUKEBOX_SONG, Identifier.of(MOD_ID, "melancolie")))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(MOD_ID, name), item);
