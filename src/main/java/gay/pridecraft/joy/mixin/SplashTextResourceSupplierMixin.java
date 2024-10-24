@@ -46,6 +46,10 @@ public class SplashTextResourceSupplierMixin {
             bdSplash.add("Happy Birthday, Blurry!");
         }
 
+        if (now.getMonth() == Month.NOVEMBER && now.getDayOfMonth() == 8) {
+            bdSplash.add("Happy Birthday, Fery!");
+        }
+
         if (!bdSplash.isEmpty()) {
             cir.setReturnValue(bdSplash);
         } else {
