@@ -18,6 +18,9 @@ repositories {
     maven {
         url = "https://api.modrinth.com/maven"
     }
+    maven {
+        url = "https://maven.bawnorton.com/releases"
+    }
 }
 
 fabricApi {
@@ -30,10 +33,12 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
+    modImplementation "maven.modrinth:mavapi:${project.mavapi_version}"
     modImplementation "maven.modrinth:midnightlib:${project.midnightlib_version}"
 
+    include(implementation(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.2.0")))
     include(modImplementation "maven.modrinth:modmenu-badges-lib:${badges_lib}")
+
 }
 
 processResources {

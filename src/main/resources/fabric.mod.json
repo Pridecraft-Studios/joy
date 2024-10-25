@@ -5,7 +5,7 @@
   "name": "Joy",
   "description": "This is an LGBT pride mod made by Pridecraft Studios.",
   "authors": [
-    "Pridecraft Studios", "Wolren", "Blurryface", "Sake", "Ampflower", "UnlikePaladin", "TheClashFruit", "WorldWidePixel"
+    "Pridecraft Studios", "Wolren", "Blurryface", "Sake", "Ampflower", "UnlikePaladin", "TheClashFruit", "WorldWidePixel", "rotgruengelb"
   ],
   "contact": {
     "homepage": "https://pridecraft.gay/",
@@ -23,6 +23,9 @@
     ],
     "main": [
       "gay.pridecraft.joy.Joy"
+    ],
+    "mixinsquared": [
+      "gay.pridecraft.joy.mixin.fix.JoyMixinCanceller"
     ]
   },
   "mixins": [
@@ -33,6 +36,7 @@
     "minecraft": "${minecraft_version}",
     "java": ">=17",
     "fabric-api": "*",
-    "midnightlib": ">=1.5.3-fabric"
+    "midnightlib": ">=1.5.3-fabric",
+    "mavapi": ">=1.2.1"
   }
 }

@@ -9,7 +9,8 @@
   ],
   "client": [
     "ClientPlayNetworkHandlerMixin",
-    "SplashTextResourceSupplierMixin"
+    "SplashTextResourceSupplierMixin",
+    "fix.mavapi.EntityBucketItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

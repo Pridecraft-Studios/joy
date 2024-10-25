@@ -67,7 +67,6 @@ public class ModItemGroups {
                         entries.add(ModItems.ENBEE_SPAWN_EGG);
                         entries.add(ModItems.TRANS_BEE_SPAWN_EGG);
                         entries.add(ModItems.TREE_SPAWN_EGG);
-                        entries.add(ModItems.AXOLOTL_SPAWN_EGG);
                         entries.add(ModItems.FROG_SPAWN_EGG);
                         entries.add(ModItems.SNIFFER_SPAWN_EGG);
 
