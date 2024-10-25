@@ -24,7 +24,7 @@ public class Joy implements ModInitializer {
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
-        ModEntities.registerBlockEntities();
+        ModEntities.registerEntities();
         ModSoundEvents.registerModSoundEvents();
 
         // this is now has to be done in a mixin.
@@ -63,9 +63,6 @@ public class Joy implements ModInitializer {
                 .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
 
-        FabricDefaultAttributeRegistry.register(ModEntities.AXOLOTL, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0));
 
         FabricDefaultAttributeRegistry.register(ModEntities.FROG, MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10.0)

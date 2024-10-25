@@ -79,15 +79,6 @@ public class ModEntities {
                     .build()
     );
 
-    public static final EntityType<CustomAxolotlEntity.AxolotlEntity> AXOLOTL = Registry.register(
-        Registries.ENTITY_TYPE,
-        Identifier.of(Joy.MOD_ID, "axolotl"),
-        EntityType.Builder.create(CustomAxolotlEntity.AxolotlEntity::new, EntityType.AXOLOTL.getSpawnGroup())
-            .dimensions(0.75F, 0.42F)
-            .maxTrackingRange(10)
-            .build()
-    );
-
     public static final EntityType<CustomFrogEntity.FrogEntity> FROG = Registry.register(
         Registries.ENTITY_TYPE,
         Identifier.of(Joy.MOD_ID, "frog"),
@@ -107,7 +98,8 @@ public class ModEntities {
             .build()
     );
 
-    public static void registerBlockEntities() {
+    public static void registerEntities() {
         Joy.LOGGER.info("Registering Entities for " + Joy.MOD_ID);
+        ModAxolotlVariants.registerAxolotlVariants();
     }
 }

@@ -28,7 +28,6 @@ public class ModItems {
     public static final Item ENBEE_SPAWN_EGG = registerItem("enbee_spawn_egg", new CustomSpawnEggItem(ModEntities.ENBEE, 16577588, 0x9C59D1, new Item.Settings()));
     public static final Item TRANS_BEE_SPAWN_EGG = registerItem("trans_bee_spawn_egg", new CustomSpawnEggItem(ModEntities.TRANS_BEE, 49963900, 0x48B518, new Item.Settings()));
     public static final Item TREE_SPAWN_EGG = registerItem("tree_spawn_egg", new CustomSpawnEggItem(ModEntities.TREE, 16577588, 0x9C59D1, new Item.Settings()));
-    public static final Item AXOLOTL_SPAWN_EGG = registerItem("axolotl_spawn_egg", new CustomSpawnEggItem(ModEntities.AXOLOTL, 16499171, 0xff80bf, new Item.Settings()));
     public static final Item FROG_SPAWN_EGG = registerItem("frog_spawn_egg", new CustomSpawnEggItem(ModEntities.FROG, 13661252, 0xff80bf, new Item.Settings()));
     public static final Item SNIFFER_SPAWN_EGG = registerItem("sniffer_spawn_egg", new CustomSpawnEggItem(ModEntities.SNIFFER, 8855049, 0xff80bf, new Item.Settings()));
     // Test disc item that can be used as template in case someone wants to create one. Note: it's not added to any item group, only obtainable via commands.
