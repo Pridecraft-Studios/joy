@@ -15,6 +15,7 @@ public class ModAxolotlVariants {
 		register("progress");
 		register("trans");
 		register("aroace");
+		register("pan");
 
 	}
 
