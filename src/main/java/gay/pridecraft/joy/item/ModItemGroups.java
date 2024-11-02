@@ -2,14 +2,18 @@ package gay.pridecraft.joy.item;
 
 import gay.pridecraft.joy.Joy;
 import gay.pridecraft.joy.block.ModBlocks;
+import gay.pridecraft.joy.block.BlahajBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.MinecartItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
+import static gay.pridecraft.joy.block.BlahajBlocks.PRIDE_ITEMS;
 
 public class ModItemGroups {
     public static final ItemGroup JOY_BEDS =  Registry.register(Registries.ITEM_GROUP,
@@ -60,7 +64,7 @@ public class ModItemGroups {
                     }).build());
     public static final ItemGroup JOY_ENTITIES =  Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joy.MOD_ID, "joy_entities"),FabricItemGroup.builder().displayName(Text.translatable("itemgroup.joy_entities_group"))
-                    .icon(() -> new ItemStack(ModItems.BII_SPAWN_EGG)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(Blocks.BEEHIVE)).entries((displayContext, entries) -> {
 
                         entries.add(ModItems.SOCK_FOX_SPAWN_EGG);
                         entries.add(ModItems.BII_SPAWN_EGG);
@@ -71,11 +75,27 @@ public class ModItemGroups {
                         entries.add(ModItems.SNIFFER_SPAWN_EGG);
 
                     }).build());
+    public static final ItemGroup HAJS =  Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(Joy.MOD_ID, "hajs"),FabricItemGroup.builder().displayName(Text.translatable("itemgroup.hajs_group"))
+                    .icon(() -> new ItemStack(BlahajBlocks.BLAHAJ_BLOCK)).entries((displayContext, entries) -> {
+
+                        entries.add(BlahajBlocks.GRAY_SHARK_ITEM);
+                        entries.add(BlahajBlocks.BLAHAJ_ITEM);
+                        entries.add(BlahajBlocks.BLAVINGAD_ITEM);
+                        entries.add(BlahajBlocks.BREAD_ITEM);
+                        entries.add(BlahajBlocks.BROWN_BEAR_ITEM);
+
+                      /*for (Item item : PRIDE_ITEMS) {
+                            entries.add(BlahajBlocks.item);         To anyone who feels like figuring this out, pls do i give up
+                        } */
+
+                    }).build());
+
     public static final ItemGroup JOY_BLOCKS =  Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joy.MOD_ID, "joy_blocks"),FabricItemGroup.builder().displayName(Text.translatable("itemgroup.joy_blocks_group"))
-                    .icon(() -> new ItemStack(ModBlocks.MLM_CANDLE)).entries((displayContext, entries) -> {
-                       // Using Gay Bed since I don't know how to do vanilla items & it's a block.
-                        entries.add(ModBlocks.GAY_BED);
+                    .icon(() -> new ItemStack(Blocks.DIRT)).entries((displayContext, entries) -> {
+
+                        entries.add(Blocks.DIRT);
 
                     }).build());
     public static final ItemGroup JOY_MISC =  Registry.register(Registries.ITEM_GROUP,

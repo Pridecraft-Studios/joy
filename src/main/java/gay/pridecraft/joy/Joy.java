@@ -1,5 +1,6 @@
 package gay.pridecraft.joy;
 
+import gay.pridecraft.joy.block.BlahajBlocks;
 import gay.pridecraft.joy.block.ModBlocks;
 import gay.pridecraft.joy.config.Config;
 import gay.pridecraft.joy.entity.ModEntities;
@@ -24,6 +25,8 @@ public class Joy implements ModInitializer {
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        BlahajDataComponentTypes.register();
+        BlahajBlocks.register();
         ModEntities.registerEntities();
         ModSoundEvents.registerModSoundEvents();
 

@@ -2,15 +2,18 @@
   "required": true,
   "minVersion": "0.8",
   "package": "gay.pridecraft.joy.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
     "LivingEntityMixin",
-    "PaintingVariantsMixin"
+    "PaintingVariantsMixin",
+    "AllayEntityMixin"
   ],
   "client": [
     "ClientPlayNetworkHandlerMixin",
     "SplashTextResourceSupplierMixin",
-    "fix.mavapi.EntityBucketItemMixin"
+    "fix.mavapi.EntityBucketItemMixin",
+    "client.BipedEntityModelMixin",
+    "client.PlayerEntityRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

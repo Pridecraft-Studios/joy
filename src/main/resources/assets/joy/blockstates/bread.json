@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "joy:block/bread",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "joy:block/bread"
+    },
+    "facing=south": {
+      "model": "joy:block/bread",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "joy:block/bread",
+      "y": 270
+    }
+  }
+}

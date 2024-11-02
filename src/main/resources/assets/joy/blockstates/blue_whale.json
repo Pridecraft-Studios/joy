@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "joy:block/blue_whale",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "joy:block/blue_whale"
+    },
+    "facing=south": {
+      "model": "joy:block/blue_whale",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "joy:block/blue_whale",
+      "y": 270
+    }
+  }
+}
