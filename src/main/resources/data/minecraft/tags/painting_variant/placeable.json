@@ -1,21 +1,21 @@
 {
   "replace": false,
   "values": [
-    "joymod:ace",
-    "joymod:agender",
-    "joymod:aro",
-    "joymod:aroace",
-    "joymod:bigender",
-    "joymod:bisexual",
-    "joymod:enby",
-    "joymod:gay",
-    "joymod:intersex",
-    "joymod:lesbian",
-    "joymod:mlm",
-    "joymod:pan",
-    "joymod:progress",
-    "joymod:queer",
-    "joymod:straight_ally",
-    "joymod:trans"
+    "joy:ace",
+    "joy:agender",
+    "joy:aro",
+    "joy:aroace",
+    "joy:bigender",
+    "joy:bisexual",
+    "joy:enby",
+    "joy:gay",
+    "joy:intersex",
+    "joy:lesbian",
+    "joy:mlm",
+    "joy:pan",
+    "joy:progress",
+    "joy:queer",
+    "joy:straight_ally",
+    "joy:trans"
   ]
 }

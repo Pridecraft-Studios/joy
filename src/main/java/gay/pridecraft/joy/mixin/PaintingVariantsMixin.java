@@ -30,13 +30,13 @@ public abstract class PaintingVariantsMixin {
         register(registry, PAN, 2, 2);
         register(registry, PROGRESS, 4, 4);
         register(registry, QUEER, 1, 1);
-        register(registry, STRAIGHT_ALLY, 2, 2);
+        register(registry, ALLY, 2, 2);
         register(registry, TRANS, 2, 2);
         register(registry, BIRB, 2,2);
         register(registry, DEMIROMANTIC,2 ,2);
         register(registry, DEMISEXUAL,2 ,2);
         register(registry, FLOATING_TREES,2 ,2);
-        register(registry, FLOATING_BIIS,2 ,2);
+        register(registry, FLOATING_BEES,2 ,2);
     }
 
     @Shadow

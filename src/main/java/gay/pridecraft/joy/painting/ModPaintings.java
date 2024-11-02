@@ -22,13 +22,13 @@ public class ModPaintings {
     public static final RegistryKey<PaintingVariant> PAN =              of("pan");
     public static final RegistryKey<PaintingVariant> PROGRESS =         of("progress");
     public static final RegistryKey<PaintingVariant> QUEER =            of("queer");
-    public static final RegistryKey<PaintingVariant> STRAIGHT_ALLY =    of("straight_ally");
+    public static final RegistryKey<PaintingVariant> ALLY =             of("ally");
     public static final RegistryKey<PaintingVariant> TRANS =            of("trans");
     public static final RegistryKey<PaintingVariant> BIRB =             of("birb");
     public static final RegistryKey<PaintingVariant> DEMIROMANTIC =     of("demiromantic");
     public static final RegistryKey<PaintingVariant> DEMISEXUAL =       of("demisexual");
     public static final RegistryKey<PaintingVariant> FLOATING_TREES =   of("floating_trees");
-    public static final RegistryKey<PaintingVariant> FLOATING_BIIS =    of("floating_biis");
+    public static final RegistryKey<PaintingVariant> FLOATING_BEES =    of("floating_bees");
 
     private static RegistryKey<PaintingVariant> of(String id) {
         return RegistryKey.of(RegistryKeys.PAINTING_VARIANT, Identifier.of(MOD_ID, id));
