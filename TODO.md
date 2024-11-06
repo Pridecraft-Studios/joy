@@ -23,5 +23,10 @@
 - [ ] Integration with/in other Pridecraft projects
 - [ ] Add further entries as we go along
 
+## Notes
+
+¹: These need to be discussed in Pridecraft's Development channels on the discord server for a better idea on how they should be implemented
+
+²: The biomes need to not be *too* colorful so it doesn't "look like someone vomited rainbows all over the place"
 
 <!-- - [X] We should make a more organized file, including our "creative direction" plans in the list -->
