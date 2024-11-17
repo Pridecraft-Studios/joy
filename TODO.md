@@ -8,7 +8,7 @@
 - [ ] All pride beds
 - [ ] All pride entity variants
 - [X] All paintings from Pridepack
-- [ ] All splashes from Pridepack
+- [X] All splashes from Pridepack
 - [ ] Pride banners (different from Minecraft's actual banners)
 - [ ] Pride shulker boxes
 - [ ] Pride armor trims
