@@ -2,7 +2,18 @@
 
 ## Content
 
-- [ ] Implement all Bundles of Pride from pridepack as separate items
+- [ ] All Bundles of Pride from pridepack as separate items
+- [ ] Pride cakes
+- [ ] All pride candles
+- [ ] All pride beds
+- [ ] All pride entity variants
+- [ ] All paintings from Pridepack
+- [ ] All splashes from Pridepack
+- [ ] Pride banners (different from Minecraft's actual banners)
+- [ ] Pride shulker boxes
+- [ ] Pride armor trims
+- [ ] All music from the Joy EP
+- [ ] Music discs with music made by Ministumpy
 - [X] Add a Blåhaj
 - [ ] "Pride Table" block to help with crafting of Pride items¹
 - [ ] Joy Biomes²
@@ -11,6 +22,7 @@
 
 ## Technical
 
+- [ ] Proper configs
 - [ ] Bump dependencies (MAVAPI) to 1.21.2+
 - [ ] Bump mod to 1.21.2+ and test pridexolotls in current implementation
 - [ ] Custom UI and functionality for the "Pride Table"¹
@@ -21,7 +33,9 @@
 
 - [ ] Joy Wiki
 - [ ] Integration with/in other Pridecraft projects
-- [ ] Add further entries as we go along
+- [ ] Credit everyone involved with the project properly
+- [ ] Mention other people's work on Pridecraft somewhere
+- [ ] Hide silly stuff in the files
 
 ## Notes
 
