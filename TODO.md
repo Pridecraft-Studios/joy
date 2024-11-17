@@ -2,7 +2,7 @@
 
 ## Content
 
-- [ ] All Bundles of Pride from pridepack as separate items
+- [ ] All Bundles from Pridepack as separate items
 - [ ] Pride cakes
 - [X] All pride candles
 - [X] All pride beds
