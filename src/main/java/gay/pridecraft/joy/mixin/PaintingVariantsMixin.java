@@ -16,27 +16,28 @@ import static gay.pridecraft.joy.painting.ModPaintings.*;
 public abstract class PaintingVariantsMixin {
     @Inject(method = "bootstrap", at = @At("RETURN"))
     private static void bootstrap(Registerable<PaintingVariant> registry, CallbackInfo ci) {
-        register(registry, ACE, 2, 1);
-        register(registry, AGENDER, 1, 1);
-        register(registry, ARO, 2, 1);
-        register(registry, AROACE, 4, 3);
-        register(registry, BIGENDER, 1, 1);
-        register(registry, BISEXUAL, 2, 2);
-        register(registry, ENBY, 2, 2);
-        register(registry, GAY, 2, 2);
-        register(registry, INTERSEX, 4, 4);
-        register(registry, LESBIAN, 4, 3);
-        register(registry, MLM, 1, 1);
-        register(registry, PAN, 2, 2);
-        register(registry, PROGRESS, 4, 4);
-        register(registry, QUEER, 1, 1);
-        register(registry, ALLY, 2, 2);
-        register(registry, TRANS, 2, 2);
+        register(registry, ACE, 2,1);
+        register(registry, AGENDER, 1,1);
+        register(registry, ALLY,2,2);
+        register(registry, ARO, 2,1);
+        register(registry, AROACE, 4,3);
+        register(registry, BI, 2,2);
+        register(registry, BIGENDER, 1,1);
         register(registry, BIRB, 2,2);
-        register(registry, DEMIROMANTIC,2 ,2);
-        register(registry, DEMISEXUAL,2 ,2);
-        register(registry, FLOATING_TREES,2 ,2);
-        register(registry, FLOATING_BEES,2 ,2);
+        register(registry, DEMIROMANTIC,2,2);
+        register(registry, DEMISEXUAL,2,2);
+        register(registry, ENBY, 2,2);
+        register(registry, FLOATING_TREES,2,2);
+        register(registry, FLOATING_BEES,2,2);
+        register(registry, INTERSEX, 4,4);
+        register(registry, LESBIAN, 4,3);
+        register(registry, MLM, 1,1);
+        register(registry, PAN, 2,2);
+        register(registry, POLYSEXUAL,2,2);
+        register(registry, PROGRESS, 4,4);
+        register(registry, QUEER, 1,1);
+        register(registry, RAINBOW, 2,2);
+        register(registry, TRANS, 2,2);
     }
 
     @Shadow
