@@ -11,7 +11,7 @@
     "homepage": "https://pridecraft.gay/",
     "sources": "https://git.pridecraft.gay/joy"
   },
-  "license": "None yet! I guess this means ARR",
+  "license": "ARR-FOR-NOW, CC-BY-SA 4.0, ARR",
   "icon": "assets/joy/icon.png",
   "environment": "*",
   "entrypoints": {
