@@ -12,7 +12,7 @@
 - [ ] Pride banners (different from Minecraft's actual banners)
 - [ ] Pride shulker boxes
 - [ ] Pride armor trims
-- [ ] All music from the Joy EP
+- [X] All music from the Joy OST
 - [ ] Music discs with music made by Ministumpy
 - [X] Add a Blåhaj
 - [ ] "Pride Table" block to help with crafting of Pride items¹
