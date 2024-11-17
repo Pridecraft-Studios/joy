@@ -4,8 +4,8 @@
 
 - [ ] All Bundles of Pride from pridepack as separate items
 - [ ] Pride cakes
-- [ ] All pride candles
-- [ ] All pride beds
+- [X] All pride candles
+- [X] All pride beds
 - [ ] All pride entity variants
 - [X] All paintings from Pridepack
 - [X] All splashes from Pridepack
