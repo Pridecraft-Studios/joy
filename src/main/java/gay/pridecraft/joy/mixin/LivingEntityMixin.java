@@ -1,6 +1,8 @@
 package gay.pridecraft.joy.mixin;
 
-import gay.pridecraft.joy.item.ModItems;
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import gay.pridecraft.joy.registry.JoyItems;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -12,13 +14,9 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity {
-
     @Shadow public abstract ItemStack getStackInHand(Hand hand);
 
     @Shadow public abstract void setHealth(float health);
@@ -31,29 +29,28 @@ public abstract class LivingEntityMixin extends Entity {
         super(type, world);
     }
 
-    @Inject(at = @At("HEAD"), method = "tryUseTotem", cancellable = true)
-    public void useCustomTotem(DamageSource damageSource, CallbackInfoReturnable<Boolean> callback) {
-        Entity entity = this;
+    @WrapMethod(method = "tryUseTotem")
+    public boolean useCustomTotem(DamageSource source, Operation<Boolean> original) {
+        LivingEntityMixin entity = this;
 
-        ItemStack offhandStack = ((LivingEntityMixin) entity).getStackInHand(Hand.OFF_HAND);
-        ItemStack mainhandStack = ((LivingEntityMixin) entity).getStackInHand(Hand.MAIN_HAND);
+        ItemStack offhandStack = entity.getStackInHand(Hand.OFF_HAND);
+        ItemStack mainHandStack = entity.getStackInHand(Hand.MAIN_HAND);
 
-        if (offhandStack.isOf(ModItems.TOTEM_OF_PRIDE) || mainhandStack.isOf(ModItems.TOTEM_OF_PRIDE)) {
-                if (offhandStack.isOf(ModItems.TOTEM_OF_PRIDE)) {
-                    offhandStack.decrement(1);
-                } else if (mainhandStack.isOf(ModItems.TOTEM_OF_PRIDE)) {
-                    mainhandStack.decrement(1);
-                }
+        if (!offhandStack.isOf(JoyItems.TOTEM_OF_PRIDE) && !mainHandStack.isOf(JoyItems.TOTEM_OF_PRIDE)) return original.call(source);
 
-                this.setHealth(1.0F);
-                this.clearStatusEffects();
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 45 * 20, 1));
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 40 * 20, 0));
-                this.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 5 * 20, 1));
+        if (offhandStack.isOf(JoyItems.TOTEM_OF_PRIDE)) offhandStack.decrement(1);
+        else if (mainHandStack.isOf(JoyItems.TOTEM_OF_PRIDE)) mainHandStack.decrement(1);
 
-                this.getWorld().sendEntityStatus(entity, (byte) 36);
 
-            callback.setReturnValue(true);
-        }
+        this.setHealth(1.0F);
+        this.clearStatusEffects();
+
+        this.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 45 * 20, 1));
+        this.addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 40 * 20, 0));
+        this.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 5 * 20, 1));
+
+        this.getWorld().sendEntityStatus(entity, (byte) 36);
+
+        return true;
     }
 }
