@@ -1,11 +1,8 @@
 package gay.pridecraft.joy.block;
 
 import gay.pridecraft.joy.Blahaj;
-import gay.pridecraft.joy.item.ModItemGroups;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.*;
-import net.fabricmc.fabric.api.itemgroup.v1.*;
+import gay.pridecraft.joy.item.CuddlyItem;
 import net.minecraft.block.*;
-import net.minecraft.client.render.*;
 import net.minecraft.item.*;
 import net.minecraft.registry.*;
 import net.minecraft.util.*;

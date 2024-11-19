@@ -1,11 +1,9 @@
 package gay.pridecraft.joy.mixin;
 
-import gay.pridecraft.joy.block.CuddlyItem;
-import gay.pridecraft.joy.block.*;
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import gay.pridecraft.joy.item.CuddlyItem;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import net.minecraft.entity.passive.AllayEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -15,15 +13,10 @@ import net.minecraft.util.Hand;
 @Mixin(AllayEntity.class)
 public class AllayEntityMixin {
 
-	@Inject(
-		method = "interactMob",
-		at = @At("HEAD"),
-		cancellable = true
-	)
-	public void preventTakePlush(PlayerEntity player, Hand hand, CallbackInfoReturnable<ActionResult> info) {
-		if(player.getStackInHand(hand).getItem() instanceof CuddlyItem) {
-			info.setReturnValue(ActionResult.PASS);
-			info.cancel();
-		}
-	}
+    @WrapMethod(method = "interactMob")
+    public ActionResult preventTakePlush(PlayerEntity player, Hand hand, Operation<ActionResult> original) {
+        return player.getStackInHand(hand).getItem() instanceof CuddlyItem ?
+                ActionResult.PASS :
+                original.call(player, hand);
+    }
 }

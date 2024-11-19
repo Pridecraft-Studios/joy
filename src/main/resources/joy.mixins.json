@@ -8,13 +8,6 @@
     "PaintingVariantsMixin",
     "AllayEntityMixin"
   ],
-  "client": [
-    "ClientPlayNetworkHandlerMixin",
-    "SplashTextResourceSupplierMixin",
-    "fix.mavapi.EntityBucketItemMixin",
-    "client.BipedEntityModelMixin",
-    "client.PlayerEntityRendererMixin"
-  ],
   "injectors": {
     "defaultRequire": 1
   }

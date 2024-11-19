@@ -1,11 +1,11 @@
 package gay.pridecraft.joy.item;
 
 import gay.pridecraft.joy.Joy;
-import gay.pridecraft.joy.block.ModBlocks;
+import gay.pridecraft.joy.registry.JoyBlocks;
 import gay.pridecraft.joy.block.BlahajBlocks;
+import gay.pridecraft.joy.registry.JoyItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -13,66 +13,64 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import static gay.pridecraft.joy.block.BlahajBlocks.PRIDE_ITEMS;
-
 public class ModItemGroups {
     public static final ItemGroup JOY_BEDS =  Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joy.MOD_ID, "joy"),FabricItemGroup.builder().displayName(Text.translatable("itemgroup.joy_beds_group"))
-                    .icon(() -> new ItemStack(ModBlocks.GAY_BED)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(JoyBlocks.GAY_BED)).entries((displayContext, entries) -> {
 
-                        entries.add(ModBlocks.GAY_BED);
-                        entries.add(ModBlocks.ENBY_BED);
-                        entries.add(ModBlocks.INTERSEX_BED);
-                        entries.add(ModBlocks.AGENDER_BED);
-                        entries.add(ModBlocks.BIGENDER_BED);
-                        entries.add(ModBlocks.BISEXUAL_BED);
-                        entries.add(ModBlocks.MLM_BED);
-                        entries.add(ModBlocks.ACE_BED);
-                        entries.add(ModBlocks.ARO_BED);
-                        entries.add(ModBlocks.APLATONIC_BED);
-                        entries.add(ModBlocks.GENDER_FLUID_BED);
-                        entries.add(ModBlocks.PAN_BED);
-                        entries.add(ModBlocks.TRANS_BED);
-                        entries.add(ModBlocks.AROACE_BED);
-                        entries.add(ModBlocks.LESBIAN_BED);
-                        entries.add(ModBlocks.PROGRESS_BED);
+                        entries.add(JoyBlocks.GAY_BED);
+                        entries.add(JoyBlocks.ENBY_BED);
+                        entries.add(JoyBlocks.INTERSEX_BED);
+                        entries.add(JoyBlocks.AGENDER_BED);
+                        entries.add(JoyBlocks.BIGENDER_BED);
+                        entries.add(JoyBlocks.BISEXUAL_BED);
+                        entries.add(JoyBlocks.MLM_BED);
+                        entries.add(JoyBlocks.ACE_BED);
+                        entries.add(JoyBlocks.ARO_BED);
+                        entries.add(JoyBlocks.APLATONIC_BED);
+                        entries.add(JoyBlocks.GENDER_FLUID_BED);
+                        entries.add(JoyBlocks.PAN_BED);
+                        entries.add(JoyBlocks.TRANS_BED);
+                        entries.add(JoyBlocks.AROACE_BED);
+                        entries.add(JoyBlocks.LESBIAN_BED);
+                        entries.add(JoyBlocks.PROGRESS_BED);
 
                     }).build());
 
     public static final ItemGroup JOY_CANDLES =  Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joy.MOD_ID, "joy_candles"),FabricItemGroup.builder().displayName(Text.translatable("itemgroup.joy_candles_group"))
-                    .icon(() -> new ItemStack(ModBlocks.GAY_CANDLE)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(JoyBlocks.GAY_CANDLE)).entries((displayContext, entries) -> {
 
-                        entries.add(ModBlocks.QUEER_CANDLE);
-                        entries.add(ModBlocks.GAY_CANDLE);
-                        entries.add(ModBlocks.ENBY_CANDLE);
-                        entries.add(ModBlocks.INTERSEX_CANDLE);
-                        entries.add(ModBlocks.AGENDER_CANDLE);
-                        entries.add(ModBlocks.BIGENDER_CANDLE);
-                        entries.add(ModBlocks.BISEXUAL_CANDLE);
-                        entries.add(ModBlocks.MLM_CANDLE);
-                        entries.add(ModBlocks.ACE_CANDLE);
-                        entries.add(ModBlocks.ARO_CANDLE);
-                        entries.add(ModBlocks.APLATONIC_CANDLE);
-                        entries.add(ModBlocks.GENDER_FLUID_CANDLE);
-                        entries.add(ModBlocks.PAN_CANDLE);
-                        entries.add(ModBlocks.TRANS_CANDLE);
-                        entries.add(ModBlocks.AROACE_CANDLE);
-                        entries.add(ModBlocks.LESBIAN_CANDLE);
-                        entries.add(ModBlocks.PROGRESS_CANDLE);
+                        entries.add(JoyBlocks.QUEER_CANDLE);
+                        entries.add(JoyBlocks.GAY_CANDLE);
+                        entries.add(JoyBlocks.ENBY_CANDLE);
+                        entries.add(JoyBlocks.INTERSEX_CANDLE);
+                        entries.add(JoyBlocks.AGENDER_CANDLE);
+                        entries.add(JoyBlocks.BIGENDER_CANDLE);
+                        entries.add(JoyBlocks.BISEXUAL_CANDLE);
+                        entries.add(JoyBlocks.MLM_CANDLE);
+                        entries.add(JoyBlocks.ACE_CANDLE);
+                        entries.add(JoyBlocks.ARO_CANDLE);
+                        entries.add(JoyBlocks.APLATONIC_CANDLE);
+                        entries.add(JoyBlocks.GENDER_FLUID_CANDLE);
+                        entries.add(JoyBlocks.PAN_CANDLE);
+                        entries.add(JoyBlocks.TRANS_CANDLE);
+                        entries.add(JoyBlocks.AROACE_CANDLE);
+                        entries.add(JoyBlocks.LESBIAN_CANDLE);
+                        entries.add(JoyBlocks.PROGRESS_CANDLE);
 
                     }).build());
     public static final ItemGroup JOY_ENTITIES =  Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joy.MOD_ID, "joy_entities"),FabricItemGroup.builder().displayName(Text.translatable("itemgroup.joy_entities_group"))
                     .icon(() -> new ItemStack(Blocks.BEEHIVE)).entries((displayContext, entries) -> {
 
-                        entries.add(ModItems.SOCK_FOX_SPAWN_EGG);
-                        entries.add(ModItems.BII_SPAWN_EGG);
-                        entries.add(ModItems.ENBEE_SPAWN_EGG);
-                        entries.add(ModItems.TRANS_BEE_SPAWN_EGG);
-                        entries.add(ModItems.TREE_SPAWN_EGG);
-                        entries.add(ModItems.FROG_SPAWN_EGG);
-                        entries.add(ModItems.SNIFFER_SPAWN_EGG);
+                        entries.add(JoyItems.SOCK_FOX_SPAWN_EGG);
+                        entries.add(JoyItems.BII_SPAWN_EGG);
+                        entries.add(JoyItems.ENBEE_SPAWN_EGG);
+                        entries.add(JoyItems.TRANS_BEE_SPAWN_EGG);
+                        entries.add(JoyItems.TREE_SPAWN_EGG);
+                        entries.add(JoyItems.FROG_SPAWN_EGG);
+                        entries.add(JoyItems.SNIFFER_SPAWN_EGG);
 
                     }).build());
     public static final ItemGroup HAJS =  Registry.register(Registries.ITEM_GROUP,
@@ -100,11 +98,11 @@ public class ModItemGroups {
                     }).build());
     public static final ItemGroup JOY_MISC =  Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joy.MOD_ID, "joy_misc"),FabricItemGroup.builder().displayName(Text.translatable("itemgroup.joy_misc_group"))
-                    .icon(() -> new ItemStack(ModItems.PRIDE_BRUSH)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(JoyItems.PRIDE_BRUSH)).entries((displayContext, entries) -> {
 
-                        entries.add(ModItems.TOTEM_OF_PRIDE);
-                        entries.add(ModItems.PRIDE_BRUSH);
-                        entries.add(ModItems.PRIDE_ELYTRA);
+                        entries.add(JoyItems.TOTEM_OF_PRIDE);
+                        entries.add(JoyItems.PRIDE_BRUSH);
+                        entries.add(JoyItems.PRIDE_ELYTRA);
 
                     }).build());
 
