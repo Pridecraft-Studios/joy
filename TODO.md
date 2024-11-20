@@ -23,8 +23,8 @@
 ## Technical
 
 - [ ] Proper configs
-- [ ] Bump dependencies (MAVAPI) to 1.21.2+
-- [ ] Bump mod to 1.21.2+ and test pridexolotls in current implementation
+- [ ] Bump dependencies to 1.21.4
+- [ ] Bump mod to 1.21.4 and test pridexolotls in current implementation
 - [ ] Custom UI and functionality for the "Pride Table"¹
 - [ ] Crafting recipes for all Pride items (Crafting Table, "Pride Table"¹, Furnace etc)
 - [ ] Balancing of rarity of Joy Mod's content
