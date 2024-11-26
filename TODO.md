@@ -3,7 +3,7 @@
 ## Content
 
 - [ ] All Bundles from Pridepack as separate items
-- [ ] Pride cakes
+- [ ] Pride cakes³
 - [X] All pride candles
 - [X] All pride beds
 - [ ] All pride entity variants
@@ -42,5 +42,10 @@
 ¹: These need to be discussed in Pridecraft's Development channels on the discord server for a better idea on how they should be implemented
 
 ²: The biomes need to not be *too* colorful so it doesn't "look like someone vomited rainbows all over the place"
+
+³:
+- [ ] Rainbow cherries
+- [ ] Rainbow inside, no cherries
+- [ ] Rainbow inside, with cherries
 
 <!-- - [X] We should make a more organized file, including our "creative direction" plans in the list -->
