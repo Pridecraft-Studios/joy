@@ -19,12 +19,18 @@
 - [ ] Joy Biomes²
 - [ ] Pride dyes to help with recipes for the Pride Items
 - [ ] More variants of Pridepack entities
+- [ ] Rare music disk using WorldWidePixel - [Currently untitled `366` song]
 
 ## Technical
 
 - [ ] Proper configs
-- [ ] Bump dependencies to 1.21.4
-- [ ] Bump mod to 1.21.4 and test pridexolotls in current implementation
+    - [ ] Configurable Main Menu changes
+        - [ ] Minecraft Logo
+        - [ ] Panorama
+        - [ ] Splashes
+        - [ ] Mojang Splash
+    - [ ] Configurable spawn rate?
+- [ ] Bump mod and libraries to 1.20.4, and make sure all features work properly.
 - [ ] Custom UI and functionality for the "Pride Table"¹
 - [ ] Crafting recipes for all Pride items (Crafting Table, "Pride Table"¹, Furnace etc)
 - [ ] Balancing of rarity of Joy Mod's content
