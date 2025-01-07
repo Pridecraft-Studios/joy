@@ -1,18 +1,18 @@
 {
   "variants": {
     "facing=east": {
-      "model": "blahaj:block/gray_shark",
+      "model": "joy:block/poly_shark",
       "y": 90
     },
     "facing=north": {
-      "model": "blahaj:block/gray_shark"
+      "model": "joy:block/poly_shark"
     },
     "facing=south": {
-      "model": "blahaj:block/gray_shark",
+      "model": "joy:block/poly_shark",
       "y": 180
     },
     "facing=west": {
-      "model": "blahaj:block/gray_shark",
+      "model": "joy:block/poly_shark",
       "y": 270
     }
   }
