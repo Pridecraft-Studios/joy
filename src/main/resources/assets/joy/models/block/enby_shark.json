@@ -1,0 +1,6 @@
+{
+  "parent": "joy:block/blue_shark",
+  "textures": {
+    "0": "joy:block/pride_sharks/enby"
+  }
+}

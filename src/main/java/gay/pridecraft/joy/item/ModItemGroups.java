@@ -6,12 +6,15 @@ import gay.pridecraft.joy.block.BlahajBlocks;
 import gay.pridecraft.joy.registry.JoyItems;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
+import static gay.pridecraft.joy.block.BlahajBlocks.*;
 
 public class ModItemGroups {
     public static final ItemGroup JOY_BEDS =  Registry.register(Registries.ITEM_GROUP,
@@ -73,6 +76,13 @@ public class ModItemGroups {
                         entries.add(JoyItems.SNIFFER_SPAWN_EGG);
 
                     }).build());
+
+//    public static final List<String> PRIDE_NAMES = List.of(
+//            "ace", "agender", "aro", "aroace", "bi", "demiboy", "demigirl",
+//            "demi_r", "demi_s", "enby", "gay", "genderfluid", "genderqueer", "greyrose",
+//            "grey_r", "grey_s", "intersex", "lesbian", "pan", "poly", "pride", "trans"
+//    ).stream().distinct().toList();
+
     public static final ItemGroup HAJS =  Registry.register(Registries.ITEM_GROUP,
             Identifier.of(Joy.MOD_ID, "hajs"),FabricItemGroup.builder().displayName(Text.translatable("itemgroup.hajs_group"))
                     .icon(() -> new ItemStack(BlahajBlocks.BLAHAJ_BLOCK)).entries((displayContext, entries) -> {
@@ -83,9 +93,10 @@ public class ModItemGroups {
                         entries.add(BlahajBlocks.BREAD_ITEM);
                         entries.add(BlahajBlocks.BROWN_BEAR_ITEM);
 
-                      /*for (Item item : PRIDE_ITEMS) {
-                            entries.add(BlahajBlocks.item);         To anyone who feels like figuring this out, pls do i give up
-                        } */
+                        for (Item item : PRIDE_ITEMS) {
+                            entries.add(new ItemStack(item));
+                        }
+
 
                     }).build());
 

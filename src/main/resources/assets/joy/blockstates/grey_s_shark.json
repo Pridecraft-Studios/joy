@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "joy:block/grey_s_shark",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "joy:block/grey_s_shark"
+    },
+    "facing=south": {
+      "model": "joy:block/grey_s_shark",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "joy:block/grey_s_shark",
+      "y": 270
+    }
+  }
+}
