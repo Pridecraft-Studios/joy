@@ -56,5 +56,8 @@
     "fabric-api": "*",
     "midnightlib": ">=1.5.3-fabric",
     "mavapi": ">=1.2.1"
-  }
+  },
+  "breaks": {
+        "essential-container": "*"
+    }
 }
