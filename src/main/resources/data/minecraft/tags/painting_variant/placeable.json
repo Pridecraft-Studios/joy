@@ -3,19 +3,24 @@
   "values": [
     "joy:ace",
     "joy:agender",
+    "joy:ally",
     "joy:aro",
     "joy:aroace",
     "joy:bigender",
+    "joy:birb",
     "joy:bisexual",
+    "joy:demiromantic",
+    "joy:demisexual",
     "joy:enby",
-    "joy:gay",
+    "joy:floating_bees",
+    "joy:floating_trees",
     "joy:intersex",
     "joy:lesbian",
     "joy:mlm",
     "joy:pan",
     "joy:progress",
     "joy:queer",
-    "joy:straight_ally",
+    "joy:rainbow",
     "joy:trans"
   ]
 }

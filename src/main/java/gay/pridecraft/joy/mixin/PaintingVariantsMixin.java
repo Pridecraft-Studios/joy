@@ -25,7 +25,7 @@ public abstract class PaintingVariantsMixin {
         register(registry, ALLY, 2, 2);
         register(registry, ARO, 2, 1);
         register(registry, AROACE, 4, 3);
-        register(registry, BI, 2, 2);
+        register(registry, BISEXUAL, 2, 2);
         register(registry, BIGENDER, 1, 1);
         register(registry, BIRB, 2, 2);
         register(registry, DEMIROMANTIC, 2, 2);

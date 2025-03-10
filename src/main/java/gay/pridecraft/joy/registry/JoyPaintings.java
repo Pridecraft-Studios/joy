@@ -13,9 +13,9 @@ public class JoyPaintings {
     public static final RegistryKey<PaintingVariant> ALLY = of("ally");
     public static final RegistryKey<PaintingVariant> ARO = of("aro");
     public static final RegistryKey<PaintingVariant> AROACE = of("aroace");
-    public static final RegistryKey<PaintingVariant> BI = of("bi");
     public static final RegistryKey<PaintingVariant> BIGENDER = of("bigender");
     public static final RegistryKey<PaintingVariant> BIRB = of("birb");
+    public static final RegistryKey<PaintingVariant> BISEXUAL = of("bisexual");
     public static final RegistryKey<PaintingVariant> DEMIROMANTIC = of("demiromantic");
     public static final RegistryKey<PaintingVariant> DEMISEXUAL = of("demisexual");
     public static final RegistryKey<PaintingVariant> ENBY = of("enby");
