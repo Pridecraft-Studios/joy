@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "name": "Joy Datagen",
+  "version": "${version}",
+  "entrypoints": {
+    "main": [
+      "gay.pridecraft.joy.Joy"
+    ],
+    "client": [
+      "gay.pridecraft.joy.JoyClient"
+    ],
+    "fabric-datagen": [
+      "gay.pridecraft.joy.JoyData"
+    ]
+  },
+  "mixins": [
+    "joy-data.mixin.json"
+  ]
+}

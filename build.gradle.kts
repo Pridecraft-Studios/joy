@@ -1,88 +1,22 @@
 plugins {
     java
-    id("fabric-loom") version "1.7-SNAPSHOT"
+    alias(libs.plugins.loom)
+    alias(libs.plugins.minotaur)
 }
 
-class ModInfo {
-    val id = property("mod.id").toString()
-    val group = property("mod.group").toString()
-    val version = property("mod.version").toString()
-}
-
-class Dependencies {
-    val minecraft = property("deps.minecraft").toString()
-    val loader = property("deps.loader").toString()
-    val yarn = property("deps.yarn").toString()
-
-    val fabricApi = property("deps.fabricapi").toString()
-    val mavApi = property("deps.mavapi").toString()
-    val midnightLib = property("deps.midnightlib").toString()
-    val badgesLib = property("deps.badgeslib").toString()
-}
-
-val mod = ModInfo()
-val deps = Dependencies()
-
-version = mod.version
-group = mod.group
-
-base.archivesName = "${mod.id}-${mod.version}"
+val id: String by project
 
 loom {
     splitEnvironmentSourceSets()
-    mods.create(mod.id) {
-        sourceSet(sourceSets.getByName("main"))
-        sourceSet(sourceSets.getByName("client"))
-    }
-}
-
-repositories {
-    mavenCentral()
-    maven("https://maven.terraformersmc.com/")
-    maven("https://api.modrinth.com/maven")
-    maven("https://maven.bawnorton.com/releases")
 }
 
 fabricApi {
-    configureDataGeneration()
-}
-
-dependencies {
-    minecraft("com.mojang:minecraft:${deps.minecraft}")
-    mappings("net.fabricmc:yarn:${deps.yarn}:v2")
-    modImplementation("net.fabricmc:fabric-loader:${deps.loader}")
-
-    modImplementation("net.fabricmc.fabric-api:fabric-api:${deps.fabricApi}")
-    modImplementation("maven.modrinth:mavapi:${deps.mavApi}")
-    modImplementation("maven.modrinth:midnightlib:${deps.midnightLib}")
-
-    annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.2.0")
-    include("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.2.0")
-    implementation("com.github.bawnorton.mixinsquared:mixinsquared-fabric:0.2.0")
-
-    include("maven.modrinth:modmenu-badges-lib:${deps.badgesLib}")
-    modImplementation("maven.modrinth:modmenu-badges-lib:${deps.badgesLib}")
-}
-
-tasks.processResources {
-    inputs.property("id", mod.id)
-    inputs.property("version", mod.version)
-    inputs.property("loader_version", deps.loader)
-    inputs.property("minecraft_version", deps.minecraft)
-
-    val map = mapOf(
-        "id" to mod.id,
-        "version" to mod.version,
-        "loader_version" to deps.loader,
-        "minecraft_version" to deps.minecraft
-    )
-
-    filesMatching("fabric.mod.json") { expand(map) }
-}
-
-tasks.withType<JavaCompile> {
-    options.encoding = "UTF-8"
-    options.release = 21
+    configureDataGeneration {
+        createSourceSet = true
+        strictValidation = true
+        modId = id
+        client = true
+    }
 }
 
 java {
@@ -92,6 +26,62 @@ java {
     targetCompatibility = JavaVersion.VERSION_21
 }
 
-tasks.withType<Jar> {
-    from("LICENSE") { rename { "${it}_${project.base.archivesName.get()}" } }
+repositories {
+    mavenCentral()
+    maven("https://maven.neoforged.net/releases") { name = "Neoforged" }
+    maven("https://files.minecraftforge.net/maven/") { name = "Forge" }
+    maven("https://maven.quiltmc.org/repository/release") { name = "Quilt" }
+    maven("https://api.modrinth.com/maven") { name = "Modrinth" }
+    maven("https://maven.terraformersmc.com") { name = "TerraformersMC" }
+    maven("https://maven.ladysnake.org/releases") { name = "Ladysnake Libs" }
+    maven("https://maven.theillusivec4.top/") { name = "TheIllusiveC4" }
+    maven("https://maven.bawnorton.com/releases") { name = "Bawnorton" }
+}
+
+dependencies {
+    minecraft(libs.minecraft)
+    mappings(variantOf(libs.yarn) { classifier("v2") })
+    modImplementation(libs.bundles.fabric)
+
+    annotationProcessor(libs.mixin.squared)
+
+    include(libs.bundles.fabric.bundle)
+    modImplementation(libs.bundles.fabric.bundle)
+
+    modRuntimeOnly(libs.bundles.fabric.runtime)
+}
+
+tasks {
+    processResources {
+        val map = mapOf(
+            "id" to id,
+            "version" to version,
+            "java" to java.targetCompatibility.majorVersion,
+            "loader" to libs.versions.fabric.loader.get(),
+            "minecraftRequired" to libs.versions.minecraft.required.get(),
+        )
+
+        inputs.properties(map)
+
+        filesMatching(listOf("fabric.mod.json", "quilt.mod.json", "META-INF/mods.toml")) {
+            expand(map)
+        }
+
+        exclude("*/.editorconfig")
+    }
+
+    withType<JavaCompile> {
+        options.encoding = "UTF-8"
+        options.release = 21
+    }
+
+    withType<Jar> {
+        from("LICENSE*") {
+            rename { "${project.name}-${it}" }
+        }
+    }
+
+    "sourcesJar" {
+        dependsOn("runDatagen")
+    }
 }

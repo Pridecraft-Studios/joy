@@ -50,11 +50,11 @@
     }
   ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
-    "minecraft": "~${minecraft_version}",
-    "java": ">=21",
+    "fabricloader": "*",
+    "minecraft": "${minecraftRequired}",
+    "java": "${java}",
     "fabric-api": "*",
-    "midnightlib": ">=1.5.3-fabric",
-    "mavapi": ">=1.2.1"
+    "midnightlib": "*",
+    "mavapi": "*"
   }
 }

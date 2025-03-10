@@ -1,0 +1,94 @@
+[versions]
+# Minecraft
+minecraft-version = "1.21.1"
+minecraft-required = "1.21.1"
+minecraft-forge-compatible = "1.21.1"
+minecraft-fabric-compatible = "1.21.1"
+minecraft-neoforge-compatible = "1.21.1"
+
+yarn = "1.21.1+build.3"
+quilt-mappings = "1.21.1+build.9"
+
+# Fabric
+fabric-loader = "0.16.+"
+fabric-api = "0.115.0+1.21.1"
+
+# Forge
+forge-loader = "1.21.1-52.1.0"
+
+# Neoforged
+neoforge-loader = "21.1.121"
+
+# Mods
+trinkets = "3.10.0"
+curios = "5.9.1+1.20.1"
+emi = "1.1.10+1.21"
+mavapi = "1.2.1"
+
+modmenu = "11.0.3"
+modmenu-badges = "2023.6.1"
+
+midnight-fabric = "1.6.9+1.21-fabric"
+midnight-neoforge = "1.6.9+1.21-neoforge"
+
+# Libraries
+annotations = "23.+"
+mixin = "0.15.0+mixin.0.8.7"
+mixin-squared = "0.2.0"
+
+testng = "7.5.1"
+
+# Plugins
+loom = "1.+"
+minotaur = "2.+"
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft-version" }
+yarn = { module = "net.fabricmc:yarn", version.ref = "yarn" }
+quilt-mappings = { module = "org.quiltmc:quilt-mappings", version.ref = "quilt-mappings" }
+
+fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric-loader" }
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+
+forge-loader = { module = "net.minecraftforge:forge", version.ref = "forge-loader" }
+neoforge-loader = { module = "net.neoforged:neoforge", version.ref = "neoforge-loader" }
+
+trinkets = { module = "dev.emi:trinkets", version.ref = "trinkets" }
+
+curios = { module = "top.theillusivec4.curios:curios-forge", version.ref = "curios" }
+
+emi = { module = "dev.emi:emi-xplat-intermediary", version.ref = "emi" }
+emi-fabric = { module = "dev.emi:emi-fabric", version.ref = "emi" }
+emi-forge = { module = "dev.emi:emi-forge", version.ref = "emi" }
+emi-neoforge = { module = "dev.emi:emi-neoforge", version.ref = "emi" }
+
+mavapi = { module = "maven.modrinth:mavapi", version.ref = "mavapi"}
+
+modmenu = { module = "maven.modrinth:modmenu", version.ref = "modmenu" }
+modmenu-badges = { module = "maven.modrinth:modmenu-badges-lib", version.ref = "modmenu-badges" }
+
+midnight-fabric = { module = "maven.modrinth:midnightlib", version.ref = "midnight-fabric" }
+midnight-neoforge = { module = "maven.modrinth:midnightlib", version.ref = "midnight-neoforge" }
+
+annotations = { module = "org.jetbrains:annotations", version.ref = "annotations" }
+mixin = { module = "net.fabricmc:sponge-mixin", version.ref = "mixin" }
+mixin-squared = { module = "com.github.bawnorton.mixinsquared:mixinsquared-fabric", version.ref = "mixin-squared" }
+
+testng = { module = "org.testng:testng", version.ref = "testng" }
+
+[bundles]
+fabric = ["fabric-loader", "fabric-api", "trinkets", "mavapi", "midnight-fabric"]
+fabric-bundle = ["mixin-squared", "modmenu-badges"]
+fabric-runtime = ["emi-fabric", "modmenu"]
+
+forge = ["curios"]
+forge-runtime = []
+
+neoforge = []
+neoforge-runtime = ["emi-neoforge"]
+
+compile-only = ["annotations"]
+
+[plugins]
+loom = { id = "dev.architectury.loom", version.ref = "loom" }
+minotaur = { id = "com.modrinth.minotaur", version.ref = "minotaur" }
