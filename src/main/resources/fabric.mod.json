@@ -52,7 +52,6 @@
   "depends": {
     "fabricloader": "*",
     "minecraft": "${minecraftRequired}",
-    "java": "${java}",
     "fabric-api": "*",
     "midnightlib": "*",
     "mavapi": "*"
