@@ -23,10 +23,17 @@
     "musicalskele (blahaj)"
   ],
   "contact": {
-    "homepage": "https://pridecraft.gay/",
+    "homepage": "https://pridecraft.gay/joy",
     "sources": "https://git.pridecraft.gay/joy"
   },
-  "license": "ARR-FOR-NOW, CC-BY-SA 4.0, ARR",
+  "license": [
+    "For Joy Licensing Details & Source Disclosure, see LICENSE.md",
+    "All Rights Reserved (Code)",
+    "CC-BY-SA-4.0 (Art)",
+    "All Rights Reserved (Music)",
+    "Unlicense (Blahaj)",
+    "MIT (Blahaj)"
+  ],
   "icon": "assets/joy/icon.png",
   "environment": "*",
   "entrypoints": {
