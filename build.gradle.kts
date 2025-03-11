@@ -1,3 +1,8 @@
+import it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap
+import java.io.IOException
+import java.nio.file.Files
+import javax.imageio.ImageIO
+
 plugins {
     java
     alias(libs.plugins.loom)
@@ -83,5 +88,128 @@ tasks {
 
     "sourcesJar" {
         dependsOn("runDatagen")
+    }
+
+    register("imageCleanup") {
+        val prop = System.getProperties()
+        val cleanupSource = prop.getProperty("cleanupSource")
+
+        notCompatibleWithConfigurationCache("not ready for caching")
+
+        onlyIf { cleanupSource != null }
+
+        if (cleanupSource != null) {
+            inputs.files(cleanupSource, sourceSets.main.get().resources)
+        }
+
+        doLast {
+            data class ImgData(
+                val file: File,
+                val image: IntArray,
+                val badMips: Boolean,
+                val update: MutableSet<File> = HashSet(),
+                val hit: MutableSet<File> = HashSet()
+            ) {
+                override fun toString(): String {
+                    return "$file => ${image.size} pixels\n\tupdate => $update\n\thit => $hit"
+                }
+
+                fun isMissed(): Boolean = update.isEmpty() && hit.isEmpty()
+            }
+
+            val map = Long2ObjectOpenHashMap<ImgData>()
+
+            fun doWork(file: File) {
+                if (file.extension != "png") {
+                    return
+                }
+
+                val img = ImageIO.read(file)
+
+                val w = img.width
+                val h = img.height
+
+                val data = img.getRGB(0, 0, w, h, null, 0, w)
+
+                var hash = 0L
+
+                for (i in data.indices) {
+                    val c = data[i]
+                    if (c and 0xFF000000.toInt() == 0) {
+                        data[i] = 0
+                    }
+                }
+                for (d in data) {
+                    hash = hash * 31L + d
+                }
+
+                val other = map.get(hash)
+
+                // Kotlin kept randomly stating that the variable other is always null,
+                // then had the audacity to tell me the suppression was redundant.
+                @Suppress("KotlinConstantConditions", "RedundantSuppression")
+                if (other == null) {
+                    map.put(hash, ImgData(file, data, (w and 15) or (w and 15) != 0))
+                    return
+                }
+
+                if (!other.image.contentEquals(data)) {
+                    logger.warn("{} != {}", file, other.file)
+                    return
+                }
+
+                val selfSize = Files.size(file.toPath())
+                val otherSize = Files.size(other.file.toPath())
+
+                if (selfSize < otherSize) {
+                    logger.info("{} < {} => {} < {}; replace", file, other.file, selfSize, otherSize)
+                    map.put(hash, ImgData(file, data, other.badMips, update = HashSet(other.update + other.hit + other.file)))
+                    return
+                }
+
+                if (selfSize > otherSize) {
+                    logger.info("{} > {} => {} > {}; update", file, other.file, selfSize, otherSize)
+                    other.update += file
+                    return
+                }
+
+                logger.info("{} = {} => {} = {}; hit", file, other.file, selfSize, otherSize)
+                other.hit += file
+            }
+
+            for (file in project.fileTree(cleanupSource)) {
+                doWork(file)
+            }
+
+            for (file in sourceSets.main.get().resources) {
+                doWork(file)
+            }
+
+            for ((k, v) in map) {
+                logger.info("{} => {}", k, v)
+            }
+
+            map.values.asSequence()
+                .filterNot { it.isMissed() }
+                .map { it.file to it.update }
+                .forEach {
+                    val src = it.first.readBytes()
+                    it.second.forEach { dest ->
+                        try {
+                            dest.writeBytes(src)
+                        } catch (e: IOException) {
+                            logger.error("Failed to copy {} => {}", src, dest, e)
+                        }
+                    }
+                }
+
+            map.values.asSequence()
+                .filter { it.isMissed() }
+                .forEach { logger.warn("Missed entry: {}", it.file) }
+
+            map.values.asSequence()
+                .filter { it.badMips }
+                .forEach { logger.warn("Bad mipmaps: {}", it) }
+        }
     }
 }
