@@ -1,5 +1,6 @@
 package gay.pridecraft.joy;
 
+import gay.pridecraft.joy.client.SplashUtil;
 import gay.pridecraft.joy.registry.JoyBlockEntityTypes;
 import gay.pridecraft.joy.registry.JoyBlocks;
 import gay.pridecraft.joy.registry.JoyEntities;
@@ -45,6 +46,8 @@ public class JoyClient implements ClientModInitializer {
 
         JoyUtil.registerEnabledPack("menu", Text.of("Joy's Main Menu & HUD"));
         JoyUtil.registerEnabledPack("glint", Text.of("Joy's Enchantment Glint"));
+
+        SplashUtil.init();
     }
 
     private static void registerBedBlockRenderLayers() {

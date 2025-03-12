@@ -1,52 +1,35 @@
 package gay.pridecraft.joy.mixin.client;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import gay.pridecraft.joy.Joy;
-import net.fabricmc.loader.api.FabricLoader;
+import com.llamalad7.mixinextras.sugar.Local;
+import gay.pridecraft.joy.client.SplashUtil;
+import net.minecraft.client.gui.screen.SplashTextRenderer;
 import net.minecraft.client.resource.SplashTextResourceSupplier;
 import org.spongepowered.asm.mixin.Mixin;
 
 import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.profiler.Profiler;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import java.time.LocalDateTime;
-import java.time.Month;
-import java.util.ArrayList;
 import java.util.List;
 
 @Mixin(SplashTextResourceSupplier.class)
 public class SplashTextResourceSupplierMixin {
-    @ModifyReturnValue(method = "prepare(Lnet/minecraft/resource/ResourceManager;Lnet/minecraft/util/profiler/Profiler;)Ljava/util/List;", at = @At("RETURN"))
-    private List<String> onPrepare(List<String> original) {
-        List<String> bdSplash = new ArrayList<>();
+    @ModifyReturnValue(method = "prepare", at = @At("RETURN"))
+    private List<String> onPrepare(List<String> original, @Local(argsOnly = true) ResourceManager resourceManager) {
+        original.addAll(SplashUtil.prepare(resourceManager));
 
-        FabricLoader
-                .getInstance()
-                .getModContainer(Joy.MOD_ID)
-                .ifPresent(modContainer ->
-                        modContainer
-                                .getMetadata()
-                                .getAuthors()
-                                .forEach(author ->
-                                        original.add("Made by " + author.getName() + "!")
-                                )
-                );
+        return original;
+    }
 
-        LocalDateTime now = LocalDateTime.now();
+    @Inject(method = "get", at = @At("HEAD"), cancellable = true)
+    private void onGet(CallbackInfoReturnable<SplashTextRenderer> ci) {
+        String birthday = SplashUtil.getBirthday(.5);
 
-        if (now.getMonth() == Month.MARCH && now.getDayOfMonth() == 18)
-            bdSplash.add("Happy Birthday, TheClashFruit!");
-
-        if (now.getMonth() == Month.SEPTEMBER && now.getDayOfMonth() == 14)
-            bdSplash.add("Happy Birthday, Blurry!");
-
-        if (now.getMonth() == Month.NOVEMBER && now.getDayOfMonth() == 8)
-            bdSplash.add("Happy Birthday, Fery!");
-
-        return !bdSplash.isEmpty() ? bdSplash : original;
+        if (birthday != null) {
+            ci.setReturnValue(new SplashTextRenderer(birthday));
+        }
     }
 }
 
