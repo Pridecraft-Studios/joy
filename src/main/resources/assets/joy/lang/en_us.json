@@ -40,9 +40,11 @@
   "block.joy.aroace_candle": "Aro-Ace Candle",
   "block.joy.lesbian_candle": "Lesbian Candle",
   "block.joy.progress_candle": "Progress Candle",
+
   "item.joy.pride_elytra": "Pride Elytra",
   "item.joy.totem_of_pride": "Totem of Pride",
   "item.joy.pride_brush": "Pride Brush",
+
   "item.joy.queer_bundle": "Queer Bundle",
   "item.joy.gay_bundle": "Gay Bundle",
   "item.joy.enby_bundle": "Enby Bundle",
@@ -112,12 +114,14 @@
   "painting.joy.demisexual.author": "Pridecraft Studios",
   "painting.joy.rainbow.title": "Rainbow flag",
   "painting.joy.rainbow.author": "Pridecraft Studios",
+
   "painting.joy.birb.title": "birb",
   "painting.joy.birb.author": "Blurryface",
   "painting.joy.floating_trees.title": "Floating Trees",
   "painting.joy.floating_trees.author": "WorldWidePixel",
   "painting.joy.floating_bees.title": "Floating Bees",
   "painting.joy.floating_bees.author": "WorldWidePixel",
+
   "block.joy.blue_shark": "Soft Toy Shark",
   "block.joy.blue_shark.tooltip": "a.k.a. Blahaj",
   "block.joy.gray_shark": "Gray Toy Shark",
