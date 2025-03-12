@@ -15,8 +15,13 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 @Environment(EnvType.CLIENT)
@@ -37,6 +42,10 @@ public class JoyClient implements ClientModInitializer {
         });
 
         ParticleFactoryRegistry.getInstance().register(JoyParticles.TOTEM_OF_PRIDE_PARTICLE, TotemOfPrideParticle.Factory::new);
+
+        final ModContainer self = FabricLoader.getInstance().getModContainer(Joy.MOD_ID).orElseThrow();
+
+        ResourceManagerHelper.registerBuiltinResourcePack(JoyUtil.id("menu"), self, Text.of("Joy's Main Menu & HUD"), ResourcePackActivationType.DEFAULT_ENABLED);
     }
 
     private static void registerBedBlockRenderLayers() {
