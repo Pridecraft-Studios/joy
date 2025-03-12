@@ -83,7 +83,8 @@ testng = { module = "org.testng:testng", version.ref = "testng" }
 [bundles]
 fabric = ["fabric-loader", "fabric-api", "trinkets", "mavapi", "midnight-fabric"]
 fabric-bundle = ["modmenu-badges"]
-fabric-runtime = ["emi-fabric", "modmenu"]
+fabric-runtime = ["emi-fabric"]
+fabric-client-runtime = ["modmenu"]
 
 forge = ["curios"]
 forge-runtime = []

@@ -3,13 +3,6 @@ val xplatClient = xplat.sourceSets.client.get()
 val xplatMain = xplat.sourceSets.main.get()
 
 val modrinthId: String by project
-/*
-sourceSets {
-    client {
-        compileClasspath += xplatClient.compileClasspath;
-        runtimeClasspath += xplatClient.runtimeClasspath;
-    }
-}*/
 
 dependencies {
     modImplementation(libs.bundles.fabric)
@@ -21,6 +14,8 @@ dependencies {
     include(libs.bundles.fabric.bundle)
     modImplementation(libs.bundles.fabric.bundle)
     modRuntimeOnly(libs.bundles.fabric.runtime)
+
+    modClientRuntimeOnly(libs.bundles.fabric.client.runtime)
 }
 
 tasks {
