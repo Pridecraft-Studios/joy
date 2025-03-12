@@ -2,6 +2,7 @@ package gay.pridecraft.joy.client;
 
 import com.mojang.logging.LogUtils;
 import gay.pridecraft.joy.JoyUtil;
+import gay.pridecraft.joy.Pivot;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -46,7 +47,13 @@ public final class SplashUtil {
     }
 
     private static List<String> makeContributors() {
-        return List.of();
+        final var authors = Pivot.INSTANCE.authors()
+            .map(person -> "Joy, made by " + person + "!");
+
+        final var contributors = Pivot.INSTANCE.contributors()
+            .map(person -> "Joy, aided by " + person + "!");
+
+        return Stream.concat(authors, contributors).toList();
     }
 
     public static List<String> prepare(ResourceManager manager) {

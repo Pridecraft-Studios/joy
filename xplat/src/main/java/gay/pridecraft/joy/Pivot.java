@@ -16,6 +16,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 
 import java.util.ServiceLoader;
+import java.util.stream.Stream;
 
 
 /**
@@ -40,6 +41,10 @@ public interface Pivot {
     static SimpleParticleType simpleParticle() {
         return INSTANCE.createSimpleParticle();
     }
+
+    Stream<String> authors();
+
+    Stream<String> contributors();
 
     @SuppressWarnings("unchecked")
     static <V> Registry<V> getRegistry(RegistryKey<Registry<V>> key) {

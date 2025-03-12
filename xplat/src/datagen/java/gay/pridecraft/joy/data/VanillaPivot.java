@@ -11,6 +11,8 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.entry.RegistryEntry;
 import org.slf4j.Logger;
 
+import java.util.stream.Stream;
+
 /**
  * @author Ampflower
  * @since 1.0.0
@@ -37,5 +39,15 @@ public class VanillaPivot implements Pivot {
     @Override
     public SimpleParticleType createSimpleParticle() {
         return FabricParticleTypes.simple();
+    }
+
+    @Override
+    public Stream<String> authors() {
+        return Stream.empty();
+    }
+
+    @Override
+    public Stream<String> contributors() {
+        return Stream.empty();
     }
 }
