@@ -13,7 +13,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Ampflower
- * @since 0.1.0
+ * @since 1.0.0
  **/
 public class VanillaPivot implements Pivot {
     private static final Logger logger = LogUtils.getLogger();
