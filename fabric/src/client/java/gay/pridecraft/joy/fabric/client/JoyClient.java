@@ -30,12 +30,23 @@ public class JoyClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         BlockEntityRendererFactories.register(
-                JoyBlockEntityTypes.JOY_BED_BLOCK_ENTITY,
-                JoyBedBlockEntityRenderer::new
+            JoyBlockEntityTypes.JOY_BED_BLOCK_ENTITY,
+            JoyBedBlockEntityRenderer::new
         );
 
         registerBedBlockRenderLayers();
         registerEntityRenderers();
+
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+            JoyBlocks.PINK_ALLIUM,
+            JoyBlocks.BLUE_ALLIUM,
+            JoyBlocks.WHITE_ALLIUM,
+            JoyBlocks.TRANS_ALLIUM,
+            JoyBlocks.POTTED_PINK_ALLIUM,
+            JoyBlocks.POTTED_BLUE_ALLIUM,
+            JoyBlocks.POTTED_WHITE_ALLIUM,
+            JoyBlocks.POTTED_TRANS_ALLIUM
+        );
 
         LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
             Identifier elytra = Identifier.ofVanilla("textures/entity/elytra.png");

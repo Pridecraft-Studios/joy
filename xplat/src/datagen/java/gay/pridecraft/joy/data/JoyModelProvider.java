@@ -65,6 +65,11 @@ public class JoyModelProvider extends FabricModelProvider {
         gen.registerCandle(JoyBlocks.LESBIAN_CANDLE, JoyBlocks.LESBIAN_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.PROGRESS_CANDLE, JoyBlocks.PROGRESS_CANDLE_CAKE);
         registerCake(gen, JoyBlocks.PRIDE_CAKE);
+
+        gen.registerFlowerPotPlant(JoyBlocks.PINK_ALLIUM, JoyBlocks.POTTED_PINK_ALLIUM, BlockStateModelGenerator.TintType.NOT_TINTED);
+        gen.registerFlowerPotPlant(JoyBlocks.BLUE_ALLIUM, JoyBlocks.POTTED_BLUE_ALLIUM, BlockStateModelGenerator.TintType.NOT_TINTED);
+        gen.registerFlowerPotPlant(JoyBlocks.WHITE_ALLIUM, JoyBlocks.POTTED_WHITE_ALLIUM, BlockStateModelGenerator.TintType.NOT_TINTED);
+        gen.registerFlowerPotPlant(JoyBlocks.TRANS_ALLIUM, JoyBlocks.POTTED_TRANS_ALLIUM, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     private static void registerBed(BlockStateModelGenerator gen, Block block) {

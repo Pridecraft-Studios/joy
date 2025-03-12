@@ -60,15 +60,29 @@ public class JoyBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(JoyBlocks.AGENDER_CANDLE_CAKE)
                 .add(JoyBlocks.BIGENDER_CANDLE_CAKE)
                 .add(JoyBlocks.BISEXUAL_CANDLE_CAKE)
-                .add(JoyBlocks.MLM_CANDLE_CAKE)
-                .add(JoyBlocks.ACE_CANDLE_CAKE)
-                .add(JoyBlocks.ARO_CANDLE_CAKE)
-                .add(JoyBlocks.APLATONIC_CANDLE_CAKE)
-                .add(JoyBlocks.GENDER_FLUID_CANDLE_CAKE)
-                .add(JoyBlocks.PAN_CANDLE_CAKE)
-                .add(JoyBlocks.TRANS_CANDLE_CAKE)
-                .add(JoyBlocks.AROACE_CANDLE_CAKE)
-                .add(JoyBlocks.LESBIAN_CANDLE_CAKE)
-                .add(JoyBlocks.PROGRESS_CANDLE_CAKE);
+            .add(JoyBlocks.MLM_CANDLE_CAKE)
+            .add(JoyBlocks.ACE_CANDLE_CAKE)
+            .add(JoyBlocks.ARO_CANDLE_CAKE)
+            .add(JoyBlocks.APLATONIC_CANDLE_CAKE)
+            .add(JoyBlocks.GENDER_FLUID_CANDLE_CAKE)
+            .add(JoyBlocks.PAN_CANDLE_CAKE)
+            .add(JoyBlocks.TRANS_CANDLE_CAKE)
+            .add(JoyBlocks.AROACE_CANDLE_CAKE)
+            .add(JoyBlocks.LESBIAN_CANDLE_CAKE)
+            .add(JoyBlocks.PROGRESS_CANDLE_CAKE);
+
+        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS).add(
+            JoyBlocks.PINK_ALLIUM,
+            JoyBlocks.BLUE_ALLIUM,
+            JoyBlocks.WHITE_ALLIUM,
+            JoyBlocks.TRANS_ALLIUM
+        );
+
+        getOrCreateTagBuilder(BlockTags.FLOWER_POTS).add(
+            JoyBlocks.POTTED_PINK_ALLIUM,
+            JoyBlocks.POTTED_BLUE_ALLIUM,
+            JoyBlocks.POTTED_WHITE_ALLIUM,
+            JoyBlocks.POTTED_TRANS_ALLIUM
+        );
     }
 }

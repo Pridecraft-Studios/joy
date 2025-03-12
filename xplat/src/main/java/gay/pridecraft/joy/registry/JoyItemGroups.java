@@ -104,6 +104,16 @@ public final class JoyItemGroups {
         JoyItems.PROGRESS_BUNDLE::getDefaultStack,
         (ctx, entries) -> JoyItems.BUNDLES.forEach(entries::add));
 
+    public static final ItemGroup FLOWERS = register("flowers",
+        () -> new ItemStack(JoyBlocks.TRANS_ALLIUM),
+        (ctx, entries) -> {
+            entries.add(JoyBlocks.PINK_ALLIUM);
+            entries.add(JoyBlocks.BLUE_ALLIUM);
+            entries.add(JoyBlocks.WHITE_ALLIUM);
+            entries.add(JoyBlocks.TRANS_ALLIUM);
+        }
+    );
+
     private static ItemGroup register(String name, Supplier<ItemStack> icon, ItemGroup.EntryCollector collector) {
         return Pivot.INSTANCE.register(RegistryKeys.ITEM_GROUP, name, Pivot.itemGroupBuilder()
             .displayName(Text.translatable("itemgroup.joy." + name))

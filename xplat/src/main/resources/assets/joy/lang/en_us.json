@@ -6,6 +6,7 @@
   "itemgroup.joy.hajs": "Håjs",
   "itemgroup.joy.misc": "Joy Misc",
   "itemgroup.joy.food": "Joy Food",
+  "itemgroup.joy.flowers": "Joy Flowers",
 
   "block.joy.gay_bed": "Gay Bed",
   "block.joy.enby_bed": "Enby Bed",
@@ -43,6 +44,15 @@
   "block.joy.progress_candle": "Progress Candle",
 
   "block.joy.pride_cake": "Pride Cake",
+
+  "block.joy.pink_allium": "Pink Allium",
+  "block.joy.blue_allium": "Blue Allium",
+  "block.joy.white_allium": "White Allium",
+  "block.joy.trans_allium": "Trans Allium",
+  "block.joy.potted_pink_allium": "Potted Pink Allium",
+  "block.joy.potted_blue_allium": "Potted Blue Allium",
+  "block.joy.potted_white_allium": "Potted White Allium",
+  "block.joy.potted_trans_allium": "Potted Trans Allium",
 
   "item.joy.pride_elytra": "Pride Elytra",
   "item.joy.totem_of_pride": "Totem of Pride",
