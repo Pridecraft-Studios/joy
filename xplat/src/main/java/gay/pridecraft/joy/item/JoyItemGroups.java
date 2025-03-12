@@ -96,6 +96,12 @@ public final class JoyItemGroups {
             entries.add(JoyItems.PRIDE_ELYTRA);
         });
 
+    public static final ItemGroup FOOD = register("food",
+        () -> new ItemStack(JoyBlocks.PRIDE_CAKE),
+        (ctx, entries) -> {
+            entries.add(JoyBlocks.PRIDE_CAKE);
+        });
+
     public static final ItemGroup JOY_BUNDLES = register("bundles",
         JoyItems.PROGRESS_BUNDLE::getDefaultStack,
         (ctx, entries) -> JoyItems.BUNDLES.forEach(entries::add));

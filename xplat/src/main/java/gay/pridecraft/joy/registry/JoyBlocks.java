@@ -5,6 +5,7 @@ import gay.pridecraft.joy.block.JoyBedBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.CakeBlock;
 import net.minecraft.block.CandleBlock;
 import net.minecraft.block.CandleCakeBlock;
 import net.minecraft.item.BlockItem;
@@ -159,14 +160,17 @@ public final class JoyBlocks {
             new CandleCakeBlock(TRANS_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE)));
 
     public static final Block AROACE_CANDLE_CAKE = registerBlock("aroace_candle_cake",
-            new CandleCakeBlock(AROACE_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE)));
+        new CandleCakeBlock(AROACE_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE)));
 
     public static final Block LESBIAN_CANDLE_CAKE = registerBlock("lesbian_candle_cake",
-            new CandleCakeBlock(LESBIAN_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE)));
+        new CandleCakeBlock(LESBIAN_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE)));
 
     public static final Block PROGRESS_CANDLE_CAKE = registerBlock("progress_candle_cake",
-            new CandleCakeBlock(PROGRESS_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE)));
+        new CandleCakeBlock(PROGRESS_CANDLE, AbstractBlock.Settings.copy(Blocks.CANDLE_CAKE)));
     // endregion
+
+    public static final Block PRIDE_CAKE = registerBlock("pride_cake",
+        new CakeBlock(AbstractBlock.Settings.copy(Blocks.CAKE)));
 
     // region Registration Helpers
     private static Block registerBlock(String name, Block block) {

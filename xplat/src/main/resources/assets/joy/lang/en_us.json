@@ -5,6 +5,7 @@
   "itemgroup.joy.entities": "Joy Entities",
   "itemgroup.joy.hajs": "Håjs",
   "itemgroup.joy.misc": "Joy Misc",
+  "itemgroup.joy.food": "Joy Food",
 
   "block.joy.gay_bed": "Gay Bed",
   "block.joy.enby_bed": "Enby Bed",
@@ -40,6 +41,8 @@
   "block.joy.aroace_candle": "Aro-Ace Candle",
   "block.joy.lesbian_candle": "Lesbian Candle",
   "block.joy.progress_candle": "Progress Candle",
+
+  "block.joy.pride_cake": "Pride Cake",
 
   "item.joy.pride_elytra": "Pride Elytra",
   "item.joy.totem_of_pride": "Totem of Pride",

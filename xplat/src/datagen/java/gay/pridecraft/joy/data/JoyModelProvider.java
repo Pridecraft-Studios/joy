@@ -7,13 +7,19 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.CakeBlock;
 import net.minecraft.data.client.BlockStateModelGenerator;
+import net.minecraft.data.client.BlockStateSupplier;
+import net.minecraft.data.client.BlockStateVariant;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Model;
 import net.minecraft.data.client.ModelIds;
 import net.minecraft.data.client.Models;
+import net.minecraft.data.client.MultipartBlockStateSupplier;
 import net.minecraft.data.client.TextureKey;
 import net.minecraft.data.client.TextureMap;
+import net.minecraft.data.client.VariantSettings;
+import net.minecraft.data.client.When;
 import net.minecraft.util.Identifier;
 
 import java.util.Optional;
@@ -58,6 +64,7 @@ public class JoyModelProvider extends FabricModelProvider {
         gen.registerCandle(JoyBlocks.AROACE_CANDLE, JoyBlocks.AROACE_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.LESBIAN_CANDLE, JoyBlocks.LESBIAN_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.PROGRESS_CANDLE, JoyBlocks.PROGRESS_CANDLE_CAKE);
+        registerCake(gen, JoyBlocks.PRIDE_CAKE);
     }
 
     private static void registerBed(BlockStateModelGenerator gen, Block block) {
@@ -70,6 +77,44 @@ public class JoyModelProvider extends FabricModelProvider {
             gen.modelCollector);
 
         gen.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, ModelIds.getBlockModelId(block)));
+    }
+
+    public static void registerCake(BlockStateModelGenerator gen, Block cake) {
+        gen.registerItemModel(cake.asItem());
+
+        final var base = blockVanilla("cake", TextureKey.TOP);
+        base.upload(
+            ModelIds.getBlockModelId(cake),
+            TextureMap.top(cake),
+            gen.modelCollector
+        );
+
+        for (int i = 1; i <= 6; i++) {
+            final var slice = blockVanilla("cake_slice" + i, TextureKey.TOP);
+            slice.upload(
+                ModelIds.getBlockSubModelId(cake, "_slice" + i),
+                TextureMap.top(cake),
+                gen.modelCollector
+            );
+        }
+
+        gen.blockStateCollector.accept(cakeBlockState(cake, ModelIds.getBlockModelId(cake)));
+    }
+
+    private static BlockStateSupplier cakeBlockState(Block block, Identifier base) {
+        final var supplier = MultipartBlockStateSupplier.create(block)
+            .with(When.create().set(CakeBlock.BITES, 0), model(base));
+
+        for (int i = 1; i <= 6; i++) {
+            supplier.with(When.create().set(CakeBlock.BITES, i), model(base.withSuffixedPath("_slice" + i)));
+        }
+
+        return supplier;
+    }
+
+    private static BlockStateVariant model(Identifier model) {
+        return BlockStateVariant.create()
+            .put(VariantSettings.MODEL, model);
     }
 
     @Override
@@ -100,6 +145,10 @@ public class JoyModelProvider extends FabricModelProvider {
 
     private static Model block(String parent, TextureKey... requiredTextureKeys) {
         return new Model(Optional.of(JoyUtil.id("block/" + parent)), Optional.empty(), requiredTextureKeys);// 191
+    }
+
+    private static Model blockVanilla(String parent, TextureKey... requiredTextureKeys) {
+        return new Model(Optional.of(Identifier.ofVanilla("block/" + parent)), Optional.empty(), requiredTextureKeys);// 191
     }
 
     private static Model item(String parent, TextureKey... requiredTextureKeys) {
