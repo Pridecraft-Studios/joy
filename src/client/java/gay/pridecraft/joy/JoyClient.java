@@ -43,9 +43,8 @@ public class JoyClient implements ClientModInitializer {
 
         ParticleFactoryRegistry.getInstance().register(JoyParticles.TOTEM_OF_PRIDE_PARTICLE, TotemOfPrideParticle.Factory::new);
 
-        final ModContainer self = FabricLoader.getInstance().getModContainer(Joy.MOD_ID).orElseThrow();
-
-        ResourceManagerHelper.registerBuiltinResourcePack(JoyUtil.id("menu"), self, Text.of("Joy's Main Menu & HUD"), ResourcePackActivationType.DEFAULT_ENABLED);
+        JoyUtil.registerEnabledPack("menu", Text.of("Joy's Main Menu & HUD"));
+        JoyUtil.registerEnabledPack("glint", Text.of("Joy's Enchantment Glint"));
     }
 
     private static void registerBedBlockRenderLayers() {
