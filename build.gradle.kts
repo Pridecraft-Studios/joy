@@ -11,91 +11,118 @@ plugins {
 
 val id: String by project
 
-loom {
-    splitEnvironmentSourceSets()
-}
+val excluded = setOf(rootProject, project(":xplat"))
 
-fabricApi {
-    configureDataGeneration {
-        createSourceSet = true
-        strictValidation = true
-        modId = id
-        client = true
-    }
-}
+allprojects {
+    apply(plugin = "java")
+    apply(plugin = rootProject.libs.plugins.loom.get().pluginId)
+    apply(plugin = rootProject.libs.plugins.minotaur.get().pluginId)
 
-java {
-    withSourcesJar()
+    val libs = rootProject.libs
 
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
-}
-
-repositories {
-    mavenCentral()
-    maven("https://maven.neoforged.net/releases") { name = "Neoforged" }
-    maven("https://files.minecraftforge.net/maven/") { name = "Forge" }
-    maven("https://maven.quiltmc.org/repository/release") { name = "Quilt" }
-    maven("https://repo.sleeping.town") {
-        name = "Sleeping Town"
-        content {
-            includeGroup("com.unascribed")
+    base {
+        if (project != rootProject) {
+            archivesName.set(rootProject.name + '-' + project.name)
         }
     }
-    maven("https://api.modrinth.com/maven") { name = "Modrinth" }
-    maven("https://maven.terraformersmc.com") { name = "TerraformersMC" }
-    maven("https://maven.ladysnake.org/releases") { name = "Ladysnake Libs" }
-    maven("https://maven.theillusivec4.top/") { name = "TheIllusiveC4" }
-    maven("https://maven.bawnorton.com/releases") { name = "Bawnorton" }
-}
 
-dependencies {
-    minecraft(libs.minecraft)
-    mappings(variantOf(libs.yarn) { classifier("v2") })
-    modImplementation(libs.bundles.fabric)
+    loom {
+        mixin {
+            defaultRefmapName = "joy.refmap.json"
+        }
 
-    annotationProcessor(libs.mixin.squared)
+        splitEnvironmentSourceSets()
+        runs {
+            named("client") {
+                client()
+                configName = "${project.name.replaceFirstChar(Char::uppercase)} Client"
+                ideConfigGenerated(project !in excluded)
+                runDir(rootProject.relativePath("run"))
+            }
+            named("server") {
+                server()
+                configName = "${project.name.replaceFirstChar(Char::uppercase)} Server"
+                ideConfigGenerated(project !in excluded)
+                runDir(rootProject.relativePath("run"))
+            }
+        }
+    }
 
-    include(libs.bundles.fabric.bundle)
-    modImplementation(libs.bundles.fabric.bundle)
+    java {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+        withSourcesJar()
+    }
 
-    modRuntimeOnly(libs.bundles.fabric.runtime)
+    repositories {
+        mavenCentral()
+        maven("https://maven.neoforged.net/releases") { name = "Neoforged" }
+        maven("https://files.minecraftforge.net/maven/") { name = "Forge" }
+        maven("https://maven.quiltmc.org/repository/release") { name = "Quilt" }
+        maven("https://repo.sleeping.town") {
+            name = "Sleeping Town"
+            content {
+                includeGroup("com.unascribed")
+            }
+        }
+        maven("https://api.modrinth.com/maven") { name = "Modrinth" }
+        maven("https://maven.terraformersmc.com") { name = "TerraformersMC" }
+        maven("https://maven.ladysnake.org/releases") { name = "Ladysnake Libs" }
+        maven("https://maven.theillusivec4.top/") { name = "TheIllusiveC4" }
+        maven("https://maven.bawnorton.com/releases") { name = "Bawnorton" }
+    }
+
+    dependencies {
+        minecraft(libs.minecraft)
+        mappings(variantOf(libs.yarn) { classifier("v2") })
+
+        modCompileOnly(libs.bundles.common.compile)
+
+        annotationProcessor(libs.mixin.squared)
+        modImplementation(libs.bundles.common.bundle)
+        include(libs.bundles.common.bundle)
+    }
+
+    tasks {
+        withType<ProcessResources> {
+            if (project !in excluded) {
+                project(":xplat").afterEvaluate { dependsOn(tasks.named("runDatagen")) }
+            }
+
+            val map = mapOf(
+                "id" to id,
+                "version" to version,
+                "java" to java.targetCompatibility.majorVersion,
+                "loader" to libs.versions.fabric.loader.get(),
+                "minecraftRequired" to libs.versions.minecraft.required.get(),
+            )
+
+            inputs.properties(map)
+
+            filesMatching(listOf("fabric.mod.json", "quilt.mod.json", "META-INF/mods.toml")) {
+                expand(map)
+            }
+
+            exclude("*/.editorconfig")
+        }
+
+        withType<JavaCompile> {
+            options.encoding = "UTF-8"
+            options.release = 21
+        }
+
+        withType<Jar> {
+            dependsOn("runDatagen")
+            from("LICENSE*") {
+                rename { "${project.name}-${it}" }
+            }
+        }
+
+        register("publish")
+    }
 }
 
 tasks {
-    processResources {
-        val map = mapOf(
-            "id" to id,
-            "version" to version,
-            "java" to java.targetCompatibility.majorVersion,
-            "loader" to libs.versions.fabric.loader.get(),
-            "minecraftRequired" to libs.versions.minecraft.required.get(),
-        )
-
-        inputs.properties(map)
-
-        filesMatching(listOf("fabric.mod.json", "quilt.mod.json", "META-INF/mods.toml")) {
-            expand(map)
-        }
-
-        exclude("*/.editorconfig")
-    }
-
-    withType<JavaCompile> {
-        options.encoding = "UTF-8"
-        options.release = 21
-    }
-
-    withType<Jar> {
-        from("LICENSE*") {
-            rename { "${project.name}-${it}" }
-        }
-    }
-
-    "sourcesJar" {
-        dependsOn("runDatagen")
-    }
-
     register("imageCleanup") {
         val prop = System.getProperties()
         val cleanupSource = prop.getProperty("cleanupSource")

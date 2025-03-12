@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/template_four_candles",
-  "textures": {
-    "all": "joy:block/intersex_candle",
-    "particle": "joy:block/intersex_candle"
-  }
-}

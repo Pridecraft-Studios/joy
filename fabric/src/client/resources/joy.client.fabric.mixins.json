@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "gay.pridecraft.joy.fabric.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "fix.mavapi.EntityBucketItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

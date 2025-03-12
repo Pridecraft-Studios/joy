@@ -18,3 +18,5 @@ pluginManagement {
 }
 
 rootProject.name = "joy"
+include("xplat")
+include("fabric")

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/template_three_candles",
-  "textures": {
-    "all": "joy:block/ace_candle",
-    "particle": "joy:block/ace_candle"
-  }
-}

@@ -82,14 +82,17 @@ testng = { module = "org.testng:testng", version.ref = "testng" }
 
 [bundles]
 fabric = ["fabric-loader", "fabric-api", "trinkets", "mavapi", "midnight-fabric"]
-fabric-bundle = ["mixin-squared", "modmenu-badges"]
+fabric-bundle = ["modmenu-badges"]
 fabric-runtime = ["emi-fabric", "modmenu"]
 
 forge = ["curios"]
 forge-runtime = []
 
-neoforge = []
+neoforge = ["midnight-neoforge"]
 neoforge-runtime = ["emi-neoforge"]
+
+common-compile = ["midnight-fabric"]
+common-bundle = ["mixin-squared"]
 
 compile-only = ["annotations"]
 

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "name": "Joy Datagen",
+  "version": "${version}",
+  "entrypoints": {
+    "main": [
+      "gay.pridecraft.joy.Pivot::init"
+    ],
+    "fabric-datagen": [
+      "gay.pridecraft.joy.data.JoyData"
+    ]
+  },
+  "mixins": [
+    "joy-data.mixin.json"
+  ]
+}
