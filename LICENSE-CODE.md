@@ -1,5 +1,5 @@
 Copyright 2024-2025 Pridecraft Studios
-Copyright 2024 Wolren, blryface, WorldWidePixel, TheClashFruit, NormalFery, Zhamty, Danial "rotgruengelb", CallMeEcho
+Copyright 2024 Wolren, blryface, WorldWidePixel, TheClashFruit, NormalFery, Zhamty, Daniel "rotgruengelb", CallMeEcho
 
 All Rights Reserved
 
