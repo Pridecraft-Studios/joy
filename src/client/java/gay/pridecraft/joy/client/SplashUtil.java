@@ -61,7 +61,10 @@ public final class SplashUtil {
 
     public static List<String> prepare(ResourceManager manager) {
         try (final var reader = manager.openAsReader(joySplashes)) {
-            return Stream.concat(reader.lines(), contributors.stream()).toList();
+            return Stream.concat(
+                    reader.lines().map(String::trim).filter(str -> !str.isEmpty()),
+                    contributors.stream()
+            ).toList();
         } catch (IOException ioe) {
             logger.warn("Could not read Joy splashes", ioe);
         }
