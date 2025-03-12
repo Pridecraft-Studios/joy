@@ -31,6 +31,8 @@ modmenu-badges = "2023.6.1"
 midnight-fabric = "1.6.9+1.21-fabric"
 midnight-neoforge = "1.6.9+1.21-neoforge"
 
+lib39 = "1.5.0-experimental7+1.20.1"
+
 # Libraries
 annotations = "23.+"
 mixin = "0.15.0+mixin.0.8.7"
@@ -62,13 +64,15 @@ emi-fabric = { module = "dev.emi:emi-fabric", version.ref = "emi" }
 emi-forge = { module = "dev.emi:emi-forge", version.ref = "emi" }
 emi-neoforge = { module = "dev.emi:emi-neoforge", version.ref = "emi" }
 
-mavapi = { module = "maven.modrinth:mavapi", version.ref = "mavapi"}
+mavapi = { module = "maven.modrinth:mavapi", version.ref = "mavapi" }
 
 modmenu = { module = "maven.modrinth:modmenu", version.ref = "modmenu" }
 modmenu-badges = { module = "maven.modrinth:modmenu-badges-lib", version.ref = "modmenu-badges" }
 
 midnight-fabric = { module = "maven.modrinth:midnightlib", version.ref = "midnight-fabric" }
 midnight-neoforge = { module = "maven.modrinth:midnightlib", version.ref = "midnight-neoforge" }
+
+lib39-ripple = { module = "com.unascribed:lib39-ripple", version.ref = "lib39" }
 
 annotations = { module = "org.jetbrains:annotations", version.ref = "annotations" }
 mixin = { module = "net.fabricmc:sponge-mixin", version.ref = "mixin" }

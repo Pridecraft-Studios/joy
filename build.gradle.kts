@@ -36,6 +36,12 @@ repositories {
     maven("https://maven.neoforged.net/releases") { name = "Neoforged" }
     maven("https://files.minecraftforge.net/maven/") { name = "Forge" }
     maven("https://maven.quiltmc.org/repository/release") { name = "Quilt" }
+    maven("https://repo.sleeping.town") {
+        name = "Sleeping Town"
+        content {
+            includeGroup("com.unascribed")
+        }
+    }
     maven("https://api.modrinth.com/maven") { name = "Modrinth" }
     maven("https://maven.terraformersmc.com") { name = "TerraformersMC" }
     maven("https://maven.ladysnake.org/releases") { name = "Ladysnake Libs" }
