@@ -96,6 +96,9 @@ public final class JoyItemGroups {
             entries.add(JoyItems.PRIDE_ELYTRA);
         });
 
+    public static final ItemGroup JOY_BUNDLES = register("bundles",
+        JoyItems.PROGRESS_BUNDLE::getDefaultStack,
+        (ctx, entries) -> JoyItems.BUNDLES.forEach(entries::add));
 
     private static ItemGroup register(String name, Supplier<ItemStack> icon, ItemGroup.EntryCollector collector) {
         return Pivot.INSTANCE.register(RegistryKeys.ITEM_GROUP, name, Pivot.itemGroupBuilder()

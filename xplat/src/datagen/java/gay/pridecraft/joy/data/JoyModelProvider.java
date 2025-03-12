@@ -73,18 +73,22 @@ public class JoyModelProvider extends FabricModelProvider {
     }
 
     @Override
-    public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(JoyItems.TOTEM_OF_PRIDE, Models.GENERATED);
-        itemModelGenerator.register(JoyItems.PRIDE_ELYTRA, Models.GENERATED);
-        itemModelGenerator.register(JoyItems.PRIDE_BRUSH, Models.GENERATED);
-        itemModelGenerator.register(JoyItems.SOCK_FOX_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
-        itemModelGenerator.register(JoyItems.BII_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
-        itemModelGenerator.register(JoyItems.ENBEE_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
-        itemModelGenerator.register(JoyItems.TRANS_BEE_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
-        itemModelGenerator.register(JoyItems.FROG_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
-        itemModelGenerator.register(JoyItems.SNIFFER_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
-        itemModelGenerator.register(JoyItems.TEST_DISC, Models.GENERATED);
-        itemModelGenerator.register(JoyItems.TEST_DISK, Models.GENERATED);
+    public void generateItemModels(ItemModelGenerator gen) {
+        for (final var bundle : JoyItems.BUNDLES) {
+            gen.register(bundle, Models.GENERATED);
+        }
+
+        gen.register(JoyItems.TOTEM_OF_PRIDE, Models.GENERATED);
+        gen.register(JoyItems.PRIDE_ELYTRA, Models.GENERATED);
+        gen.register(JoyItems.PRIDE_BRUSH, Models.GENERATED);
+        gen.register(JoyItems.SOCK_FOX_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
+        gen.register(JoyItems.BII_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
+        gen.register(JoyItems.ENBEE_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
+        gen.register(JoyItems.TRANS_BEE_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
+        gen.register(JoyItems.FROG_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
+        gen.register(JoyItems.SNIFFER_SPAWN_EGG, TEMPLATE_SPAWN_EGG);
+        gen.register(JoyItems.DOUGLAS_DISC, Models.GENERATED);
+        gen.register(JoyItems.MELANCOLIE_DISC, Models.GENERATED);
     }
 
     public static final Model TEMPLATE_SPAWN_EGG = new Model(Optional.of(Identifier.ofVanilla("item/template_spawn_egg")), Optional.empty());
