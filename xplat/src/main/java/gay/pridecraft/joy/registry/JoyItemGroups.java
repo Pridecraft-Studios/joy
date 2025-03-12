@@ -1,9 +1,7 @@
-package gay.pridecraft.joy.item;
+package gay.pridecraft.joy.registry;
 
 import gay.pridecraft.joy.Pivot;
 import gay.pridecraft.joy.block.BlahajBlocks;
-import gay.pridecraft.joy.registry.JoyBlocks;
-import gay.pridecraft.joy.registry.JoyItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

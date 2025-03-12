@@ -1,10 +1,10 @@
 package gay.pridecraft.joy;
 
 import gay.pridecraft.joy.block.BlahajBlocks;
-import gay.pridecraft.joy.item.JoyItemGroups;
 import gay.pridecraft.joy.registry.JoyBlockEntityTypes;
 import gay.pridecraft.joy.registry.JoyBlocks;
 import gay.pridecraft.joy.registry.JoyEntities;
+import gay.pridecraft.joy.registry.JoyItemGroups;
 import gay.pridecraft.joy.registry.JoyItems;
 import gay.pridecraft.joy.registry.JoyParticles;
 import gay.pridecraft.joy.registry.JoySoundEvents;
