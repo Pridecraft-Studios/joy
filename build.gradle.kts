@@ -112,7 +112,7 @@ allprojects {
                 expand(map)
             }
 
-            exclude("*/.editorconfig")
+            exclude("*/.editorconfig", ".cache/")
         }
 
         withType<JavaCompile> {
@@ -124,8 +124,11 @@ allprojects {
             if (project !in excluded) {
                 project(":xplat").afterEvaluate { dependsOn(tasks.named("runDatagen")) }
             }
-            from("LICENSE*") {
-                rename { "${project.name}-${it}" }
+
+            rootDir.listFiles { _, name -> name.startsWith("LICENSE") }?.let {
+                from(it) {
+                    rename { file -> "${rootProject.name}-${file}" }
+                }
             }
         }
 
