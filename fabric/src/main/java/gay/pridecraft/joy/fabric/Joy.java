@@ -7,8 +7,10 @@ import gay.pridecraft.joy.registry.JoyAxolotlVariants;
 import gay.pridecraft.joy.registry.JoyEntities;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.entity.attribute.EntityAttributes;
-import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.passive.BeeEntity;
+import net.minecraft.entity.passive.FoxEntity;
+import net.minecraft.entity.passive.FrogEntity;
+import net.minecraft.entity.passive.SnifferEntity;
 
 public class Joy implements ModInitializer {
     public static final String MOD_ID = "joy";
@@ -26,38 +28,15 @@ public class Joy implements ModInitializer {
 
     private void registerEntityAttributes() {
         // TODO: move to common
-        FabricDefaultAttributeRegistry.register(JoyEntities.SOCK_FOX, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 32.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3));
+        FabricDefaultAttributeRegistry.register(JoyEntities.SOCK_FOX, FoxEntity.createFoxAttributes());
 
-        FabricDefaultAttributeRegistry.register(JoyEntities.BII, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
-                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
+        FabricDefaultAttributeRegistry.register(JoyEntities.BII, BeeEntity.createBeeAttributes());
+        FabricDefaultAttributeRegistry.register(JoyEntities.ENBEE, BeeEntity.createBeeAttributes());
+        FabricDefaultAttributeRegistry.register(JoyEntities.TRANS_BEE, BeeEntity.createBeeAttributes());
+        FabricDefaultAttributeRegistry.register(JoyEntities.TREE, BeeEntity.createBeeAttributes());
 
-        FabricDefaultAttributeRegistry.register(JoyEntities.ENBEE, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
-                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
+        FabricDefaultAttributeRegistry.register(JoyEntities.FROG, FrogEntity.createFrogAttributes());
 
-        //Tree == Trans Bee :moyai:
-        FabricDefaultAttributeRegistry.register(JoyEntities.TRANS_BEE, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
-                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
-
-        FabricDefaultAttributeRegistry.register(JoyEntities.TREE, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 2.0)
-                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.6)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0));
-
-
-        FabricDefaultAttributeRegistry.register(JoyEntities.FROG, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 1.0));
-
-        FabricDefaultAttributeRegistry.register(JoyEntities.SNIFFER, MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.1));
+        FabricDefaultAttributeRegistry.register(JoyEntities.SNIFFER, SnifferEntity.createSnifferAttributes());
     }
 }
