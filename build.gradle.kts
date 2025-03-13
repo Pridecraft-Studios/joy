@@ -5,20 +5,21 @@ import javax.imageio.ImageIO
 
 plugins {
     java
+    id("gay.ampflower.BuildPlugin")
     alias(libs.plugins.loom)
     alias(libs.plugins.minotaur)
 }
-
-val id: String by project
 
 val excluded = setOf(rootProject, project(":xplat"))
 
 allprojects {
     apply(plugin = "java")
+    apply(plugin = "gay.ampflower.BuildPlugin")
     apply(plugin = rootProject.libs.plugins.loom.get().pluginId)
     apply(plugin = rootProject.libs.plugins.minotaur.get().pluginId)
 
     val libs = rootProject.libs
+    version = meta.globalVersion
 
     base {
         if (project != rootProject) {
@@ -90,10 +91,11 @@ allprojects {
             }
 
             val map = mapOf(
-                "id" to id,
+                "id" to mod.id.get(),
                 "version" to version,
                 "java" to java.targetCompatibility.majorVersion,
                 "loader" to libs.versions.fabric.loader.get(),
+                "description" to project.description,
                 "minecraftRequired" to libs.versions.minecraft.required.get(),
             )
 

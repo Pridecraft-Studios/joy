@@ -40,13 +40,13 @@ tasks {
 modrinth {
     token.set(System.getenv("MODRINTH_TOKEN"))
     projectId.set(modrinthId)
-    //versionType.set(meta.releaseType)
-    //versionName.set("${meta.projectVersion} - Fabric ${libs.versions.minecraft.version.get()}")
+    versionType.set(meta.releaseType)
+    versionName.set("${meta.projectVersion} - Fabric ${libs.versions.minecraft.version.get()}")
     versionNumber.set("${project.version}-fabric")
-    //changelog.set(meta.changelog)
+    changelog.set(meta.changelog)
     uploadFile.set(tasks.remapJar)
     dependencies {
     }
-    //gameVersions.set(meta.minecraftCompatible)
+    gameVersions.set(meta.minecraftCompatible)
     loaders.addAll("fabric", "quilt")
 }
