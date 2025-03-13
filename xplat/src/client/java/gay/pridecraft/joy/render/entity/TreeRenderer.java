@@ -38,7 +38,7 @@ public class TreeRenderer<T extends BeeEntity> extends MobEntityRenderer<T, BeeE
             JoyUtil.id("textures/entity/bee/" + base + "_angry.png"),
             JoyUtil.id("textures/entity/bee/" + base + "_angry_nectar.png"),
             JoyUtil.id("textures/entity/bee/" + base + ".png"),
-            JoyUtil.id("textures/entity/bee/" + base + "_nextar.png")
+            JoyUtil.id("textures/entity/bee/" + base + "_nectar.png")
         );
     }
 
