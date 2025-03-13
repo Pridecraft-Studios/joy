@@ -31,22 +31,7 @@ public class JoyModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator gen) {
-        registerBed(gen, JoyBlocks.GAY_BED);
-        registerBed(gen, JoyBlocks.ENBY_BED);
-        registerBed(gen, JoyBlocks.INTERSEX_BED);
-        registerBed(gen, JoyBlocks.AGENDER_BED);
-        registerBed(gen, JoyBlocks.BIGENDER_BED);
-        registerBed(gen, JoyBlocks.BISEXUAL_BED);
-        registerBed(gen, JoyBlocks.MLM_BED);
-        registerBed(gen, JoyBlocks.ACE_BED);
-        registerBed(gen, JoyBlocks.ARO_BED);
-        registerBed(gen, JoyBlocks.APLATONIC_BED);
-        registerBed(gen, JoyBlocks.GENDER_FLUID_BED);
-        registerBed(gen, JoyBlocks.PAN_BED);
-        registerBed(gen, JoyBlocks.TRANS_BED);
-        registerBed(gen, JoyBlocks.AROACE_BED);
-        registerBed(gen, JoyBlocks.LESBIAN_BED);
-        registerBed(gen, JoyBlocks.PROGRESS_BED);
+        JoyBlocks.BEDS.forEach(bed -> registerBed(gen, bed));
         gen.registerCandle(JoyBlocks.QUEER_CANDLE, JoyBlocks.QUEER_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.GAY_CANDLE, JoyBlocks.GAY_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.ENBY_CANDLE, JoyBlocks.ENBY_CANDLE_CAKE);

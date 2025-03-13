@@ -85,6 +85,26 @@ public final class JoyBlocks {
         LESBIAN_CANDLE = registerCandle("lesbian_candle"),
         PROGRESS_CANDLE = registerCandle("progress_candle");
 
+    public static final List<Block> CANDLES = List.of(
+        QUEER_CANDLE,
+        GAY_CANDLE,
+        ENBY_CANDLE,
+        INTERSEX_CANDLE,
+        AGENDER_CANDLE,
+        BIGENDER_CANDLE,
+        BISEXUAL_CANDLE,
+        MLM_CANDLE,
+        ACE_CANDLE,
+        ARO_CANDLE,
+        APLATONIC_CANDLE,
+        GENDER_FLUID_CANDLE,
+        PAN_CANDLE,
+        TRANS_CANDLE,
+        AROACE_CANDLE,
+        LESBIAN_CANDLE,
+        PROGRESS_CANDLE
+    );
+
     private static Block registerCandle(String name) {
         return registerBlock(name, new CandleBlock(copy(Blocks.CANDLE)));
     }
@@ -110,6 +130,26 @@ public final class JoyBlocks {
         LESBIAN_CANDLE_CAKE = registerCandleCake(LESBIAN_CANDLE),
         PROGRESS_CANDLE_CAKE = registerCandleCake(PROGRESS_CANDLE);
 
+    public static final List<Block> CANDLE_CAKES = List.of(
+        QUEER_CANDLE_CAKE,
+        GAY_CANDLE_CAKE,
+        ENBY_CANDLE_CAKE,
+        INTERSEX_CANDLE_CAKE,
+        AGENDER_CANDLE_CAKE,
+        BIGENDER_CANDLE_CAKE,
+        BISEXUAL_CANDLE_CAKE,
+        MLM_CANDLE_CAKE,
+        ACE_CANDLE_CAKE,
+        ARO_CANDLE_CAKE,
+        APLATONIC_CANDLE_CAKE,
+        GENDER_FLUID_CANDLE_CAKE,
+        PAN_CANDLE_CAKE,
+        TRANS_CANDLE_CAKE,
+        AROACE_CANDLE_CAKE,
+        LESBIAN_CANDLE_CAKE,
+        PROGRESS_CANDLE_CAKE
+    );
+
     private static Block registerCandleCake(Block candle) {
         final var name = Registries.BLOCK.getId(candle).getPath() + "_cake";
         return registerBlock(name, new CandleCakeBlock(candle, copy(Blocks.CANDLE_CAKE)));
@@ -128,6 +168,20 @@ public final class JoyBlocks {
         POTTED_BLUE_ALLIUM = registerFlowerPot(BLUE_ALLIUM, Blocks.POTTED_ALLIUM),
         POTTED_WHITE_ALLIUM = registerFlowerPot(WHITE_ALLIUM, Blocks.POTTED_ALLIUM),
         POTTED_TRANS_ALLIUM = registerFlowerPot(TRANS_ALLIUM, Blocks.POTTED_ALLIUM);
+
+    public static final List<Block> PLANTS = List.of(
+        PINK_ALLIUM,
+        BLUE_ALLIUM,
+        WHITE_ALLIUM,
+        TRANS_ALLIUM
+    );
+
+    public static final List<Block> POTTED_PLANTS = List.of(
+        POTTED_PINK_ALLIUM,
+        POTTED_BLUE_ALLIUM,
+        POTTED_WHITE_ALLIUM,
+        POTTED_TRANS_ALLIUM
+    );
 
     // region Registration Helpers
 

@@ -20,6 +20,7 @@ public class JoyData implements DataGeneratorEntrypoint {
 
         final var pack = fabricDataGenerator.createPack();
 
+        pack.addProvider(JoyBlockLootProvider::new);
         pack.addProvider(JoyBlockTagProvider::new);
         pack.addProvider(JoyEntityTagProvider::new);
         pack.addProvider(JoyModelProvider::new);
