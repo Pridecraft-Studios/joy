@@ -1,0 +1,23 @@
+name: Publish
+
+on:
+  release:
+    types:
+      - published
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    uses: Modflower/workflows/.github/workflows/mod-publish.yml@main
+    with:
+      artifacts: |
+        */build/libs/*
+        !buildSrc/*
+        !xplat/*
+        !*-sources.jar
+        !*-javadoc.jar
+      gradle-publish: 'publish'
+      java-version: 21
+    secrets: inherit

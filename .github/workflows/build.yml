@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    tags-ignore:
+      - '**'
+    branches:
+      - '**'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: Modflower/workflows/.github/workflows/mod-build.yml@main
+    with:
+      artifacts: |
+        */build/libs/
+        !buildSrc
+      java-version: 21
