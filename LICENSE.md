@@ -19,7 +19,7 @@ The core code was taken from [DaFuqs] and [hibiii] under the [Unlicense][BLAHAJ-
 
 Pride Blahajs were taken from [musicalskele] under the [MIT License][BLAHAJ-PRIDE].
 
-*Note: This is operating under assumptions from known and disclosed sources.* 
+*Note: This is operating under assumptions from known and disclosed sources.*
 
 ## Assets
 
@@ -27,14 +27,20 @@ Pride Blahajs were taken from [musicalskele] under the [MIT License][BLAHAJ-PRID
 
 This does *NOT* include the music. See the [music license][MUSIC] for usage terms.
 
+This also does *NOT* include brand assets, including the rosettes in `icon.png`, and `*_rosette.png`.
+These are All Rights Reserved.
+
 ## Music
 
 [All Rights Reserved][MUSIC]. See the license file for details.
 
 
 [CODE]: LICENSE-CODE.md
+
 [BLAHAJ-BASE]: LICENSE-BLAHAJ-BASE
+
 [BLAHAJ-PRIDE]: LICENSE-BLAHAJ-PRIDE
+
 [ASSETS]: LICENSE-ASSETS
 [MUSIC]: LICENSE-MUSIC
 
