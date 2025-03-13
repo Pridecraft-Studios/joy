@@ -66,6 +66,11 @@ Please read carefully; this affects how you may be able to use Joy's sources.
 
 <p><a property="dct:title" rel="cc:attributionURL" href="https://pridecraft.gay/pridepack">Joy's Assets</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://pridecraft.gay">Pridecraft Studios</a> is licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img width="16" height="16" style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img width="16" height="16" style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img width="16" height="16" style="height:16px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
 
+This does *NOT* include the music. See the [music license][MUSIC] for usage terms.
+
+This also does *NOT* include brand assets, including the rosettes in `icon.png`, and `*_rosette.png`.
+These are All Rights Reserved.
+
 </details>
 
 <details><summary>Music license [ARR + Permissions]</summary>
