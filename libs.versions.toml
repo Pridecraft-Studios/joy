@@ -36,6 +36,7 @@ lib39 = "1.5.0-experimental7+1.20.1"
 # Libraries
 annotations = "23.+"
 mixin = "0.15.0+mixin.0.8.7"
+mixin-extras = "0.4.1"
 mixin-squared = "0.2.0"
 
 testng = "7.5.1"
@@ -76,6 +77,7 @@ lib39-ripple = { module = "com.unascribed:lib39-ripple", version.ref = "lib39" }
 
 annotations = { module = "org.jetbrains:annotations", version.ref = "annotations" }
 mixin = { module = "net.fabricmc:sponge-mixin", version.ref = "mixin" }
+mixin-extras = { module = "io.github.llamalad7:mixinextras-common", version.ref = "mixin-extras" }
 mixin-squared = { module = "com.github.bawnorton.mixinsquared:mixinsquared-fabric", version.ref = "mixin-squared" }
 
 testng = { module = "org.testng:testng", version.ref = "testng" }

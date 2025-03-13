@@ -79,11 +79,16 @@ allprojects {
 
         modCompileOnly(libs.bundles.common.compile)
 
-        annotationProcessor(libs.mixin.squared)
+        annotationProcessor(libs.mixin.squared) {
+            exclude(module = "fabric-loader")
+        }
         modImplementation(libs.bundles.common.bundle)
         if (project !in excluded) {
             include(libs.bundles.common.bundle)
         }
+
+        annotationProcessor(libs.mixin.extras)
+        modCompileOnly(libs.mixin.extras)
     }
 
     tasks {
