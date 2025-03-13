@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   build:
-    uses: Modflower/workflows/.github/workflows/mod-publish.yml@main
+    uses: Pridecraft-Studios/workflows/.github/workflows/mod-publish.yml@main
     with:
       artifacts: |
         */build/libs/*

@@ -22,7 +22,7 @@ public final class Properties {
 	}
 
 	public static @Nullable String str(Project project, String property) {
-		final var p = project.property(property);
+		final var p = project.findProperty(property);
 		if (p == null) {
 			return null;
 		}

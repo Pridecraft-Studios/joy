@@ -40,7 +40,7 @@ public class BuildPlugin implements Plugin<Project> {
 			version,
 			Util.mkVersion(version + "+mc." + minecraftVersion),
 			Util.getVersionType(version),
-			Util.mkChangelog(Properties.str(target, "github")),
+			Util.mkChangelog(Properties.str(target, "github"), Properties.str(target, "forge")),
 			Util.getCompatibleVersions(libs, target)
 		));
 

@@ -24,7 +24,7 @@ public class Util {
 		return URLEncoder.encode(str, StandardCharsets.UTF_8);
 	}
 
-	public static String mkChangelog(String git) {
+	public static String mkChangelog(String git, String forge) {
 		if (!isBlank(Env.Changelog)) {
 			logger.debug("Changelog found, returning {}", Env.Changelog);
 			return Env.Changelog;
@@ -35,8 +35,10 @@ public class Util {
 			return null;
 		}
 
-		if (startsWith(Env.Reference, "refs/tags/")) {
-			final var host = VcsHost.find(git);
+        final var host = VcsHost.find(git, forge);
+        if (host == null) {
+            logger.warn("Forge not found. Returning bare link to {}", git);
+        } else if (startsWith(Env.Reference, "refs/tags/")) {
 
 			logger.warn("Changelog not found but tag reference was, returning link to {}{}{}",
 				git, host.release, urlEncode(Env.getTag()));

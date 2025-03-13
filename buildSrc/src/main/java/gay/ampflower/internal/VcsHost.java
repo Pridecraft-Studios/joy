@@ -17,7 +17,7 @@ public enum VcsHost {
 		this.release = release;
 	}
 
-	public static VcsHost find(String url) {
+	public static VcsHost find(String url, String forge) {
 		// "https://".length = 8
 		final int lastSlash = url.indexOf('/', 8);
 		for (final var host : values()) {
@@ -28,6 +28,11 @@ public enum VcsHost {
 				return host;
 			}
 		}
+        for (final var host : values()) {
+            if (host.name().equals(forge)) {
+                return host;
+            }
+        }
 		return null;
 	}
 }
