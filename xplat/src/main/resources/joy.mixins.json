@@ -6,7 +6,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AllayEntityMixin", "LivingEntityMixin", "PaintingVariantsMixin",
-    "minecraft.AccessorPoi"
+    "minecraft.AccessorPoi", "minecraft.MixinLivingEntity", "minecraft.MixinPlayerEntity"
   ],
   "injectors": {
     "defaultRequire": 1

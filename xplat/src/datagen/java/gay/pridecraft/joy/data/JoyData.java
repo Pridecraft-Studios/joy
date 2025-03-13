@@ -23,6 +23,7 @@ public class JoyData implements DataGeneratorEntrypoint {
         pack.addProvider(JoyBlockLootProvider::new);
         pack.addProvider(JoyBlockTagProvider::new);
         pack.addProvider(JoyEntityTagProvider::new);
+        pack.addProvider(JoyItemTagProvider::new);
         pack.addProvider(JoyModelProvider::new);
 
         for (final var translation : Bootstrap.getMissingTranslations()) {

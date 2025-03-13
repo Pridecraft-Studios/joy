@@ -5,10 +5,8 @@
   "refmap": "client-joy.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "BipedEntityModelMixin",
-    "ClientPlayNetworkHandlerMixin",
-    "PlayerEntityRendererMixin",
-    "SplashTextResourceSupplierMixin"
+    "BipedEntityModelMixin", "ClientPlayNetworkHandlerMixin", "PlayerEntityRendererMixin",
+    "SplashTextResourceSupplierMixin", "minecraft.MixinCapeFeatureRenderer"
   ],
   "injectors": {
     "defaultRequire": 1

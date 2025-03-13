@@ -187,5 +187,8 @@
   "tooltip.joy.owner.rename": "%s of %s",
 
   "tag.item.joy.plushies": "Plushies",
-  "tag.item.joy.sharks": "Shark Plushies"
+  "tag.item.joy.sharks": "Shark Plushies",
+
+  "tag.item.c.gliders": "Gliders",
+  "tag.item.c.elytra": "Elytra"
 }
