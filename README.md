@@ -86,7 +86,7 @@ WorldWidePixel on Discord via `@worldwidepixel` or contact using [their public e
 
 </details>
 
-<details><summary>Blahaj & Pride Blahaj license [Unlicense]</summary>
+<details><summary>Blahaj [Unlicense][BLAHAJ-BASE] & Pride Blahaj [MIT][BLAHAJ-PRIDE] licensing</summary>
 
 The core code was taken from [DaFuqs] and [hibiii] under the [Unlicense][BLAHAJ-BASE].
 
