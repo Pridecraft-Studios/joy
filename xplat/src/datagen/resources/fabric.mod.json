@@ -12,6 +12,7 @@
     ]
   },
   "mixins": [
+    "joy.mixins.json",
     "joy-data.mixin.json"
   ]
 }

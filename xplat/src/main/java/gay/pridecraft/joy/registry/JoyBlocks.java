@@ -15,6 +15,8 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
 
+import java.util.List;
+
 import static net.minecraft.block.AbstractBlock.Settings.copy;
 
 public final class JoyBlocks {
@@ -36,6 +38,25 @@ public final class JoyBlocks {
         AROACE_BED = registerBed("aroace_bed", Blocks.MAGENTA_BED),
         LESBIAN_BED = registerBed("lesbian_bed", Blocks.ORANGE_BED),
         PROGRESS_BED = registerBed("progress_bed", Blocks.WHITE_BED);
+
+    public static final List<Block> BEDS = List.of(
+        GAY_BED,
+        ENBY_BED,
+        INTERSEX_BED,
+        AGENDER_BED,
+        BIGENDER_BED,
+        BISEXUAL_BED,
+        MLM_BED,
+        ACE_BED,
+        ARO_BED,
+        APLATONIC_BED,
+        GENDER_FLUID_BED,
+        PAN_BED,
+        TRANS_BED,
+        AROACE_BED,
+        LESBIAN_BED,
+        PROGRESS_BED
+    );
 
     private static Block registerBed(String name, Block src) {
         final var block = new JoyBedBlock(copy(src));

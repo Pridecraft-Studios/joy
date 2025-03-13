@@ -3,6 +3,7 @@ package gay.pridecraft.joy.data;
 import gay.pridecraft.joy.registry.JoyBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -35,22 +36,7 @@ public class JoyBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(JoyBlocks.PROGRESS_CANDLE);
 
         getOrCreateTagBuilder(BlockTags.BEDS)
-                .add(JoyBlocks.GAY_BED)
-                .add(JoyBlocks.ENBY_BED)
-                .add(JoyBlocks.INTERSEX_BED)
-                .add(JoyBlocks.AGENDER_BED)
-                .add(JoyBlocks.BIGENDER_BED)
-                .add(JoyBlocks.BISEXUAL_BED)
-                .add(JoyBlocks.MLM_BED)
-                .add(JoyBlocks.ACE_BED)
-                .add(JoyBlocks.ARO_BED)
-                .add(JoyBlocks.APLATONIC_BED)
-                .add(JoyBlocks.GENDER_FLUID_BED)
-                .add(JoyBlocks.PAN_BED)
-                .add(JoyBlocks.TRANS_BED)
-                .add(JoyBlocks.AROACE_BED)
-                .add(JoyBlocks.LESBIAN_BED)
-                .add(JoyBlocks.PROGRESS_BED);
+            .add(JoyBlocks.BEDS.toArray(Block[]::new));
 
         getOrCreateTagBuilder(BlockTags.CANDLE_CAKES)
                 .add(JoyBlocks.QUEER_CANDLE_CAKE)

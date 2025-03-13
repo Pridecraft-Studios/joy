@@ -4,7 +4,10 @@
   "package": "gay.pridecraft.joy.mixin",
   "refmap": "joy.refmap.json",
   "compatibilityLevel": "JAVA_21",
-  "mixins": ["AllayEntityMixin", "LivingEntityMixin", "PaintingVariantsMixin"],
+  "mixins": [
+    "AllayEntityMixin", "LivingEntityMixin", "PaintingVariantsMixin",
+    "minecraft.AccessorPoi"
+  ],
   "injectors": {
     "defaultRequire": 1
   },

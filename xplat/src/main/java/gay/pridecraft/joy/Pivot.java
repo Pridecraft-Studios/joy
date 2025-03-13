@@ -7,6 +7,7 @@ import gay.pridecraft.joy.registry.JoyEntities;
 import gay.pridecraft.joy.registry.JoyItemGroups;
 import gay.pridecraft.joy.registry.JoyItems;
 import gay.pridecraft.joy.registry.JoyParticles;
+import gay.pridecraft.joy.registry.JoyPoi;
 import gay.pridecraft.joy.registry.JoySoundEvents;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.particle.SimpleParticleType;
@@ -61,5 +62,6 @@ public interface Pivot {
         BlahajDataComponentTypes.init();
         BlahajBlocks.init();
         JoyItemGroups.init();
+        JoyPoi.init();
     }
 }
