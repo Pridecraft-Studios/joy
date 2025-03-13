@@ -114,6 +114,10 @@ public final class JoyItemGroups {
         }
     );
 
+    public static final ItemGroup ROSETTES = register("rosettes",
+        JoyItems.PLURAL_ROSETTE::getDefaultStack,
+        (ctx, entries) -> JoyItems.ROSETTES.forEach(entries::add));
+
     private static ItemGroup register(String name, Supplier<ItemStack> icon, ItemGroup.EntryCollector collector) {
         return Pivot.INSTANCE.register(RegistryKeys.ITEM_GROUP, name, Pivot.itemGroupBuilder()
             .displayName(Text.translatable("itemgroup.joy." + name))

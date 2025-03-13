@@ -125,6 +125,34 @@ public final class JoyItems {
 
     // endregion
 
+    // region rosette
+
+    public static final Item
+        GAY_ROSETTE = registerDummy("gay_rosette"),
+        ENBY_ROSETTE = registerDummy("enby_rosette"),
+        BISEXUAL_ROSETTE = registerDummy("bisexual_rosette"),
+        MLM_ROSETTE = registerDummy("mlm_rosette"),
+        ACE_ROSETTE = registerDummy("ace_rosette"),
+        ARO_ROSETTE = registerDummy("aro_rosette"),
+        PAN_ROSETTE = registerDummy("pan_rosette"),
+        TRANS_ROSETTE = registerDummy("trans_rosette"),
+        LESBIAN_ROSETTE = registerDummy("lesbian_rosette"),
+        PLURAL_ROSETTE = registerDummy("plural_rosette");
+
+    public static final List<Item> ROSETTES = List.of(
+        GAY_ROSETTE,
+        ENBY_ROSETTE,
+        BISEXUAL_ROSETTE,
+        MLM_ROSETTE,
+        ACE_ROSETTE,
+        ARO_ROSETTE,
+        PAN_ROSETTE,
+        TRANS_ROSETTE,
+        LESBIAN_ROSETTE,
+        PLURAL_ROSETTE
+    );
+    // endregion
+
     // Currently inaccessible, only exists to serve as an example.
     public static final Item
         DOUGLAS_DISC = registerDisc("douglas"),
@@ -136,6 +164,10 @@ public final class JoyItems {
             .rarity(Rarity.RARE)
             .jukeboxPlayable(RegistryKey.of(RegistryKeys.JUKEBOX_SONG, JoyUtil.id(name)))
         ));
+    }
+
+    private static Item registerDummy(String name) {
+        return registerItem(name, new Item(new Item.Settings()));
     }
 
     private static Item registerItem(String name, Item item) {

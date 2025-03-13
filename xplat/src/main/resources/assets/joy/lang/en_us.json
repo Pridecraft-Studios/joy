@@ -9,6 +9,7 @@
   "itemgroup.joy.misc": "Joy Misc",
   "itemgroup.joy.food": "Joy Food",
   "itemgroup.joy.flowers": "Joy Flowers",
+  "itemgroup.joy.rosettes": "Pridecraft Rosettes",
 
   "block.joy.gay_bed": "Gay Bed",
   "block.joy.enby_bed": "Enby Bed",
@@ -77,6 +78,17 @@
   "item.joy.aroace_bundle": "Aro-Ace Bundle",
   "item.joy.lesbian_bundle": "Lesbian Bundle",
   "item.joy.progress_bundle": "Progress Bundle",
+
+  "item.joy.gay_rosette": "Gay Rosette",
+  "item.joy.enby_rosette": "Enby Rosette",
+  "item.joy.bisexual_rosette": "Bisexual Rosette",
+  "item.joy.mlm_rosette": "MLM Rosette",
+  "item.joy.ace_rosette": "Ace Rosette",
+  "item.joy.aro_rosette": "Aro Rosette",
+  "item.joy.pan_rosette": "Pan Rosette",
+  "item.joy.trans_rosette": "Trans Rosette",
+  "item.joy.lesbian_rosette": "Lesbian Rosette",
+  "item.joy.plural_rosette": "Plural Rosette",
 
   "item.joy.sock_fox_spawn_egg": "Thigh-High Fox Spawn Egg",
   "item.joy.bii_spawn_egg": "Bii Spawn Egg",

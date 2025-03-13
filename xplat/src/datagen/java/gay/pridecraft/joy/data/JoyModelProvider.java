@@ -128,6 +128,10 @@ public class JoyModelProvider extends FabricModelProvider {
             gen.register(bundle, Models.GENERATED);
         }
 
+        for (final var rosette : JoyItems.ROSETTES) {
+            gen.register(rosette, Models.GENERATED);
+        }
+
         gen.register(JoyItems.TOTEM_OF_PRIDE, Models.GENERATED);
         gen.register(JoyItems.PRIDE_ELYTRA, Models.GENERATED);
         gen.register(JoyItems.PRIDE_BRUSH, Models.GENERATED);
