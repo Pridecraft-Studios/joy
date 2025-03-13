@@ -114,7 +114,9 @@ allprojects {
         }
 
         withType<Jar> {
-            dependsOn("runDatagen")
+            if (project !in excluded) {
+                project(":xplat").afterEvaluate { dependsOn(tasks.named("runDatagen")) }
+            }
             from("LICENSE*") {
                 rename { "${project.name}-${it}" }
             }
