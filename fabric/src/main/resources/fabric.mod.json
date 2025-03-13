@@ -3,7 +3,7 @@
   "id": "joy",
   "version": "${version}",
   "name": "Joy",
-  "description": "This is an LGBT pride mod made by Pridecraft Studios.",
+  "description": "Joy is a Fabric mod built with the core goal of tastefully adding pride to Minecraft, while also porting Pridepack to its own set of decoration.",
   "authors": [
     "Pridecraft Studios",
     "Wolren",
@@ -27,14 +27,13 @@
     "sources": "https://git.pridecraft.gay/joy"
   },
   "license": [
-    "For Joy Licensing Details & Source Disclosure, see LICENSE.md",
     "All Rights Reserved (Code)",
     "CC-BY-SA-4.0 (Art)",
     "All Rights Reserved (Music)",
     "Unlicense (Blahaj)",
     "MIT (Blahaj)"
   ],
-  "icon": "assets/joy/icon.png",
+  "icon": "assets/joy/icon-release.png",
   "environment": "*",
   "entrypoints": {
     "client": [
@@ -67,5 +66,13 @@
   },
   "suggests": {
     "mavapi": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.pridecraft.gay/",
+        "joy.license": "https://git.pridecraft.gay/joy/tree/HEAD/LICENSE.md"
+      }
+    }
   }
 }
