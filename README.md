@@ -5,16 +5,15 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/pridecraft-studios/joy?style=for-the-badge&logo=github)
 
 This is Joy, a Content Mod made by [Pridecraft Studios](https://pridecraft.gay).
-It comes with many LGBTQ+ Pride additions, such as paintings, beds, mobs and Main Menu changes,
-and currently acts as a mod version of [PridePack](https://pridecraft.gay/pridepack).
+It comes with lots of LGBTQ+ Pride additions, such as, paintings, beds, mobs and, Main Menu changes. Joy also currently acts as a mod version of [PridePack](https://pridecraft.gay/pridepack).
 
-There are also added variants as well, including trans bees and backporting of bundle variants.
+There are also added variants as well, including trans bees and backporting of pride bundle variants.
 
 We also include Blahaj, including pride haj.
 
 ## Donate
 
-You can support the developers of Pridecraft Studios by donating on Patreon
+You can support the developers of Pridecraft Studios by donating on Patreon.
 
 [![patreon](https://raw.githubusercontent.com/intergrav/devins-badges/c7fd18efdadd1c3f12ae56b49afd834640d2d797/assets/cozy/donate/patreon-singular_vector.svg)](https://donate.pridecraft.gay)
 
