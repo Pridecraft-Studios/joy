@@ -1,6 +1,8 @@
 package gay.pridecraft.joy.data;
 
 import gay.pridecraft.joy.JoyUtil;
+import gay.pridecraft.joy.block.BlahajBlocks;
+import gay.pridecraft.joy.block.CuddlyBlock;
 import gay.pridecraft.joy.registry.JoyBlocks;
 import gay.pridecraft.joy.registry.JoyItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -20,8 +22,11 @@ import net.minecraft.data.client.TextureKey;
 import net.minecraft.data.client.TextureMap;
 import net.minecraft.data.client.VariantSettings;
 import net.minecraft.data.client.When;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Direction;
 
+import java.util.List;
 import java.util.Optional;
 
 public class JoyModelProvider extends FabricModelProvider {
@@ -55,6 +60,44 @@ public class JoyModelProvider extends FabricModelProvider {
         gen.registerFlowerPotPlant(JoyBlocks.BLUE_ALLIUM, JoyBlocks.POTTED_BLUE_ALLIUM, BlockStateModelGenerator.TintType.NOT_TINTED);
         gen.registerFlowerPotPlant(JoyBlocks.WHITE_ALLIUM, JoyBlocks.POTTED_WHITE_ALLIUM, BlockStateModelGenerator.TintType.NOT_TINTED);
         gen.registerFlowerPotPlant(JoyBlocks.TRANS_ALLIUM, JoyBlocks.POTTED_TRANS_ALLIUM, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        registerProxy(gen,
+            BlahajBlocks.BLAHAJ_BLOCK,
+            BlahajBlocks.BLAVINGAD_BLOCK,
+            BlahajBlocks.BREAD_BLOCK,
+            BlahajBlocks.BROWN_BEAR_BLOCK
+        );
+        for (final var block : List.of(
+            BlahajBlocks.BLAHAJ_BLOCK,
+            BlahajBlocks.BLAVINGAD_BLOCK,
+            BlahajBlocks.BREAD_BLOCK,
+            BlahajBlocks.BROWN_BEAR_BLOCK)) {
+            gen.blockStateCollector.accept(cuddlyBlockState(block, ModelIds.getBlockModelId(block), false));
+        }
+        registerShark(gen, BlahajBlocks.GRAY_SHARK_BLOCK, false);
+        BlahajBlocks.PRIDE_BLOCKS.forEach(shark -> registerShark(gen, shark, true));
+    }
+
+    private static void registerShark(BlockStateModelGenerator gen, Block shark, boolean pride) {
+        final var model = block("blue_shark", TextureKey.TEXTURE);
+        final var id = ModelIds.getBlockModelId(shark);
+        model.upload(
+            id,
+            pride ?
+                TextureMap.texture(Registries.BLOCK.getId(shark)
+                    .withPath(str -> "block/pride_sharks/" + str.substring(0, str.lastIndexOf('_')))) :
+                TextureMap.texture(shark),
+            gen.modelCollector
+        );
+
+        gen.registerParentedItemModel(shark, id);
+        gen.blockStateCollector.accept(cuddlyBlockState(shark, id, false));
+    }
+
+    private static void registerProxy(BlockStateModelGenerator gen, Block... toProxy) {
+        for (final var proxied : toProxy) {
+            gen.registerParentedItemModel(proxied, ModelIds.getBlockModelId(proxied));
+        }
     }
 
     private static void registerBed(BlockStateModelGenerator gen, Block block) {
@@ -100,6 +143,31 @@ public class JoyModelProvider extends FabricModelProvider {
         }
 
         return supplier;
+    }
+
+    private static BlockStateSupplier cuddlyBlockState(Block block, Identifier model, boolean wall) {
+        return MultipartBlockStateSupplier.create(block)
+            .with(When.create().set(CuddlyBlock.FACING, Direction.NORTH),
+                rotateVariant(model, VariantSettings.Rotation.R0, wall))
+
+            .with(When.create().set(CuddlyBlock.FACING, Direction.EAST),
+                rotateVariant(model, VariantSettings.Rotation.R90, wall))
+
+            .with(When.create().set(CuddlyBlock.FACING, Direction.SOUTH),
+                rotateVariant(model, VariantSettings.Rotation.R180, wall))
+
+            .with(When.create().set(CuddlyBlock.FACING, Direction.WEST),
+                rotateVariant(model, VariantSettings.Rotation.R270, wall));
+    }
+
+    private static BlockStateVariant rotateVariant(Identifier model, VariantSettings.Rotation Y, boolean wall) {
+        final var var = BlockStateVariant.create()
+            .put(VariantSettings.MODEL, model)
+            .put(VariantSettings.Y, Y);
+        if (wall) {
+            var.put(VariantSettings.X, VariantSettings.Rotation.R90);
+        }
+        return var;
     }
 
     private static BlockStateVariant model(Identifier model) {
