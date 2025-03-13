@@ -81,7 +81,9 @@ allprojects {
 
         annotationProcessor(libs.mixin.squared)
         modImplementation(libs.bundles.common.bundle)
-        include(libs.bundles.common.bundle)
+        if (project !in excluded) {
+            include(libs.bundles.common.bundle)
+        }
     }
 
     tasks {
