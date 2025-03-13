@@ -10,6 +10,7 @@ dependencies {
     clientCompileOnly(xplatClient.output)
 
     modCompileOnly(variantOf(rootProject.libs.emi.fabric) { classifier("api") })
+    modCompileOnly(libs.bundles.fabric.compile)
 
     include(libs.bundles.fabric.bundle)
     modImplementation(libs.bundles.fabric.bundle)

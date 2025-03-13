@@ -81,8 +81,9 @@ mixin-squared = { module = "com.github.bawnorton.mixinsquared:mixinsquared-fabri
 testng = { module = "org.testng:testng", version.ref = "testng" }
 
 [bundles]
-fabric = ["fabric-loader", "fabric-api", "trinkets", "mavapi", "midnight-fabric"]
+fabric = ["fabric-loader", "fabric-api", "trinkets", "midnight-fabric"]
 fabric-bundle = ["modmenu-badges"]
+fabric-compile = ["mavapi"]
 fabric-runtime = ["emi-fabric"]
 fabric-client-runtime = ["modmenu"]
 

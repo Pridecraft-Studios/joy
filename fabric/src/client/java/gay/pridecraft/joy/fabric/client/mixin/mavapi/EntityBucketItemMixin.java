@@ -28,7 +28,7 @@
  * THE SOFTWARE.
  */
 
-package gay.pridecraft.joy.fabric.client.mixin.fix.mavapi;
+package gay.pridecraft.joy.fabric.client.mixin.mavapi;
 
 import io.github.akashiikun.mavapi.v1.impl.AxolotlTypeExtension;
 import io.github.akashiikun.mavapi.v1.impl.MoreAxolotlVariant;

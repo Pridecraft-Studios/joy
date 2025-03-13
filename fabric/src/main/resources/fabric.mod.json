@@ -63,7 +63,9 @@
     "fabricloader": "*",
     "minecraft": "${minecraftRequired}",
     "fabric-api": "*",
-    "midnightlib": "*",
+    "midnightlib": "*"
+  },
+  "suggests": {
     "mavapi": "*"
   }
 }
