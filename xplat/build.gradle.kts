@@ -7,7 +7,7 @@ loom {
 fabricApi {
     configureDataGeneration {
         createSourceSet = true
-        // strictValidation = true
+        strictValidation = true
         addToResources = true
         modId = id
         client = true

@@ -1,5 +1,6 @@
 package gay.pridecraft.joy.data;
 
+import gay.pridecraft.joy.block.BlahajBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.registry.RegistryWrapper;
@@ -38,6 +39,7 @@ import static gay.pridecraft.joy.registry.JoyBlocks.PAN_CANDLE;
 import static gay.pridecraft.joy.registry.JoyBlocks.PAN_CANDLE_CAKE;
 import static gay.pridecraft.joy.registry.JoyBlocks.PLANTS;
 import static gay.pridecraft.joy.registry.JoyBlocks.POTTED_PLANTS;
+import static gay.pridecraft.joy.registry.JoyBlocks.PRIDE_CAKE;
 import static gay.pridecraft.joy.registry.JoyBlocks.PROGRESS_CANDLE;
 import static gay.pridecraft.joy.registry.JoyBlocks.PROGRESS_CANDLE_CAKE;
 import static gay.pridecraft.joy.registry.JoyBlocks.QUEER_CANDLE;
@@ -79,5 +81,14 @@ public class JoyBlockLootProvider extends FabricBlockLootTableProvider {
 
         PLANTS.forEach(this::addDrop);
         POTTED_PLANTS.forEach(this::addPottedPlantDrops);
+
+        addDrop(BlahajBlocks.BLAHAJ_BLOCK);
+        addDrop(BlahajBlocks.BLAVINGAD_BLOCK);
+        addDrop(BlahajBlocks.BREAD_BLOCK);
+        addDrop(BlahajBlocks.BROWN_BEAR_BLOCK);
+        addDrop(BlahajBlocks.GRAY_SHARK_BLOCK);
+        BlahajBlocks.PRIDE_BLOCKS.forEach(this::addDrop);
+
+        addDrop(PRIDE_CAKE, dropsNothing());
     }
 }
