@@ -22,6 +22,7 @@ dependencies {
     modRuntimeOnly(libs.fabric.loader)
     "modDatagenImplementation"(libs.fabric.loader)
     "modDatagenImplementation"(libs.fabric.api)
+    "modDatagenRuntimeOnly"(libs.bundles.datagen.runtime)
 
     modCompileOnly(variantOf(rootProject.libs.emi) { classifier("api") })
 }
