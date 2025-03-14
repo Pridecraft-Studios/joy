@@ -5,7 +5,7 @@
   "refmap": "joy.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "AllayEntityMixin", "LivingEntityMixin", "PaintingVariantsMixin",
+    "AllayEntityMixin", "LivingEntityMixin", "PaintingVariantsMixin", "minecraft.AccessorFrogBrain",
     "minecraft.AccessorPoi", "minecraft.MixinLivingEntity", "minecraft.MixinPlayerEntity"
   ],
   "injectors": {
