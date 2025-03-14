@@ -5,6 +5,7 @@ import gay.pridecraft.joy.JoyUtil;
 import gay.pridecraft.joy.Pivot;
 import gay.pridecraft.joy.item.CustomElytraItem;
 import gay.pridecraft.joy.item.ParticleEmittingItem;
+import gay.pridecraft.joy.item.PrideDyeItem;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.BundleContentsComponent;
 import net.minecraft.item.BrushItem;
@@ -29,45 +30,45 @@ public final class JoyItems {
     );
 
     public static final Item PRIDE_BRUSH = registerItem(
-            "pride_brush",
-            new BrushItem(new Item.Settings())
+        "pride_brush",
+        new BrushItem(new Item.Settings())
     );
 
     // region Spawn Eggs
     public static final Item SOCK_FOX_SPAWN_EGG = registerItem(
-            "sock_fox_spawn_egg",
-            new SpawnEggItem(
-                    JoyEntities.SOCK_FOX, 0xd5b69f, 0xff80bf, new Item.Settings())
+        "sock_fox_spawn_egg",
+        new SpawnEggItem(
+            JoyEntities.SOCK_FOX, 0xd5b69f, 0xff80bf, new Item.Settings())
     );
 
     public static final Item BII_SPAWN_EGG = registerItem(
-            "bii_spawn_egg",
-            new SpawnEggItem(
-                    JoyEntities.BII, 0xedc343, 0xFF69B4, new Item.Settings())
+        "bii_spawn_egg",
+        new SpawnEggItem(
+            JoyEntities.BII, 0xedc343, 0xFF69B4, new Item.Settings())
     );
 
     public static final Item ENBEE_SPAWN_EGG = registerItem(
-            "enbee_spawn_egg",
-            new SpawnEggItem(
-                    JoyEntities.ENBEE, 0xfcf434, 0x9C59D1, new Item.Settings())
+        "enbee_spawn_egg",
+        new SpawnEggItem(
+            JoyEntities.ENBEE, 0xfcf434, 0x9C59D1, new Item.Settings())
     );
 
     public static final Item TRANS_BEE_SPAWN_EGG = registerItem(
-            "trans_bee_spawn_egg",
-            new SpawnEggItem(
-                    JoyEntities.TRANS_BEE, 0x2fa637c, 0x48B518, new Item.Settings())
+        "trans_bee_spawn_egg",
+        new SpawnEggItem(
+            JoyEntities.TRANS_BEE, 0x2fa637c, 0x48B518, new Item.Settings())
     );
 
     public static final Item TREE_SPAWN_EGG = registerItem(
-            "tree_spawn_egg",
-            new SpawnEggItem(
-                    JoyEntities.TREE, 0xfcf434, 0x9C59D1, new Item.Settings())
+        "tree_spawn_egg",
+        new SpawnEggItem(
+            JoyEntities.TREE, 0xfcf434, 0x9C59D1, new Item.Settings())
     );
 
     public static final Item FROG_SPAWN_EGG = registerItem(
-            "frog_spawn_egg",
-            new SpawnEggItem(
-                JoyEntities.FROG, 0xd07444, 0xff80bf, new Item.Settings())
+        "frog_spawn_egg",
+        new SpawnEggItem(
+            JoyEntities.FROG, 0xd07444, 0xff80bf, new Item.Settings())
     );
 
     public static final Item SNIFFER_SPAWN_EGG = registerItem(
@@ -90,7 +91,7 @@ public final class JoyItems {
         ACE_BUNDLE = registerBundle("ace_bundle"),
         ARO_BUNDLE = registerBundle("aro_bundle"),
         APLATONIC_BUNDLE = registerBundle("aplatonic_bundle"),
-        GENDER_FLUID_BUNDLE = registerBundle("gender_fluid_bundle"),
+        GENDER_FLUID_BUNDLE = registerBundle("genderfluid_bundle"),
         PAN_BUNDLE = registerBundle("pan_bundle"),
         TRANS_BUNDLE = registerBundle("trans_bundle"),
         AROACE_BUNDLE = registerBundle("aroace_bundle"),
@@ -152,6 +153,69 @@ public final class JoyItems {
         LESBIAN_ROSETTE,
         PLURAL_ROSETTE
     );
+    // endregion
+
+    // region dyes
+
+    public static final Item
+        QUEER_DYE = registerDye("queer_dye"),
+        GAY_DYE = registerDye("gay_dye"),
+        ENBY_DYE = registerDye("enby_dye"),
+        INTERSEX_DYE = registerDye("intersex_dye"),
+        AGENDER_DYE = registerDye("agender_dye"),
+        BIGENDER_DYE = registerDye("bigender_dye"),
+        BISEXUAL_DYE = registerDye("bisexual_dye"),
+        MLM_DYE = registerDye("mlm_dye"),
+        ARO_DYE = registerDye("aro_dye"),
+        ACE_DYE = registerDye("ace_dye"),
+        APLATONIC_DYE = registerDye("aplatonic_dye"),
+        DEMIROMANTIC_DYE = registerDye("demiromantic_dye"),
+        DEMISEXUAL_DYE = registerDye("demisexual_dye"),
+        GREYARO_DYE = registerDye("greyaro_dye"),
+        GREYACE_DYE = registerDye("greyace_dye"),
+        GREYROSE_DYE = registerDye("greyrose_dye"),
+        GENDERFLUID_DYE = registerDye("genderfluid_dye"),
+        GENDERQUEER_DYE = registerDye("genderqueer_dye"),
+        PAN_DYE = registerDye("pan_dye"),
+        TRANS_DYE = registerDye("trans_dye"),
+        AROACE_DYE = registerDye("aroace_dye"),
+        LESBIAN_DYE = registerDye("lesbian_dye"),
+        PROGRESS_DYE = registerDye("progress_dye"),
+        PLURAL_DYE = registerDye("plural_dye"),
+        POLYAM_DYE = registerDye("polyam_dye");
+
+    public static final List<Item> PRIDE_DYES = List.of(
+        QUEER_DYE,
+        GAY_DYE,
+        ENBY_DYE,
+        INTERSEX_DYE,
+        AGENDER_DYE,
+        BIGENDER_DYE,
+        BISEXUAL_DYE,
+        MLM_DYE,
+        ACE_DYE,
+        ARO_DYE,
+        APLATONIC_DYE,
+        DEMIROMANTIC_DYE,
+        DEMISEXUAL_DYE,
+        GREYARO_DYE,
+        GREYACE_DYE,
+        GREYROSE_DYE,
+        GENDERFLUID_DYE,
+        GENDERQUEER_DYE,
+        PAN_DYE,
+        TRANS_DYE,
+        AROACE_DYE,
+        LESBIAN_DYE,
+        PROGRESS_DYE,
+        PLURAL_DYE,
+        POLYAM_DYE
+    );
+
+    private static Item registerDye(String name) {
+        return registerItem(name, new PrideDyeItem(new Item.Settings()));
+    }
+
     // endregion
 
     // Currently inaccessible, only exists to serve as an example.

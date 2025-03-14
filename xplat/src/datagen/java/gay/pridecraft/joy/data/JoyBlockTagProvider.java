@@ -1,6 +1,8 @@
 package gay.pridecraft.joy.data;
 
+import gay.pridecraft.joy.block.BlahajBlocks;
 import gay.pridecraft.joy.registry.JoyBlocks;
+import gay.pridecraft.joy.tags.JoyBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
@@ -30,5 +32,20 @@ public class JoyBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
             .add(JoyBlocks.POTTED_PLANTS.toArray(Block[]::new));
+
+        getOrCreateTagBuilder(JoyBlockTags.SHARKS).add(
+            BlahajBlocks.BLAHAJ_BLOCK,
+            BlahajBlocks.GRAY_SHARK_BLOCK
+        ).add(BlahajBlocks.PRIDE_BLOCKS.toArray(Block[]::new));
+
+        getOrCreateTagBuilder(JoyBlockTags.PLUSHIES).add(
+            BlahajBlocks.BLAVINGAD_BLOCK,
+            BlahajBlocks.BREAD_BLOCK,
+            BlahajBlocks.BROWN_BEAR_BLOCK
+        ).addTag(JoyBlockTags.SHARKS);
+
+        getOrCreateTagBuilder(JoyBlockTags.PRIDE_DYEABLE)
+            .addTag(JoyBlockTags.SHARKS)
+            .addTag(BlockTags.BEDS);
     }
 }

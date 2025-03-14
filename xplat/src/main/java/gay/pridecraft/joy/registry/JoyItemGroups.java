@@ -28,7 +28,7 @@ public final class JoyItemGroups {
             entries.add(JoyBlocks.ACE_BED);
             entries.add(JoyBlocks.ARO_BED);
             entries.add(JoyBlocks.APLATONIC_BED);
-            entries.add(JoyBlocks.GENDER_FLUID_BED);
+            entries.add(JoyBlocks.GENDERFLUID_BED);
             entries.add(JoyBlocks.PAN_BED);
             entries.add(JoyBlocks.TRANS_BED);
             entries.add(JoyBlocks.AROACE_BED);
@@ -51,7 +51,7 @@ public final class JoyItemGroups {
             entries.add(JoyBlocks.ACE_CANDLE);
             entries.add(JoyBlocks.ARO_CANDLE);
             entries.add(JoyBlocks.APLATONIC_CANDLE);
-            entries.add(JoyBlocks.GENDER_FLUID_CANDLE);
+            entries.add(JoyBlocks.GENDERFLUID_CANDLE);
             entries.add(JoyBlocks.PAN_CANDLE);
             entries.add(JoyBlocks.TRANS_CANDLE);
             entries.add(JoyBlocks.AROACE_CANDLE);
@@ -117,6 +117,28 @@ public final class JoyItemGroups {
     public static final ItemGroup ROSETTES = register("rosettes",
         JoyItems.PLURAL_ROSETTE::getDefaultStack,
         (ctx, entries) -> JoyItems.ROSETTES.forEach(entries::add));
+
+    public static final ItemGroup DYES = register("dyes",
+        JoyItems.PROGRESS_DYE::getDefaultStack,
+        (ctx, entries) -> {
+            entries.add(Items.WHITE_DYE);
+            entries.add(Items.ORANGE_DYE);
+            entries.add(Items.MAGENTA_DYE);
+            entries.add(Items.LIGHT_BLUE_DYE);
+            entries.add(Items.YELLOW_DYE);
+            entries.add(Items.LIME_DYE);
+            entries.add(Items.PINK_DYE);
+            entries.add(Items.GRAY_DYE);
+            entries.add(Items.LIGHT_GRAY_DYE);
+            entries.add(Items.CYAN_DYE);
+            entries.add(Items.PURPLE_DYE);
+            entries.add(Items.BLUE_DYE);
+            entries.add(Items.BROWN_DYE);
+            entries.add(Items.GREEN_DYE);
+            entries.add(Items.RED_DYE);
+            entries.add(Items.BLACK_DYE);
+            JoyItems.PRIDE_DYES.forEach(entries::add);
+        });
 
     private static ItemGroup register(String name, Supplier<ItemStack> icon, ItemGroup.EntryCollector collector) {
         return Pivot.INSTANCE.register(RegistryKeys.ITEM_GROUP, name, Pivot.itemGroupBuilder()

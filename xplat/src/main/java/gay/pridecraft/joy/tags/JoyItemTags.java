@@ -17,6 +17,7 @@ public final class JoyItemTags {
         TOTEM_OF_UNDYING = common("totem_of_undying");
 
     public static final TagKey<Item>
+        PRIDE_DYEABLE = joy("pride_dyeable"),
         PLUSHIES = joy("plushies"),
         SHARKS = joy("sharks");
 

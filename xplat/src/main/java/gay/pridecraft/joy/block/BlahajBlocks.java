@@ -32,9 +32,9 @@ public final class BlahajBlocks {
         BROWN_BEAR_ITEM = mkItem(BROWN_BEAR_BLOCK);
 
     private static final List<String> PRIDE_NAMES = List.of(
-        "ace", "agender", "aro", "aroace", "bi", "demiboy", "demigirl",
-        "demi_r", "demi_s", "enby", "gay", "genderfluid", "genderqueer", "greyrose",
-        "grey_r", "grey_s", "intersex", "lesbian", "pan", "poly", "pride", "trans");
+        "ace", "agender", "aro", "aroace", "bisexual", "demiboy", "demigirl",
+        "demiromantic", "demisexual", "enby", "mlm", "genderfluid", "genderqueer", "greyrose",
+        "greyaro", "greyace", "intersex", "lesbian", "pan", "polyam", "gay", "trans");
 
     public static final List<Block> PRIDE_BLOCKS;
     public static final List<Item> PRIDE_ITEMS;

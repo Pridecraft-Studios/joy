@@ -1,13 +1,16 @@
 package gay.pridecraft.joy.data;
 
 import gay.pridecraft.joy.block.BlahajBlocks;
+import gay.pridecraft.joy.registry.JoyBlocks;
 import gay.pridecraft.joy.registry.JoyItems;
 import gay.pridecraft.joy.tags.JoyItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -34,6 +37,9 @@ public class JoyItemTagProvider extends FabricTagProvider.ItemTagProvider {
             JoyItems.TOTEM_OF_PRIDE
         );
 
+        getOrCreateTagBuilder(ItemTags.BEDS)
+            .add(JoyBlocks.BEDS.stream().map(Block::asItem).toArray(Item[]::new));
+
         getOrCreateTagBuilder(JoyItemTags.SHARKS).add(
             BlahajBlocks.BLAHAJ_ITEM,
             BlahajBlocks.GRAY_SHARK_ITEM
@@ -44,5 +50,9 @@ public class JoyItemTagProvider extends FabricTagProvider.ItemTagProvider {
             BlahajBlocks.BREAD_ITEM,
             BlahajBlocks.BROWN_BEAR_ITEM
         ).addTag(JoyItemTags.SHARKS);
+
+        getOrCreateTagBuilder(JoyItemTags.PRIDE_DYEABLE)
+            .addTag(JoyItemTags.SHARKS)
+            .addTag(ItemTags.BEDS);
     }
 }

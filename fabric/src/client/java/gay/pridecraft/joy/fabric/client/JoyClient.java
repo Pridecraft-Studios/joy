@@ -72,7 +72,7 @@ public class JoyClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(JoyBlocks.AGENDER_BED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(JoyBlocks.ENBY_BED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(JoyBlocks.GAY_BED, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(JoyBlocks.GENDER_FLUID_BED, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(JoyBlocks.GENDERFLUID_BED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(JoyBlocks.LESBIAN_BED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(JoyBlocks.BIGENDER_BED, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(JoyBlocks.MLM_BED, RenderLayer.getCutout());

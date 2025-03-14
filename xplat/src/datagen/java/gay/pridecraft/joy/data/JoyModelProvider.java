@@ -48,7 +48,7 @@ public class JoyModelProvider extends FabricModelProvider {
         gen.registerCandle(JoyBlocks.ACE_CANDLE, JoyBlocks.ACE_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.ARO_CANDLE, JoyBlocks.ARO_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.APLATONIC_CANDLE, JoyBlocks.APLATONIC_CANDLE_CAKE);
-        gen.registerCandle(JoyBlocks.GENDER_FLUID_CANDLE, JoyBlocks.GENDER_FLUID_CANDLE_CAKE);
+        gen.registerCandle(JoyBlocks.GENDERFLUID_CANDLE, JoyBlocks.GENDERFLUID_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.PAN_CANDLE, JoyBlocks.PAN_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.TRANS_CANDLE, JoyBlocks.TRANS_CANDLE_CAKE);
         gen.registerCandle(JoyBlocks.AROACE_CANDLE, JoyBlocks.AROACE_CANDLE_CAKE);
@@ -183,6 +183,10 @@ public class JoyModelProvider extends FabricModelProvider {
 
         for (final var rosette : JoyItems.ROSETTES) {
             gen.register(rosette, Models.GENERATED);
+        }
+
+        for (final var dye : JoyItems.PRIDE_DYES) {
+            gen.register(dye, Models.GENERATED);
         }
 
         gen.register(JoyItems.TOTEM_OF_PRIDE, Models.GENERATED);

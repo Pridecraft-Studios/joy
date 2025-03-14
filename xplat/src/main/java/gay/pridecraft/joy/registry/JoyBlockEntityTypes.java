@@ -22,7 +22,7 @@ public final class JoyBlockEntityTypes {
         JoyBlocks.TRANS_BED,
         JoyBlocks.PROGRESS_BED,
         JoyBlocks.LESBIAN_BED,
-        JoyBlocks.GENDER_FLUID_BED,
+        JoyBlocks.GENDERFLUID_BED,
         JoyBlocks.GAY_BED,
         JoyBlocks.INTERSEX_BED,
         JoyBlocks.AROACE_BED
