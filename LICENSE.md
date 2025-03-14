@@ -1,7 +1,7 @@
 # Joy Licenses
 
 Joy is licensed differently depending on which component you are looking at.
-Read carefully, this may affect how you may use and distribute Joy.
+Read carefully, this will affect how you may use and distribute Joy.
 
 ## Code
 

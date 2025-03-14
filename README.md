@@ -55,8 +55,8 @@ is that we know how to keep the game from looking like someone vomited rainbows 
 
 # Licensing
 
-Joy is split between multiple licenses depending on what you're looking at.
-Please read carefully; this affects how you may be able to use Joy's sources.
+Joy is split between multiple licenses depending on what part you're looking at.
+Please read carefully; this affects how you will be able to use Joy's sources.
 
 [The full information can be found here.][LICENSE]
 
