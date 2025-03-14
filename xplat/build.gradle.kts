@@ -14,8 +14,6 @@ fabricApi {
     }
 }
 
-// sourceSets.named("datagen").get().resources.source(sourceSets.main.get().resources);
-
 dependencies {
     compileOnly(libs.mixin)
 
