@@ -14,6 +14,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.network.packet.s2c.play.EntityStatusS2CPacket;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Hand;
+import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -33,21 +34,28 @@ public abstract class ClientPlayNetworkHandlerMixin {
 
     @Inject(at = @At("HEAD"), method = "onEntityStatus")
     private void onCustomEntityStatus(EntityStatusS2CPacket packet, CallbackInfo ci) {
-        if (this.getWorld() == null) return;
-        Entity entity = packet.getEntity(this.getWorld());
-        if (entity == null) return;
-
-        int status = packet.getStatus();
-        if (status != 36) return;
-
-        MinecraftClient.getInstance().particleManager.addEmitter(entity, JoyParticles.TOTEM_OF_PRIDE_PARTICLE, 30);
-
-        if (MinecraftClient.getInstance().world != null) {
-            MinecraftClient.getInstance().world.playSound(entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ITEM_TOTEM_USE, entity.getSoundCategory(), 1.0F, 1.0F, false);
+        if (this.getWorld() == null || packet.getStatus() != 36) {
+            return;
         }
 
-        if (entity == MinecraftClient.getInstance().player)
-            MinecraftClient.getInstance().gameRenderer.showFloatingItem(modifyTotem(MinecraftClient.getInstance().player));
+        final var client = MinecraftClient.getInstance();
+
+        //noinspection ResultOfMethodCallIgnored - unnecessary
+        client.submit(() -> {
+            final World world = this.getWorld();
+            final Entity entity = packet.getEntity(world);
+            if (entity == null) {
+                return;
+            }
+
+            client.particleManager.addEmitter(entity, JoyParticles.TOTEM_OF_PRIDE_PARTICLE, 30);
+
+            world.playSound(entity.getX(), entity.getY(), entity.getZ(), SoundEvents.ITEM_TOTEM_USE, entity.getSoundCategory(), 1.f, 1.f, false);
+
+            if (entity == client.player) {
+                client.gameRenderer.showFloatingItem(modifyTotem(client.player));
+            }
+        });
     }
 
     @Unique
