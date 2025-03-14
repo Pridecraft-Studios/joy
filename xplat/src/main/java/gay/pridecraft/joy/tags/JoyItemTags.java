@@ -16,6 +16,10 @@ public final class JoyItemTags {
         ELYTRA = common("elytra"),
         TOTEM_OF_UNDYING = common("totem_of_undying");
 
+    public static final TagKey<Item>
+        PLUSHIES = joy("plushies"),
+        SHARKS = joy("sharks");
+
     private static TagKey<Item> joy(String name) {
         return TagKey.of(RegistryKeys.ITEM, JoyUtil.id(name));
     }

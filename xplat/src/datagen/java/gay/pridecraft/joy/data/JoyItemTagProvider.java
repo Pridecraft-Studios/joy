@@ -1,9 +1,11 @@
 package gay.pridecraft.joy.data;
 
+import gay.pridecraft.joy.block.BlahajBlocks;
 import gay.pridecraft.joy.registry.JoyItems;
 import gay.pridecraft.joy.tags.JoyItemTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -31,5 +33,16 @@ public class JoyItemTagProvider extends FabricTagProvider.ItemTagProvider {
             Items.TOTEM_OF_UNDYING,
             JoyItems.TOTEM_OF_PRIDE
         );
+
+        getOrCreateTagBuilder(JoyItemTags.SHARKS).add(
+            BlahajBlocks.BLAHAJ_ITEM,
+            BlahajBlocks.GRAY_SHARK_ITEM
+        ).add(BlahajBlocks.PRIDE_ITEMS.toArray(Item[]::new));
+
+        getOrCreateTagBuilder(JoyItemTags.PLUSHIES).add(
+            BlahajBlocks.BLAVINGAD_ITEM,
+            BlahajBlocks.BREAD_ITEM,
+            BlahajBlocks.BROWN_BEAR_ITEM
+        ).addTag(JoyItemTags.SHARKS);
     }
 }
