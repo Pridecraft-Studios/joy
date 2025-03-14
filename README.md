@@ -96,15 +96,15 @@ Pride Blahajs were taken from [musicalskele] under the [MIT License][BLAHAJ-PRID
 
 </details>
 
-<details><summary>Code license [ARR]</summary>
+<details><summary>Code license [MPL-2.0]</summary>
 
-The code for Joy is currently licensed as "All Rights Reserved".
+The code for Joy is available under the [MPL-2.0][LICENSE-CODE].
 
 </details>
 
 [LICENSE]: https://git.pridecraft.gay/joy/tree/HEAD/LICENSE.md
 
-[CODE]: https://git.pridecraft.gay/joy/tree/HEAD/LICENSE-CODE.md
+[CODE]: https://git.pridecraft.gay/joy/tree/HEAD/LICENSE-CODE
 
 [BLAHAJ-BASE]: https://git.pridecraft.gay/joy/tree/HEAD/LICENSE-BLAHAJ-BASE
 
