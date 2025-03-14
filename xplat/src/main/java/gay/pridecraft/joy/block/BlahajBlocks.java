@@ -8,18 +8,21 @@ import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.util.math.Direction;
+import net.minecraft.util.shape.VoxelShape;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public final class BlahajBlocks {
 
     public static final Block
         GRAY_SHARK_BLOCK = mkBlock("gray_shark", Blocks.LIGHT_GRAY_WOOL),
         BLAHAJ_BLOCK = mkBlock("blue_shark", Blocks.CYAN_WOOL),
-        BLAVINGAD_BLOCK = mkBlock("blue_whale", Blocks.BLUE_WOOL),
-        BREAD_BLOCK = mkBlock("bread", Blocks.ORANGE_WOOL),
-        BROWN_BEAR_BLOCK = mkBlock("brown_bear", Blocks.BROWN_WOOL);
+        BLAVINGAD_BLOCK = mkBlock("blue_whale", Blocks.BLUE_WOOL, CuddlyBlock.WHALE_SHAPES),
+        BREAD_BLOCK = mkBlock("bread", Blocks.ORANGE_WOOL, CuddlyBlock.BREAD_SHAPES),
+        BROWN_BEAR_BLOCK = mkBlock("brown_bear", Blocks.BROWN_WOOL, CuddlyBlock.BEAR_SHAPES);
 
     public static final Item
         GRAY_SHARK_ITEM = mkItem(GRAY_SHARK_BLOCK),
@@ -60,6 +63,10 @@ public final class BlahajBlocks {
 		for (Block block : PRIDE_BLOCKS) {
 			BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
 		} */
+    }
+
+    private static Block mkBlock(String id, Block block, Map<Direction, VoxelShape> shapes) {
+        return register(id, new CuddlyBlock(AbstractBlock.Settings.copy(block), shapes));
     }
 
     private static Block mkBlock(String id, Block block) {
