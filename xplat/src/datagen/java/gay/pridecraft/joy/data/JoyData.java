@@ -25,6 +25,7 @@ public class JoyData implements DataGeneratorEntrypoint {
         pack.addProvider(JoyEntityTagProvider::new);
         pack.addProvider(JoyItemTagProvider::new);
         pack.addProvider(JoyModelProvider::new);
+        pack.addProvider(JoyRecipeProvider::new);
 
         for (final var translation : Bootstrap.getMissingTranslations()) {
             logger.warn("Missing translation: {}", translation);
