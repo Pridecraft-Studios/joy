@@ -27,5 +27,9 @@ public class JoyItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(JoyItemTags.GLIDERS).addTag(
             JoyItemTags.ELYTRA
         );
+        getOrCreateTagBuilder(JoyItemTags.TOTEM_OF_UNDYING).add(
+            Items.TOTEM_OF_UNDYING,
+            JoyItems.TOTEM_OF_PRIDE
+        );
     }
 }

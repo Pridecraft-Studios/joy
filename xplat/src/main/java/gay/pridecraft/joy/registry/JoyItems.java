@@ -4,6 +4,7 @@ package gay.pridecraft.joy.registry;
 import gay.pridecraft.joy.JoyUtil;
 import gay.pridecraft.joy.Pivot;
 import gay.pridecraft.joy.item.CustomElytraItem;
+import gay.pridecraft.joy.item.ParticleEmittingItem;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.BundleContentsComponent;
 import net.minecraft.item.BrushItem;
@@ -24,7 +25,7 @@ public final class JoyItems {
 
     public static final Item TOTEM_OF_PRIDE = registerItem(
         "totem_of_pride",
-        new Item(new Item.Settings().maxCount(1))
+        new ParticleEmittingItem(new Item.Settings().maxCount(1), JoyParticles.TOTEM_OF_PRIDE_PARTICLE)
     );
 
     public static final Item PRIDE_BRUSH = registerItem(

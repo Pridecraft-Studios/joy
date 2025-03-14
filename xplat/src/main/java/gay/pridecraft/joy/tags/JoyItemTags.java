@@ -13,7 +13,8 @@ import net.minecraft.util.Identifier;
 public final class JoyItemTags {
     public static final TagKey<Item>
         GLIDERS = common("gliders"),
-        ELYTRA = common("elytra");
+        ELYTRA = common("elytra"),
+        TOTEM_OF_UNDYING = common("totem_of_undying");
 
     private static TagKey<Item> joy(String name) {
         return TagKey.of(RegistryKeys.ITEM, JoyUtil.id(name));
