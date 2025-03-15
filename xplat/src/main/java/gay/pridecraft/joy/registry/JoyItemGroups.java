@@ -73,7 +73,7 @@ public final class JoyItemGroups {
 
         });
 
-    public static final ItemGroup HAJS = register("hajs",
+    public static final ItemGroup PLUSHIES = register("plushies",
         BLAHAJ_ITEM::getDefaultStack,
         (displayContext, entries) -> {
             entries.add(BlahajBlocks.GRAY_SHARK_ITEM);
