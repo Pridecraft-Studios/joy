@@ -20,6 +20,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.text.Text;
@@ -48,10 +49,12 @@ public class JoyClient implements ClientModInitializer {
             JoyBlocks.POTTED_TRANS_ALLIUM
         );
 
-        LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
-            Identifier elytra = Identifier.ofVanilla("textures/entity/elytra.png");
-            registrationHelper.register(new CustomElytraFeatureRenderer<>(entityRenderer, context.getModelLoader(), elytra));
-        });
+        if (!FabricLoader.getInstance().isModLoaded("lilium")) {
+            LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
+                Identifier elytra = Identifier.ofVanilla("textures/entity/elytra.png");
+                registrationHelper.register(new CustomElytraFeatureRenderer<>(entityRenderer, context.getModelLoader(), elytra));
+            });
+        }
 
         ParticleFactoryRegistry.getInstance().register(JoyParticles.TOTEM_OF_PRIDE_PARTICLE, TotemOfPrideParticle.Factory::new);
 
