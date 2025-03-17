@@ -33,7 +33,7 @@ public class CustomElytraFeatureRenderer<T extends LivingEntity, M extends Entit
         super(context);
         this.defaultElytraTexture = defaultElytraTexture;
         this.elytraTextures = new HashMap<>();
-        this.elytraTextures.put(JoyItems.PRIDE_ELYTRA, JoyUtil.id("textures/entity/pride_elytra.png"));
+        this.elytraTextures.put(JoyItems.PRIDE_ELYTRA, JoyUtil.id("textures/entity/elytra/pride_elytra.png"));
 
         this.elytra = new ElytraEntityModel<>(loader.getModelPart(EntityModelLayers.ELYTRA));
     }
