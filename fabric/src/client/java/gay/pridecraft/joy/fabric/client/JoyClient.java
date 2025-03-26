@@ -1,5 +1,6 @@
 package gay.pridecraft.joy.fabric.client;
 
+import gay.pridecraft.joy.block.BlahajBlocks;
 import gay.pridecraft.joy.client.SplashUtil;
 import gay.pridecraft.joy.fabric.FabricUtil;
 import gay.pridecraft.joy.particle.TotemOfPrideParticle;
@@ -21,6 +22,7 @@ import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.text.Text;
@@ -47,6 +49,15 @@ public class JoyClient implements ClientModInitializer {
             JoyBlocks.POTTED_BLUE_ALLIUM,
             JoyBlocks.POTTED_WHITE_ALLIUM,
             JoyBlocks.POTTED_TRANS_ALLIUM
+        );
+
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+            BlahajBlocks.GRAY_SHARK_BLOCK,
+            BlahajBlocks.BLAHAJ_BLOCK
+        );
+
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+            BlahajBlocks.PRIDE_BLOCKS.toArray(Block[]::new)
         );
 
         if (!FabricLoader.getInstance().isModLoaded("lilium")) {
