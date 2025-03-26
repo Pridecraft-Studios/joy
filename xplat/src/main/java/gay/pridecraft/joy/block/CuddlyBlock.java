@@ -21,8 +21,13 @@ public class CuddlyBlock extends HorizontalFacingBlock {
         SHARK_SHAPES = VoxelEmitter.union(
         // BASE
         VoxelEmitter.ofBlock(
-            8 - 2, 0, 0,
+            8 - 2, 0, 1,
             8 + 2, 4, 9
+        ),
+        // FACE
+        VoxelEmitter.ofBlock(
+            8 - 2, 1, 0,
+            8 + 2, 4, 1
         ),
         // MID
         VoxelEmitter.ofBlock(
