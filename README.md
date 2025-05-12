@@ -4,9 +4,8 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/pridecraft-studios/joy/total?style=for-the-badge&logo=github&label=Github%20Downloads)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/pridecraft-studios/joy?style=for-the-badge&logo=github)
 
-This is Joy, a Content Mod made by [Pridecraft Studios](https://pridecraft.gay).
-It comes with lots of LGBTQ+ Pride additions, such as, paintings, beds, mobs and, Main Menu changes.
-Joy also currently acts as a mod version of [PridePack](https://pridecraft.gay/pridepack).
+This is Joy, a Content Mod made by [Pridecraft Studios], and a sister to [Pride Pack].
+It comes with lots of LGBTQ+ Pride additions, including paintings, beds, mobs, candles, and more!
 
 There are also added variants as well, including trans bees and backporting of pride bundle variants.
 
@@ -106,7 +105,7 @@ Pride Blahajs were taken from [musicalskele] under the [MIT License][BLAHAJ-PRID
 
 <details><summary>Code license [MPL-2.0]</summary>
 
-The code for Joy is available under the [MPL-2.0][LICENSE-CODE].
+The code for Joy is available under the [MPL-2.0][CODE].
 
 </details>
 
@@ -127,5 +126,7 @@ The code for Joy is available under the [MPL-2.0][LICENSE-CODE].
 [hibiii]: https://github.com/hibiii/Blahaj
 
 [musicalskele]: https://github.com/musicalskele/blahaj
+
+[Pridecraft Studios]: https://pridecraft.gay/
 
 [Pride Pack]: https://git.pridecraft.gay/pridepack
