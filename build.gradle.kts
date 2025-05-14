@@ -145,8 +145,11 @@ tasks {
 
         onlyIf { cleanupSource != null }
 
-        if (cleanupSource != null) {
-            inputs.files(cleanupSource, sourceSets.main.get().resources)
+        val cleanupSources = cleanupSource?.split(File.pathSeparatorChar) ?: listOf()
+
+        if (cleanupSources.isNotEmpty()) {
+            cleanupSources.forEach(inputs::files)
+            allprojects { inputs.files(sourceSets.main.get().resources) }
         }
 
         doLast {
@@ -224,9 +227,12 @@ tasks {
                 other.hit += file
             }
 
-            for (file in project.fileTree(cleanupSource)) {
-                logger.debug("Src {}", file)
-                doWork(file)
+            for (source in cleanupSources) {
+                logger.debug("SrcSrc {}", source)
+                for (file in project.fileTree(source)) {
+                    logger.debug("Src {}", file)
+                    doWork(file)
+                }
             }
 
             allprojects {
