@@ -225,11 +225,15 @@ tasks {
             }
 
             for (file in project.fileTree(cleanupSource)) {
+                logger.debug("Src {}", file)
                 doWork(file)
             }
 
-            for (file in sourceSets.main.get().resources) {
-                doWork(file)
+            allprojects {
+                for (file in sourceSets.main.get().resources) {
+                    logger.debug("Res {}", file)
+                    doWork(file)
+                }
             }
 
             for ((k, v) in map) {
@@ -252,6 +256,7 @@ tasks {
 
             map.values.asSequence()
                 .filter { it.isMissed() }
+                .sortedBy { it.file.absolutePath }
                 .forEach { logger.warn("Missed entry: {}", it.file) }
 
             map.values.asSequence()
