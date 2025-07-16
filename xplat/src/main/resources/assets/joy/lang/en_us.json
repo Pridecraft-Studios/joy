@@ -219,5 +219,18 @@
   "tag.item.c.gliders": "Gliders",
   "tag.item.c.elytra": "Elytra",
   "tag.item.c.totem_of_undying": "Totems of Undying",
-  "tag.item.joy.pride_dyeable": "Pride Dyeable Items"
+  "tag.item.joy.pride_dyeable": "Pride Dyeable Items",
+
+  "joy.music.game.creative.reminiscence": "WorldWidePixel - Reminiscence",
+  "joy.music.game.douglas": "WorldWidePixel - Douglas",
+  "joy.music.game.melancolie": "WorldWidePixel - Mélancolie",
+  "joy.music.game.regina": "WorldWidePixel - Regina",
+  "joy.music.game.opaque_window": "WorldWidePixel - Opaque Window",
+  "joy.music.menu.joy": "WorldWidePixel - Joy",
+  "now-playing.joy:music/game/creative": "WorldWidePixel - Reminiscence",
+  "now-playing.joy:music/game/douglas": "WorldWidePixel - Douglas",
+  "now-playing.joy:music/game/melancolie": "WorldWidePixel - Mélancolie",
+  "now-playing.joy:music/game/regina": "WorldWidePixel - Regina",
+  "now-playing.joy:music/game/opaque_window": "WorldWidePixel - Opaque Window",
+  "now-playing.joy:music/menu/joy": "WorldWidePixel - Joy"
 }

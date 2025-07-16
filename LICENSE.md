@@ -13,7 +13,7 @@ You may use code from Joy under the terms of the MPL-2.0.
 
 The core code was taken from [DaFuqs] and [hibiii] under the [Unlicense][BLAHAJ-BASE].
 
-Pride Blahajs were taken from [musicalskele] under the [MIT License][BLAHAJ-PRIDE].
+Pride Blahajar were taken from [musicalskele] under the [MIT License][BLAHAJ-PRIDE].
 
 *Note: This is operating under assumptions from known and disclosed sources.*
 

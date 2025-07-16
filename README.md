@@ -4,7 +4,7 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/pridecraft-studios/joy/total?style=for-the-badge&logo=github&label=Github%20Downloads)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/pridecraft-studios/joy?style=for-the-badge&logo=github)
 
-This is Joy, a Content Mod made by [Pridecraft Studios], and a sister to [Pride Pack].
+This is Joy, a content mod made by [Pridecraft Studios], and a sister to [Pride Pack].
 It comes with lots of LGBTQ+ Pride additions, including paintings, beds, mobs, candles, and more!
 
 There are also added variants as well, including trans bees and backporting of pride bundle variants.
