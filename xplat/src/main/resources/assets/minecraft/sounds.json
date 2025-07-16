@@ -3,11 +3,13 @@
     "sounds": [
       {
         "name": "joy:music/menu/joy",
-        "stream": true
+        "stream": true,
+        "volume":  0.4
       },
       {
         "name": "joy:music/menu/reminiscence",
-        "stream": true
+        "stream": true,
+        "volume":  0.4
       }
     ]
   },
@@ -15,15 +17,18 @@
     "sounds": [
       {
         "name": "joy:music/game/melancolie",
-        "stream": true
+        "stream": true,
+        "volume":  0.4
       },
       {
         "name": "joy:music/game/regina",
-        "stream": true
+        "stream": true,
+        "volume":  0.4
       },
       {
         "name": "joy:music/game/opaque_window",
-        "stream": true
+        "stream": true,
+        "volume":  0.4
       }
     ]
   },
@@ -31,7 +36,8 @@
     "sounds": [
       {
         "name": "joy:music/game/creative/douglas",
-        "stream": true
+        "stream": true,
+        "volume":  0.4
       }
     ]
   }
